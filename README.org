@@ -1,0 +1,206 @@
+#+title: MSc Non Linear Electronics
+
+** Table of Contents :TOC_2:
+  - [[#lecture-information][Lecture Information]]
+  - [[#requirements-and-the-learning-outcomes][Requirements and the Learning Outcomes]]
+  - [[#grading-of-the-lecture][Grading of the Lecture]]
+  - [[#lecture-sources][Lecture Sources]]
+  - [[#content-and-unit-distribution][Content and Unit Distribution]]
+  - [[#lecture-table-of-contents][Lecture Table of Contents]]
+  - [[#documentation][Documentation]]
+  - [[#related-links][Related Links]]
+
+** Lecture Information
+
+- The goal of this lecture is to give you a deper understanding of electronic
+  components used in everyday-life from the point-of-view of engineers.
+    
+| DESCRIPTION        | VALUE                                   |
+| Official Name      | Nichtlineare Elektronik                 |
+| Lecture Code       | EDY                                     |
+| Module Code        | MECH-M-1-EDY-NLE-VO                     |
+| Degree             | M.Sc                                    |
+| Program Name       | Mechatronik Smart Technologies          |
+| Lecture Name       | Non Linear Electronics                  |
+| Semester           | 1                                       |
+| Season             | WS                                      |
+| Room Type          | Lecture Room                            |
+| Assignments        | Personal Assignment Final Exam Lab Work |
+| Lecturer           | Daniel T. McGuiness, Ph.D               |
+| Module Responsible | GeS                                     |
+| Software           | SPICE, Open Modelica                    |
+| Hardware           | -                                       |
+| SWS Total          | 2                                       |
+| SWS Teaching       | 2                                       |
+| UE Total           | 30                                      |
+| ECTS               | 3                                       |
+| Lecture Type       | VO                                      |
+| Work Language      | English                                 |
+
+** Requirements and the Learning Outcomes
+
+- The student should have a preliminary knowledge on passive circuit
+  elements (R, L, and C) and should be comfortable applying circut
+  analysis techniques
+- After completion, the student will have a good foundation on advanced
+  circuit analysis, non-linear component knowledge and a good understanding
+  on integrated circuits and amplifier design.
+
+| REQUIREMENTS     | TAUGHT LECTURE         | MODULE CODE | DEGREE | OUTCOME                   |
+| Circuit Analysis | Electrotechnic         | MDT         | B.Sc   | Advanced Circuit Analysis |
+| Linear Circuits  | Electrical Engineering | ELT         | B.Sc   | Transistor Physics        |
+|                  |                        |             |        | IC Design                 |
+|                  |                        |             |        |                           |
+|                  |                        |             |        |                           |
+
+** Grading of the Lecture
+
+- The lecture will have a single personal assignment comprising of a set list of
+  questions and a final exam comprising of all the topics covered in the lecture.
+- For the written exam you are allowed to write your own equation reference
+  paper, as long as it is a single sheet of A4, double sided and contains no
+  exercise or solutions.
+- The final grade will be the total of assignment and exam with passing based
+  on their sum rather than individual.  
+   
+| ASSIGNMENT TYPE     | VALUE | QUANTITY |
+| Personal Assignment |    40 |        1 |
+| Final Exam          |    60 |        1 |
+| SUM                 |   100 |        2 |
+
+** Lecture Sources
+
+The following is a reference material table with useful resources which
+complement well with the lecture.
+
+| AUTHOR                    | TITLE                                               | PUBLISHER          |
+| L. Chua                   | Linear And Nonlinear Circuits                       | Mc Graw Hill India |
+| J. A. Svoboda, R. C. Dorf | Introduction to Electric Circuits (9th Edition)     | Wiley              |
+| K. Smith                  | Microelectronic Circuits (7th Edition)              | Oxford             |
+| E. Hughes                 | Electrical and Electronic Technology (10th Edition) | Pearson            |
+| J. M. Petttit, et. al     | Electronic Amplifier Circuits: Theory and Design    | McGraw-Hil         |
+
+** Content and Unit Distribution
+
+    
+- The content and unit distribution of the lecture is as follows where a unit
+  is defined as 45 min lecture.
+    
+| ORDER | TOPIC                        | UNITS | SELF STUDY |
+|     1 | Signals and Amplifiers       |     4 |          8 |
+|     2 | Semiconductors               |     4 |          8 |
+|     3 | Operational Amplifiers       |     4 |          8 |
+|     4 | Diodes                       |     4 |          8 |
+|     5 | MOS Field Effect Transistors |     4 |          8 |
+|     6 | Bipolar Junction Transistors |     4 |          8 |
+|     7 | Transistor Amplifiers        |     4 |          8 |
+|     8 | SUM                          |    28 |         56 |
+
+** Lecture Table of Contents
+
+- Signals and Amplifiers
+  - Introduction
+  - Signals
+    - Proper Definition
+    - Frequency Spectrum of Signals
+    - Analog and Digital Signals
+  - Amplifiers
+    - Signal Amplification
+    - Amplifier Circuit Symbol
+    - Voltage Gain
+    - Power Gain and Current Gain
+    - Expressing Gain in Decibels
+    - The Amplifier Power Supplies
+    - Amplifier Saturation
+    - Symbol Convention
+  - Circuit Models for Amplifiers
+    - Voltage Amplifiers
+    - Cascaded Amplifiers
+    - Other Amplifier Types
+    - Relationships between the Four Amplifier Models
+    - Determining Input and Output Resistance
+    - Unilateral Models
+  - Frequency Response of Amplifiers
+    -  Measuring the Amplifier Frequency Response
+    - Amplifier Bandwidth
+    - Evaluating the Frequency Response of Amplifiers
+    - Single-Time-Constant Networks
+    - Classification of Amplifiers Based on Frequency Response
+- Operational Amplifiers
+  - Introduction
+  - The Ideal Op Amp
+    - Terminals
+    - Function and Characteristics
+  - The Inverting Configuration
+  - The Non-Inverting Configuration
+  - Difference Amplifiers
+  - Integrators and Differentiators
+  - DC Imperfections
+  - Effect of Finite Open-Loop Gain and Bandwidth on Circuit Performance
+  - Large Signal Operation of Op Amps
+- Semiconductors
+  - Introduction
+  - Intrinsic Semiconductors
+  - Doped Semiconductors
+  - Current Flow in Semiconductors
+    - Drift Current
+    - Diffusion Current
+      - Relationship between D and $mu$
+  - The PN Junction
+    - Implementation
+    - Open Circuit Operation
+      - Diffustion Current
+      - Depletion Region
+      - Drift Current and Equilibrium
+      - The Junction Built-in Voltage
+      - Width of and Charge Stored in the Depletion Region
+  - PN Junction with Applied Voltage
+  - Capacitive Effects in PN Junction
+- Diodes
+  - Introduction
+  - The Ideal Diode
+    - Current-Voltage Characteristics
+    - Application Examples
+      - The Rectifier
+      - Diode Logic Gates
+  - Terminal Characteristics of Junction Diodes
+    - The Forward-Bias Region
+    - Reverse Bias Region
+    - The Breakdown Region
+  - Modelling the Diode Forward Characteristic
+    - The Small-Signal Model
+  - Zener Diodes
+  - Rectifier Circuits
+  - Limiting and Clamping Circuits
+  - Special Diode Types
+- MOS Field Effect Transistors
+  - Introduction
+  - Physical Implementation
+    - Construction
+    - Operation with Zero Gate Voltage
+    - Creating a Channel for Current Flow
+      - Applying a Small $v[ds]$
+  - Current-Voltage Characteristics
+  - Under DC Operation
+  - Body Effect and Other Topics
+- Bipolar Junction Transistors
+  - Physical Implementation
+  - Current-Voltage Characteristics
+  - Under DC Operation
+  - Breakdown and Temperature Effects
+- Transistor Amplifiers
+  - Fundamentals
+  - Small-Signal Operation and Models
+  - Basic Configurations
+  - Biasing
+  - Discrete-Circuit Amplifiers
+- Final Exam
+  - Final Exam
+
+** Documentation
+
+For any student in need of a LaTeX class designed from the ground-up for
+assignment/lab/thesis/slide for MCI needs please have a look at ~mcidoc~ class
+hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].
+
+(-DTMc 2025)

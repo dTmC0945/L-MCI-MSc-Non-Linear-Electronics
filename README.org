@@ -39,38 +39,46 @@
 
 ** Requirements and the Learning Outcomes
 
-- The student should have ...
-- After completion, the student will have ...
+- The student should have a preliminary knowledge on passive circuit
+  elements (R, L, and C) and should be comfortable applying circut
+  analysis techniques
+- After completion, the student will have a good foundation on advanced
+  circuit analysis, non-linear component knowledge and a good understanding
+  on integrated circuits and amplifier design.
 
-| REQUIREMENTS | TAUGHT LECTURE | MODULE CODE | DEGREE | OUTCOME |
-|              |                |             |        |         |
-|              |                |             |        |         |
-|              |                |             |        |         |
-|              |                |             |        |         |
-|              |                |             |        |         |
+| REQUIREMENTS     | TAUGHT LECTURE         | MODULE CODE | DEGREE | OUTCOME                   |
+| Circuit Analysis | Electrotechnic         | MDT         | B.Sc   | Advanced Circuit Analysis |
+| Linear Circuits  | Electrical Engineering | ELT         | B.Sc   | Transistor Physics        |
+|                  |                        |             |        | IC Design                 |
+|                  |                        |             |        |                           |
+|                  |                        |             |        |                           |
 
 ** Grading of the Lecture
 
 - The lecture will have a single personal assignment comprising of a set list of
   questions and a final exam comprising of all the topics covered in the lecture.
-- For the written exam you are allowed to write your own equation reference paper, as
-  long as it is a single sheet of A4, double sided and contains no exercise or solutions. 
+- For the written exam you are allowed to write your own equation reference
+  paper, as long as it is a single sheet of A4, double sided and contains no
+  exercise or solutions.
+- The final grade will be the total of assignment and exam with passing based
+  on their sum rather than individual.  
    
 | ASSIGNMENT TYPE     | VALUE | QUANTITY |
-| Personal Assignment |       |          |
-| Final Exam          |       |          |
-| Lab Work            |       |          |
-| SUM                 |   100 |        0 |
+| Personal Assignment |    40 |        1 |
+| Final Exam          |    60 |        1 |
+| SUM                 |   100 |        2 |
 
 ** Lecture Sources
 
 The following is a reference material table with useful resources which
 complement well with the lecture.
 
-| AUTHOR                    | TITLE                                           | PUBLISHER          |
-| K. Smith                  | Microelectronic Circuits (7th Edition)          | Oxford             |
-| L. Chua                   | Linear And Nonlinear Circuits                   | Mc Graw Hill India |
-| J. A. Svoboda, R. C. Dorf | Introduction to Electric Circuits (9th Edition) | Wiley              |
+| AUTHOR                    | TITLE                                               | PUBLISHER          |
+| L. Chua                   | Linear And Nonlinear Circuits                       | Mc Graw Hill India |
+| J. A. Svoboda, R. C. Dorf | Introduction to Electric Circuits (9th Edition)     | Wiley              |
+| K. Smith                  | Microelectronic Circuits (7th Edition)              | Oxford             |
+| E. Hughes                 | Electrical and Electronic Technology (10th Edition) | Pearson            |
+| J. M. Petttit, et. al     | Electronic Amplifier Circuits: Theory and Design    | McGraw-Hil         |
 
 ** Content and Unit Distribution
 
@@ -93,21 +101,43 @@ complement well with the lecture.
 - Signals and Amplifiers
   - Introduction
   - Signals
-  - Analog and Digital Signals
+    - Proper Definition
+    - Frequency Spectrum of Signals
+    - Analog and Digital Signals
   - Amplifiers
     - Signal Amplification
+    - Amplifier Circuit Symbol
+    - Voltage Gain
     - Power Gain and Current Gain
+    - Expressing Gain in Decibels
+    - The Amplifier Power Supplies
     - Amplifier Saturation
     - Symbol Convention
   - Circuit Models for Amplifiers
     - Voltage Amplifiers
     - Cascaded Amplifiers
     - Other Amplifier Types
+    - Relationships between the Four Amplifier Models
+    - Determining Input and Output Resistance
     - Unilateral Models
   - Frequency Response of Amplifiers
+    -  Measuring the Amplifier Frequency Response
     - Amplifier Bandwidth
+    - Evaluating the Frequency Response of Amplifiers
     - Single-Time-Constant Networks
     - Classification of Amplifiers Based on Frequency Response
+- Operational Amplifiers
+  - Introduction
+  - The Ideal Op Amp
+    - Terminals
+    - Function and Characteristics
+  - The Inverting Configuration
+  - The Non-Inverting Configuration
+  - Difference Amplifiers
+  - Integrators and Differentiators
+  - DC Imperfections
+  - Effect of Finite Open-Loop Gain and Bandwidth on Circuit Performance
+  - Large Signal Operation of Op Amps
 - Semiconductors
   - Introduction
   - Intrinsic Semiconductors
@@ -124,11 +154,8 @@ complement well with the lecture.
       - Drift Current and Equilibrium
       - The Junction Built-in Voltage
       - Width of and Charge Stored in the Depletion Region
-- Operational Amplifiers
-  - Introduction
-  - The Ideal Op Amp
-    - Terminals
-    - Function and Characteristics
+  - PN Junction with Applied Voltage
+  - Capacitive Effects in PN Junction
 - Diodes
   - Introduction
   - The Ideal Diode
@@ -142,7 +169,10 @@ complement well with the lecture.
     - The Breakdown Region
   - Modelling the Diode Forward Characteristic
     - The Small-Signal Model
-  - Simulation
+  - Zener Diodes
+  - Rectifier Circuits
+  - Limiting and Clamping Circuits
+  - Special Diode Types
 - MOS Field Effect Transistors
   - Introduction
   - Physical Implementation
@@ -150,8 +180,22 @@ complement well with the lecture.
     - Operation with Zero Gate Voltage
     - Creating a Channel for Current Flow
       - Applying a Small $v[ds]$
+  - Current-Voltage Characteristics
+  - Under DC Operation
+  - Body Effect and Other Topics
 - Bipolar Junction Transistors
+  - Physical Implementation
+  - Current-Voltage Characteristics
+  - Under DC Operation
+  - Breakdown and Temperature Effects
 - Transistor Amplifiers
+  - Fundamentals
+  - Small-Signal Operation and Models
+  - Basic Configurations
+  - Biasing
+  - Discrete-Circuit Amplifiers
+- Final Exam
+  - Final Exam
 
 ** Documentation
 

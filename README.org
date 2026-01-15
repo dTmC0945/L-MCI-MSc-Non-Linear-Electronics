@@ -1,4 +1,5 @@
-#+title: MSc Non Linear Electronics
+#+title: LS MSc Non Linear Electronics
+
 
 ** Table of Contents :TOC_2:
   - [[#lecture-information][Lecture Information]]
@@ -8,34 +9,50 @@
   - [[#content-and-unit-distribution][Content and Unit Distribution]]
   - [[#lecture-table-of-contents][Lecture Table of Contents]]
   - [[#documentation][Documentation]]
-  - [[#related-links][Related Links]]
 
 ** Lecture Information
+
 
 - The goal of this lecture is to give you a deper understanding of electronic
   components used in everyday-life from the point-of-view of engineers.
     
-| DESCRIPTION        | VALUE                                   |
-| Official Name      | Nichtlineare Elektronik                 |
-| Lecture Code       | EDY                                     |
-| Module Code        | MECH-M-1-EDY-NLE-VO                     |
-| Degree             | M.Sc                                    |
-| Program Name       | Mechatronik Smart Technologies          |
-| Lecture Name       | Non Linear Electronics                  |
-| Semester           | 1                                       |
-| Season             | WS                                      |
-| Room Type          | Lecture Room                            |
-| Assignments        | Personal Assignment Final Exam Lab Work |
-| Lecturer           | Daniel T. McGuiness, Ph.D               |
-| Module Responsible | GeS                                     |
-| Software           | SPICE, Open Modelica                    |
-| Hardware           | -                                       |
-| SWS Total          | 2                                       |
-| SWS Teaching       | 2                                       |
-| UE Total           | 30                                      |
-| ECTS               | 3                                       |
-| Lecture Type       | VO                                      |
-| Work Language      | English                                 |
+| INDEX | DESCRIPTION        | VALUE                                   | STATUS |
+|-------+--------------------+-----------------------------------------+--------|
+|     1 | Official Name      | Nichtlineare Elektronik                 |        |
+|-------+--------------------+-----------------------------------------+--------|
+|     2 | Lecture Code       | EDY                                     | A      |
+|     3 | Module Code        | MECH-M-1-EDY-NLE-VO                     | A      |
+|     4 | Degree             | M.Sc                                    | A      |
+|     5 | Program Name       | Mechatronik Smart Technologies          | A      |
+|     6 | Lecture Name       | Non Linear Electronics                  |        |
+|     7 | Semester           | 1                                       | A      |
+|     8 | Season             | WS                                      | A      |
+|     9 | Room Type          | Lecture Room                            |        |
+|    10 | Assignments        | Personal Assignment Final Exam Lab Work | A      |
+|    11 | Lecturer           | Daniel T. McGuiness, Ph.D               |        |
+|    12 | Module Responsible | GeS                                     | A      |
+|-------+--------------------+-----------------------------------------+--------|
+|    13 | Software           | SPICE, Open Modelica                    |        |
+|    14 | Hardware           | -                                       |        |
+|-------+--------------------+-----------------------------------------+--------|
+|    15 | SWS Total          | 2                                       | A      |
+|    16 | SWS Teaching       | 2                                       |        |
+|    17 | SWS Tutorial       | 0                                       |        |
+|    18 | SWS Laboratory     | 0                                       |        |
+|    19 | SWS Project Work   | 0                                       |        |
+|-------+--------------------+-----------------------------------------+--------|
+|    20 | UE Total           | 30                                      | A      |
+|    21 | UE Teaching        | 30                                      | A      |
+|    22 | UE Tutorial        | 0                                       | A      |
+|    23 | UE Laboratory      | 0                                       | A      |
+|    24 | Assessment Units   | 0                                       | A      |
+|    25 | Planned Units      | 30                                      | A      |
+|-------+--------------------+-----------------------------------------+--------|
+|    26 | ECTS               | 3                                       | A      |
+|    27 | Lecture Type       | VO                                      | A      |
+|    28 | Work Language      | English                                 |        |
+|-------+--------------------+-----------------------------------------+--------|
+
 
 ** Requirements and the Learning Outcomes
 
@@ -46,14 +63,17 @@
   circuit analysis, non-linear component knowledge and a good understanding
   on integrated circuits and amplifier design.
 
-| REQUIREMENTS     | TAUGHT LECTURE         | MODULE CODE | DEGREE | OUTCOME                   |
-| Circuit Analysis | Electrotechnic         | MDT         | B.Sc   | Advanced Circuit Analysis |
-| Linear Circuits  | Electrical Engineering | ELT         | B.Sc   | Transistor Physics        |
-|                  |                        |             |        | IC Design                 |
-|                  |                        |             |        |                           |
-|                  |                        |             |        |                           |
+| INDEX | REQUIREMENTS     | TAUGHT LECTURE         | MODULE CODE | DEGREE | OUTCOME                   |
+|-------+------------------+------------------------+-------------+--------+---------------------------|
+|     1 | Circuit Analysis | Electrotechnic         | MDT         | B.Sc   | Advanced Circuit Analysis |
+|     2 | Linear Circuits  | Electrical Engineering | ELT         | B.Sc   | Transistor Physics        |
+|     3 |                  |                        |             |        | IC Design                 |
+|     4 |                  |                        |             |        |                           |
+|     5 |                  |                        |             |        |                           |
+|-------+------------------+------------------------+-------------+--------+---------------------------|
 
 ** Grading of the Lecture
+
 
 - The lecture will have a single personal assignment comprising of a set list of
   questions and a final exam comprising of all the topics covered in the lecture.
@@ -64,8 +84,10 @@
   on their sum rather than individual.  
    
 | ASSIGNMENT TYPE     | VALUE | QUANTITY |
+|---------------------+-------+----------|
 | Personal Assignment |    40 |        1 |
 | Final Exam          |    60 |        1 |
+|---------------------+-------+----------|
 | SUM                 |   100 |        2 |
 
 ** Lecture Sources
@@ -73,12 +95,14 @@
 The following is a reference material table with useful resources which
 complement well with the lecture.
 
-| AUTHOR                    | TITLE                                               | PUBLISHER          |
-| L. Chua                   | Linear And Nonlinear Circuits                       | Mc Graw Hill India |
-| J. A. Svoboda, R. C. Dorf | Introduction to Electric Circuits (9th Edition)     | Wiley              |
-| K. Smith                  | Microelectronic Circuits (7th Edition)              | Oxford             |
-| E. Hughes                 | Electrical and Electronic Technology (10th Edition) | Pearson            |
-| J. M. Petttit, et. al     | Electronic Amplifier Circuits: Theory and Design    | McGraw-Hil         |
+| INDEX | AUTHOR                    | TITLE                                               | PUBLISHER          |
+|-------+---------------------------+-----------------------------------------------------+--------------------|
+|     1 | L. Chua                   | Linear And Nonlinear Circuits                       | Mc Graw Hill India |
+|     2 | J. A. Svoboda, R. C. Dorf | Introduction to Electric Circuits (9th Edition)     | Wiley              |
+|     3 | K. Smith                  | Microelectronic Circuits (7th Edition)              | Oxford             |
+|     4 | E. Hughes                 | Electrical and Electronic Technology (10th Edition) | Pearson            |
+|     4 | J. M. Petttit, et. al     | Electronic Amplifier Circuits: Theory and Design    | McGraw-Hil         |
+|-------+---------------------------+-----------------------------------------------------+--------------------|
 
 ** Content and Unit Distribution
 
@@ -87,6 +111,7 @@ complement well with the lecture.
   is defined as 45 min lecture.
     
 | ORDER | TOPIC                        | UNITS | SELF STUDY |
+|-------+------------------------------+-------+------------|
 |     1 | Signals and Amplifiers       |     4 |          8 |
 |     2 | Semiconductors               |     4 |          8 |
 |     3 | Operational Amplifiers       |     4 |          8 |
@@ -94,6 +119,7 @@ complement well with the lecture.
 |     5 | MOS Field Effect Transistors |     4 |          8 |
 |     6 | Bipolar Junction Transistors |     4 |          8 |
 |     7 | Transistor Amplifiers        |     4 |          8 |
+|-------+------------------------------+-------+------------|
 |     8 | SUM                          |    28 |         56 |
 
 ** Lecture Table of Contents
@@ -203,4 +229,3 @@ For any student in need of a LaTeX class designed from the ground-up for
 assignment/lab/thesis/slide for MCI needs please have a look at ~mcidoc~ class
 hosted at [[https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc][GitHub]].
 
-(-DTMc 2025)

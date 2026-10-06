@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>DC Imperfections</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Non-Linear Electronics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2025.WS</span>
+<span class="header-chapter">Operational Amplifiers</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="SignalsandAmplifiers.html#x3-20001">Signals and Amplifiers</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-30001.1">Fundamentals of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-40001.1.1">Proper Definition</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="FundamentalsofSignals.html#x4-50001.1.2">Frequency
+Spectrum of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="FundamentalsofSignals.html#x4-60001.1.3">Analog and Digital Signals</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-70001.2">Amplifiers as a Concept</a></span></span><span class="subsectionToc"><span class="number">1.2.1</span><span class="title"><a href="AmplifiersasaConcept.html#x5-80001.2.1">Signal
+Amplification</a></span></span><span class="subsectionToc"><span class="number">1.2.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-90001.2.2">Amplifier Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">1.2.3</span><span class="title"><a href="AmplifiersasaConcept.html#x5-100001.2.3">Voltage Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.4</span><span class="title"><a href="AmplifiersasaConcept.html#x5-110001.2.4">Power Gain and Current
+Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.5</span><span class="title"><a href="AmplifiersasaConcept.html#x5-120001.2.5">Expressing Gain in Decibels</a></span></span><span class="subsectionToc"><span class="number">1.2.6</span><span class="title"><a href="AmplifiersasaConcept.html#x5-130001.2.6">The Amplifier Power Supplies</a></span></span><span class="subsectionToc"><span class="number">1.2.7</span><span class="title"><a href="AmplifiersasaConcept.html#x5-140001.2.7">Amplifier
+Saturation</a></span></span><span class="subsectionToc"><span class="number">1.2.8</span><span class="title"><a href="AmplifiersasaConcept.html#x5-150001.2.8">Symbol Convention</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-160001.3">Circuit Models for Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-170001.3.1">Voltage
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.2</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-180001.3.2">Cascaded Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-190001.3.3">Other Amplifier Types</a></span></span><span class="subsectionToc"><span class="number">1.3.4</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-200001.3.4">Relationships between
+the Four Amplifier Models</a></span></span><span class="subsectionToc"><span class="number">1.3.5</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-210001.3.5">Determining Input and Output Resistance</a></span></span><span class="subsectionToc"><span class="number">1.3.6</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-220001.3.6">Unilateral
+Models</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-230001.4">Frequency Response of Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.1</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-240001.4.1">Measuring the Amplifier Frequency
+Response</a></span></span><span class="subsectionToc"><span class="number">1.4.2</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-250001.4.2">Amplifier Bandwidth</a></span></span><span class="subsectionToc"><span class="number">1.4.3</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-260001.4.3">Evaluating the Frequency Response of
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-270001.4.4">Single-Time-Constant Networks</a></span></span><span class="subsectionToc"><span class="number">1.4.5</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-280001.4.5">Classification of Amplifiers Based
+on Frequency Response</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="OperationalAmplifiers.html#x8-290002">Operational Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-300002.1">The Ideal Op Amp</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-310002.1.1">Terminals
+of the Element</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="TheIdealOpAmp.html#x9-320002.1.2">Function and Characteristics</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="TheIdealOpAmp.html#x9-330002.1.3">Differential and Common-Mode
+Signals</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-340002.2">The Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="TheInvertingAmplifier.html#x10-350002.2.1">The Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-360002.2.2">Effect of Finite
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="TheInvertingAmplifier.html#x10-370002.2.3">Input and Output Resistances</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-380002.3">Non-Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="NonInvertingAmplifier.html#x11-390002.3.1">The
+Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="NonInvertingAmplifier.html#x11-400002.3.2">Effect of Finite Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-410002.3.3">Input and Output
+Resistance</a></span></span><span class="subsectionToc"><span class="number">2.3.4</span><span class="title"><a href="NonInvertingAmplifier.html#x11-420002.3.4">The Voltage Follower</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="DifferenceAmplifiers.html#x12-430002.4">Difference Amplifiers</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="DifferenceAmplifiers.html#x12-440002.4.1">A Single-Op-Amp
+Difference Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="DifferenceAmplifiers.html#x12-450002.4.2">A Versatile Circuit: The Instrumentation Amplifier</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-460002.5">Integrators
+and Differentiators</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-470002.5.1">The Inverting Configuration with General Impedances</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-480002.5.2">The
+Inverting Integrator</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-490002.5.3">The Op-Amp Differentiator</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="#x14-500002.6">DC Imperfections</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="#x14-510002.6.1">Offset
+Voltage</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="#x14-520002.6.2">Input Bias and Offset Currents</a></span></span><span class="subsectionToc"><span class="number">2.6.3</span><span class="title"><a href="#x14-530002.6.3">Effects of Offset of Inverting
+Integrator</a></span></span><span class="sectionToc"><span class="number">2.7</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-540002.7">Finite Open-Loop Gain and Bandwidth</a></span></span><span class="subsectionToc"><span class="number">2.7.1</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-550002.7.1">Frequency Dependence of the
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.7.2</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-560002.7.2">Frequency Response of Closed-Loop Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.8</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-570002.8">Large-Signal
+Operation of Op Amps</a></span></span><span class="subsectionToc"><span class="number">2.8.1</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-580002.8.1">Output Voltage Saturation</a></span></span><span class="subsectionToc"><span class="number">2.8.2</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-590002.8.2">Output Current Limits</a></span></span><span class="subsectionToc"><span class="number">2.8.3</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-600002.8.3">Slew
+Rate</a></span></span><span class="subsectionToc"><span class="number">2.8.4</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-610002.8.4">Full-Power Bandwidth</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Semiconductors.html#x17-620003">Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-630003.1">Semiconductor Physics</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-640003.1.1">Intrinsic
+Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="SemiconductorPhysics.html#x18-650003.1.2">Doped Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-660003.2">Current Flow in Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-670003.2.1">Drift
+Current</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-680003.2.2">Diffusion Current</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ThePNJunction.html#x20-690003.3">The PN Junction</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ThePNJunction.html#x20-700003.3.1">Implementation</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ThePNJunction.html#x20-710003.3.2">Open
+Circuit Operation</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-770003.4">PN Junction with Applied Voltage</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-780003.4.1">Qualitative Description
+of Junction Operation</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-790003.4.2">Reverse Breakdown</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-800003.5">Capacitive Effects in the pn
+Junction</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-810003.5.1">Depletion or Junction Capacitance</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-820003.5.2">Diffusion Capacitance</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="Diodes.html#x23-830004">Diodes</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="TheIdealDiode.html#x24-850004.1">The
+Ideal Diode</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="TheIdealDiode.html#x24-860004.1.1">i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="TheIdealDiode.html#x24-880004.1.2">Application: The Rectificer</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="TheIdealDiode.html#x24-890004.1.3">Application:
+Logic Gates</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-900004.2">Terminal Characteristics of Junction Diodes</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-910004.2.1">The Forward-Bias
+Region</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-920004.2.2">Reverse Bias Region</a></span></span><span class="subsectionToc"><span class="number">4.2.3</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-930004.2.3">The Breakdown Region</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-940004.3">Modelling the Diode
+Forward Characteristic</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-950004.3.1">The Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-960004.3.2">Graphical Analysis Using the
+Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-970004.3.3">The Need for Rapid Analysis</a></span></span><span class="subsectionToc"><span class="number">4.3.4</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-980004.3.4">The Constant-Voltage-Drop
+Model</a></span></span><span class="subsectionToc"><span class="number">4.3.5</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-990004.3.5">The Ideal-Diode Model</a></span></span><span class="subsectionToc"><span class="number">4.3.6</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1000004.3.6">The Small-Signal Model</a></span></span><span class="subsectionToc"><span class="number">4.3.7</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1010004.3.7">Use of the Diode
+Forward Drop in Voltage Regulation</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="ZenerDiodes.html#x27-1020004.4">Zener Diodes</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="ZenerDiodes.html#x27-1030004.4.1">Operating in the Reverse
+Breakdown Region</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="ZenerDiodes.html#x27-1040004.4.2">Specifying and Modeling the Zener Diode</a></span></span><span class="subsectionToc"><span class="number">4.4.3</span><span class="title"><a href="ZenerDiodes.html#x27-1050004.4.3">Temperature
+Effects</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1060004.5">Limiting and Clamping Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1070004.5.1">Limiter Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.2</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1080004.5.2">The Clamped Capacitor
+or DC Restorer</a></span></span><span class="subsectionToc"><span class="number">4.5.3</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1090004.5.3">The Voltage Doubler</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1100004.6">Special Diode Types</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1110004.6.1">The Schottky-Barrier
+Diode (SBD)</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1120004.6.2">Varactors</a></span></span><span class="subsectionToc"><span class="number">4.6.3</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1130004.6.3">Photodiodes</a></span></span><span class="subsectionToc"><span class="number">4.6.4</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1140004.6.4">Light Emitting Diodes</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="MOSFieldEffectTransistors.html#x30-1150005">MOS
+Field Effect Transistors</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1170005.1">Device Structure and Physical Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1180005.1.1">Device
+Structure</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1190005.1.2">Operation with Zero Gate Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1200005.1.3">Creating a Channel for
+Current Flow</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1210005.1.4">Applying a Small Drain-to-Source Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.5</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1220005.1.5">Operation as
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is
+Increased</a></span></span><span class="subsectionToc"><span class="number">5.1.6</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1230005.1.6">Channel Pinch-Off and Current Saturation</a></span></span><span class="subsectionToc"><span class="number">5.1.7</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1240005.1.7">The p-Channel
+MOSFET</a></span></span><span class="subsectionToc"><span class="number">5.1.8</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1250005.1.8">Complementary MOS or CMOS</a></span></span><span class="subsectionToc"><span class="number">5.1.9</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1260005.1.9">Operating the MOS Transistor in
+the Subthreshold Region</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1270005.2">Current-Voltage Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1280005.2.1">Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1290005.2.2">
+The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1300005.2.3">The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1310005.2.4">Finite Output Resistance in Saturation</a></span></span><span class="subsectionToc"><span class="number">5.2.5</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1320005.2.5">Characteristics
+of the p-Channel MOSFET</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MOSFETCircuitsatDC.html#x33-1330005.3">MOSFET Circuits at DC</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1340005.4">Body Effect and
+Other Topics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1350005.4.1">The Role of the Substrate - The Body Effect</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1360005.4.2">Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">5.4.3</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1370005.4.3">Breakdown and Input Protection</a></span></span><span class="subsectionToc"><span class="number">5.4.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1380005.4.4">Velocity Saturation</a></span></span><span class="subsectionToc"><span class="number">5.4.5</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1390005.4.5">Depletion-Type
+MOSFET</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="BipolarJunctionTransistors.html#x35-1400006">Bipolar Junction Transistors</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1410006.1">Physical Implementation</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1420006.1.1">Simplified
+Structure and Operation Modes</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PhysicalImplementation.html#x36-1430006.1.2">Operation of the npn Transistor in the Active
+Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PhysicalImplementation.html#x36-1500006.1.3">Structure of Actual Transistor</a></span></span><span class="subsectionToc"><span class="number">6.1.4</span><span class="title"><a href="PhysicalImplementation.html#x36-1510006.1.4">Operation in the Saturation Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.5</span><span class="title"><a href="PhysicalImplementation.html#x36-1520006.1.5">The
+pnp Transistor</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1530006.2">The i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="TheivCharacteristics.html#x37-1540006.2.1">Symbols and Conventions</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1550006.2.2">Graphical
+Representation of Transistor Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.3</span><span class="title"><a href="TheivCharacteristics.html#x37-1560006.2.3">Dependence of ic on the Collector
+Voltage - The early Effect</a></span></span><span class="subsectionToc"><span class="number">6.2.4</span><span class="title"><a href="TheivCharacteristics.html#x37-1570006.2.4">An Alternative Form of the Common-Emitter
+Characteristics</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="BJTCircuitsatDC.html#x38-1600006.3">BJT Circuits at DC</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1610006.4">Transistor Breakdown and Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1620006.4.1">Transistor Breakdown</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x40-163000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-164000A.1">An Introduction to Scientific
+Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-165000A.1.1">A Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-166000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-169000A.1.3">Decimal Multiples
+and Sub-multiples of SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-172000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x42-173000B">Dimensional
+Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-174000B.1">Physical Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-175000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-176000B.1.2">Physical
+Quantities and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-177000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-178000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-179000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-182000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-186000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-187000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-188000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-193000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-198000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-208000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="FiniteOpenLoopGainandBandwidth.html">Finite Open-Loop Gain and Bandwidth</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="IntegratorsandDifferentiators.html">Integrators and Differentiators</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="OperationalAmplifiers.html#DCImperfections.html">Chapter: Operational
+Amplifiers</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-2.6"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#section.2.6"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">2.6</span> <span class="title"> <a id="x14-500002.6"></a>DC Imperfections</span></h3></div>
+<p class="noindent">Up to now we have considered the op-amp to be <span class="alert">ideal</span>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The only exception has been a brief discussion of the effect of the op-amp finite gain
+(<math display="inline"><mi>A</mi></math>) both
+the closed-loop gain of the <b>inverting</b> and <b>non-inverting</b> configurations. </p></div></div>
+<p class="noindent">While for many applications the assumption of an ideal op amp is <b>NOT</b> a bad practice on itself, a
+circuit designer needs to be thoroughly familiar with the characteristics of practical op-amps and the
+effects of such characteristics on the performance of op-amp <span class="margin-block">circuits. <span class="margin-comment"><span class="ellipsis">[59]</span>
+<span class="sidenote">Only then will the designer be
+able to use the op amp intelligently, especially if the application at hand is not a straightforward
+one.</span></span></span>
+</p><p class="noindent">The non-ideal properties of op amps will, of course, limit the operation range of the circuits we have
+analysed previously. Now, we will consider some of the important non-ideal properties of the op amp.
+We do this by treating one non-ideal case at a time, beginning with the dc problems to which op-amps
+are susceptible.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.6.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.2.6.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.6.1</span> <span class="title"> <a id="x14-510002.6.1"></a>Offset Voltage</span></h4></div>
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x14-51001r17"></a>
+<figcaption class="caption"><span class="id">Figure 2.17: </span><span class="content">Circuit        model        for        an        op        amp        with        input        offset        voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>.</span></figcaption>
+<img alt="PIC" src="figures/Operational-Amplifiers/figures-5.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">As op-amps are direct-coupled devices with large gains at dc, they are prone to dc problems. The first
+such problem is the dc offset voltage.
+</p><p class="noindent">To understand this problem consider the following <span class="alert">conceptual</span> experiment:
+</p>
+<div class="quote"> If the two (<span class="alert">2</span>) input terminals of the op amp are tied together and connected to ground (GND), we will see, despite
+the fact that <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>I</mi><mi>d</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>,
+a there will be a finite dc voltage at the output. </div>
+<p class="noindent">In fact, if the op-amp has a high dc gain, the output will be at either the <span class="alert">positive</span> or <span class="alert">negative</span>
+saturation level. The op-amp output can be brought back to its ideal value of
+<math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+by connecting a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators, or even
+through a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</a></span></span></span> voltage source of appropriate polarity and magnitude between the two
+(<span class="alert">2</span>) input terminals of the op amp. This external source <span class="alert">balances out</span> the input offset voltage of the op
+amp.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The input offset voltage (<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>)
+must be of equal magnitude and of opposite polarity to the voltage we applied externally.
+</p></div></div>
+<p class="noindent">The input offset voltage arises as a result of the unavoidable mismatches present in the
+input differential stage inside the op-amp. Here, our concern is to investigate the effect of
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> on the
+operation of closed-loop op-amp circuits<span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[60]</span>
+<span class="sidenote">From a practical perspective, general-purpose op amps exhibit
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> in the
+range of 1 mV to 5 mV</span></span></span>
+</p><p class="noindent">The value of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+depends on temperature. The op-amp data sheets generally specify typical and maximum values for
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+at room temperature as well as the temperature coefficient of
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>, usually in
+<math display="inline"><mstyle mathvariant="normal"><mi>μ</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>V</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>◦</mi><mi>C</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>. They do not, however, specify the
+polarity of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> because the component
+mismatches that give rise to <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+are obviously not known a priori; different units of the same op-amp type may exhibit either a positive or a
+negative <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>.
+</p><p class="noindent">To analyze the effect of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+on the operation of op-amp circuits, we need a circuit model for the op amp with input
+offset voltage. Such a model is shown in <b>Fig.</b> <a href="#x14-51001r17">2.17</a>. It consists of a de source of value
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> placed
+in series with the positive input lead of an offset-free op amp. The justification for this model follows
+from the description above.
+</p><p class="noindent">Analysis of op-amp circuits to determine the effect of the op-amp
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> on
+their performance is straightforward: The input voltage signal source is short-circuited and
+the op amp is replaced with the model of <b>Fig.</b> <a href="#x14-51001r17">2.17</a><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[61]</span>
+<span class="sidenote">Eliminating the input signal, done to
+simplify matters, is based on the principle of superposition.</span></span></span> Following this procedure, we
+find that both the inverting and the noninverting amplifier configurations result in
+the same circuit, that shown in Fig. 2.29, from which the output dc voltage due to
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> is
+found to be </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-51002r39"></mstyle>
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub> <mrow><mo fence="true" form="prefix">[</mo><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">]</mo></mrow> <mstyle class="text"><mtext></mtext></mstyle>
+</math></td><td class="eq-no">(2.39)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This output dc voltage can have a large magnitude.
+</p>
+<div class="quote"> As an example, a non-inverting amplifier with a closed-loop gain of 1000, when constructed from an op-amp with a
+<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>m</mi><mi>V</mi></mstyle></math>
+input offset voltage, will have a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The electric
+current flows in a constant direction, distinguishing it from alternating current (AC). A
+term formerly used for this type of current was galvanic current.</a></span></span></span> output voltage of
++<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+or -<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math><span class="margin-block">
+<span class="margin-comment"><span class="ellipsis">[62]</span>
+<span class="sidenote">The output polarity of course depends on the polarity of
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>.</span></span></span> rather than the ideal value of
+<math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>.
+</div>
+<p class="noindent">Now, when an input signal is applied to the amplifier, the corresponding signal output will be superimposed on the
+<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+<span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through
+a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current
+was galvanic current.</a></span></span></span>. Obviously then, the allowable signal swing at the output will be
+reduced.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Even worse, if the signal to be amplified is <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through semiconductors,
+insulators, or even through a vacuum as in electron or ion beams. The electric current flows in a
+constant direction, distinguishing it from alternating current (AC). A term formerly used for this
+type of current was galvanic current.</a></span></span></span>, we would not know whether the output is due to
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> or to
+the signal. </p></div></div>
+<div class="sidenote"> <span class="figure">
+<a id="x14-51003r18"></a>
+<figcaption class="caption"><span class="id">Figure 2.18: </span><span class="content">The output dc offset voltage of an op amp can be trimmed to zero by connecting a potentiometer to the
+two offset-nulling terminals. The wiper of the potentiometer is connected to the negative supply of the op amp.     </span></figcaption>
+<img alt="PIC" src="figures/Operational-Amplifiers/figures-18.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Some op amps are provided with two (<span class="alert">2</span>) additional terminals to which a specified circuit can be
+connected to trim to zero the output <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge.
+Direct current may flow through a conductor such as a wire, but can also flow through
+semiconductors, insulators, or even through a vacuum as in electron or ion beams. The
+electric current flows in a constant direction, distinguishing it from alternating current
+(AC). A term formerly used for this type of current was galvanic current.</a></span></span></span> voltage due to
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>.
+<b>Fig.</b> <a href="#x14-51003r18">2.18</a> shows such an arrangement that is typically used with general-purpose op amps. A
+potentiometer is connected between the offset-nulling terminals with the wiper of the potentiometer
+connected to the op-amp negative supply. Moving the potentiometer wiper introduces an imbalance
+that counteracts the asymmetry present in the internal op-amp circuitry and that gives rise to
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>. It should be
+noted, however, that even though the dc output offset can be trimmed to zero, the problem remains of the variation
+(or drift) of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+with temperature.
+One way to overcome the dc offset problem is by <span class="alert">capacitively coupling</span> the amplifier. This, however, will be possible only in
+applications where the closed-loop amplifier is not required to amplify dc or very-low-frequency signals.
+Figure 2.31(a) shows a capacitively coupled amplifier. Because of its infinite impedance at
+dc, the coupling capacitor will cause the gain to be zero at dc. As a result, the equivalent
+circuit for determining the dc output voltage resulting from the op-amp input offset voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> will be
+that shown in Fig. 2.31(b).
+</p><p class="noindent">Therefore <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+sees in effect a unity-gain voltage follower, and the dc output voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math> will be equal
+to <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> rather
+than <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>, which
+is the case without the coupling capacitor. As far as input signals are concerned, the coupling capacitor
+<math display="inline"><mi>C</mi></math> forms together with
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></math> an STC high-pass circuit
+with a corner frequency of <math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>C</mi><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></math>.
+Thus the gain of the capacitively coupled amplifier will fall off at the low-frequency end [from a magnitude of
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> at high frequencies] and
+will be 3 dB down at <math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.6.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.2.6.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.6.2</span> <span class="title"> <a id="x14-520002.6.2"></a>Input Bias and Offset Currents</span></h4></div>
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="figures/Operational-Amplifiers/figures-12.png" style=""/> <a id="x14-52001r19"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 2.19: 
+          </span><span class="content">(a) The op-amp input bias currents represented by two current sources IB1 and IB2 (b) Analysis of the
+          closed-loop amplifier, taking into account the input bias currents.                          </span></figcaption>
+</figure>
+<p class="noindent">The second <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow through a
+conductor such as a wire, but can also flow through semiconductors, insulators, or even through a
+vacuum as in electron or ion beams. The electric current flows in a constant direction, distinguishing it
+from alternating current (AC). A term formerly used for this type of current was galvanic current.</a></span></span></span>
+problem encountered in op amps is illustrated in <b>Fig.</b> <a href="#x14-52001r19">2.19</a>a. For the op amp to operate, its
+two input terminals have to be supplied with dc currents, termed the input bias <span class="margin-block">currents.
+<span class="margin-comment"><span class="ellipsis">[63]</span>
+<span class="sidenote">This is the case for op amps constructed using bipolar junction transistors (BJTs). Those
+using MOSFETs in the first (input) stage do not draw an appreciable input bias current;
+nevertheless, the input terminals should have continuous dc paths to ground. More on this in
+later chapters.</span></span></span> In <b>Fig.</b> <a href="#x14-52001r19">2.19</a>a these two currents are represented by two current sources,
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msub></math>,
+connected to the two input terminals. It should be emphasized that the input bias currents are
+<span class="alert">independent</span> of the fact that a real op amp has finite (though large) input resistance (not shown in
+<b>Fig.</b> <a href="#x14-52001r19">2.19</a>a).
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The op-amp manufacturer usually specifies the average value of
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msub></math> as well as their expected
+difference. The average value <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>
+is called the <b>input bias current</b>, </p></div></div>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">and the difference is called the <span class="alert">input offset current</span> and is given by </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>|</mi><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msub><mi>|</mi>
+</math></td></tr></table>
+<p class="noindent">Typical values for general-purpose op amps that use bipolar transistors are
+<math display="inline"><mi>I</mi><mi>B</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>0</mn><mn>0</mn></math> nA and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>0</mn></math>
+nA.
+</p><p class="noindent">We now wish to find the dc output voltage of the closed-loop amplifier due to the input bias currents.
+To do this we ground the signal source and obtain the circuit shown in <b>Fig.</b> <a href="#x14-52001r19">2.19</a>b for both the
+inverting and noninverting configurations. As shown in <b>Fig.</b> <a href="#x14-52001r19">2.19</a>b, the output dc voltage is given by
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-52002r40"></mstyle>
+<msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub> <mi>≃</mi> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub>
+</math></td><td class="eq-no">(2.40)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">This obviously places an upper limit on the value of
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>.
+Fortunately, however, a technique exists for reducing the value of the output dc voltage
+due to the input bias currents. The method consists of introducing a resistance
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math>
+in series with the noninverting input lead, From a signal point of view,
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math>
+has a negligible <span class="margin-block">effect. <span class="margin-comment"><span class="ellipsis">[64]</span>
+<span class="sidenote">ideally no effect</span></span></span> The appropriate value for
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math> can be
+determined by analyzing the circuit in Fig. 2.34, where analysis details are shown, and the output
+voltage is given by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-52003r41"></mstyle>
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>α</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>I</mi></mrow><mrow><mi>α</mi></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>I</mi></mrow><mrow><mi>α</mi><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>α</mi><mn>2</mn></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(2.41)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Consider first the case <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>,
+which results in </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>R</mi></mrow></msub><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo><mo class="MathClass-close" stretchy="false">]</mo>
+</math></td></tr></table>
+<p class="noindent">Thus we can reduce <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>
+to zero by selecting <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math>
+such that </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-52004r42"></mstyle>
+<msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow>
+<mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(2.42)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">That is, <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math> should be made equal
+to the parallel equivalent of <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>1</mn></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>. Having selected
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math> as above, let us evaluate the
+effect of a finite offset current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>.
+Let <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>1</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>
+and <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi><mn>2</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></math>,
+and substitute in Eq. (2.38). The result is </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-52005r43"></mstyle>
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>o</mi><mi>s</mi></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub>
+</math></td><td class="eq-no">(2.43)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="figures/Operational-Amplifiers/figures-6.png" style=""/> <a id="x14-52006r20"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 2.20: 
+          </span><span class="content">(a)In an ac-coupled amplifier the dc resistance seen by the inverting terminal is R2 ; hence R3 is chosen
+          equal to R2. (b) Illustrating the need for a continuous dc path for each of the op-amp input terminals.
+          Specifically, note that the amplifier will not work without resistor R3.                       </span></figcaption>
+</figure>
+<p class="noindent">which is usually about an order of magnitude smaller than the value obtained without
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math> (<span> Eq. (<a href="#x14-52002r40">2.40</a>)</span>
+). We can therefore conclude that to minimize the effect of the input bias currents, one should place in the
+positive lead a resistance equal to the equivalant dc resistance seen by the inverting terminal. We emphasize
+the word <math display="inline"><mi>d</mi><mi>c</mi></math>
+in the last statement; note that if the amplifier is ac-coupled, we should select
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mn>2</mn></mrow></msub></math>, as
+shown in Fig. 2.35.
+</p><p class="noindent">While we are on the subject of ac-coupled amplifiers, we should note that one must always provide a
+continuous dc path between each of the input terminals of the op amp and ground. This is the case no matter
+how small <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>
+is. For this reason the ac-coupled noninverting amplifier of Fig. 2.36 will <span class="alert">not</span> work without the resistance
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math> to
+ground.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Unfortunately, including <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mn>3</mn></mrow></msub></math>
+lowers considerably the input resistance of the closed-loop amplifier. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-2.6.3"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.2.6.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">2.6.3</span> <span class="title"> <a id="x14-530002.6.3"></a>Effects of Offset of Inverting Integrator</span></h4></div>
+</p><p class="noindent">Our discussion of the inverting integrator circuit mentioned the susceptibility of this circuit to
+saturation in the presence of small dc voltages or currents and therefore we have to consider the effect
+of the op-amp <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:dc">DC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:dc">Direct Current</a></span><span class="acronym-desc"><a class="glossary" href="#glo:dc">One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators, or even
+through a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current
+was galvanic current.</a></span></span></span> offsets on its operation. As will be seen, these effects can be quite
+dramatic.
+To see the effect of the input dc offset voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>,
+consider the integrator circuit in Fig. 2.37, where for simplicity we have short-circuited the input signal
+source. Analysis of the circuit is straightforward and is shown in Fig. 2.37. Assuming for simplicity that
+at time <math display="inline"><mi>t</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+the voltage across the capacitor is zero, the output voltage as a function of time is given by
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x14-53001r44"></mstyle>
+<msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></mrow>
+<mrow>
+<mi>C</mi><mi>R</mi></mrow></mfrac> <mi>t</mi>
+</math></td><td class="eq-no">(2.44)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Therefore <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi></mrow></msub></math>
+increases linearly with time until the op amp <span class="alert">saturates</span>. As should be expected, the dc input offset current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> produces a
+similar problem. Figure 2.38 illustrates the situation. Observe that we have added a resistance
+<math display="inline"><mi>R</mi></math>
+in the op-amp positive-input lead in order to keep the input bias current
+<math display="inline"><mi>I</mi><mi>B</mi></math> from flowing through C.
+Nevertheless, the offset current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math>
+will flow through C and cause <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi></mrow></msub></math>
+to ramp linearly with time until the op amp saturates.
+</p><p class="noindent">As mentioned previously on the study of integrator, the dc problem of the integrator circuit can be alleviated by
+connecting a resistor <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+across the integrator capacitor C, as shown in Fig. 2.25. Such a resistor provides a dc path through which the dc
+currents (<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mi>R</mi></math>) and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub></math> can <span class="margin-block">flow, <span class="margin-comment"><span class="ellipsis">[65]</span>
+<span class="sidenote">assuming a
+resistance equal to <math display="inline"><mi>R</mi> <mo class="MathClass-rel" stretchy="false">∥</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>F</mi></mrow></msub></math>
+is connected in the positive op-amp lead</span></span></span> with the result that
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mn>0</mn></mrow></msub></math> will now have a
+dc component <math display="inline"><mo class="MathClass-open" stretchy="false">[</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>F</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mi>R</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>O</mi><mi>S</mi></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mi>F</mi></mrow></msub><mo class="MathClass-close" stretchy="false">]</mo></math>
+instead of rising linearly. To keep the dc offset at the output small, one would select a low value for
+<math display="inline"><mi>R</mi><mi>F</mi></math>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Unfortunately, however, the lower the value of <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>F</mi></mrow></msub></math>,
+the less ideal the integrator circuit becomes. </p></div></div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:dc">¶</a>
+<dt class="acr-bottom" id="glo:dc"><span class="acr-short">DC</span><span class="acr-long">Direct Current</span></dt>
+<dd class="acr-desc"><p>One-directional flow of electric charge. Direct current may flow
+through a conductor such as a wire, but can also flow through semiconductors, insulators, or even
+through a vacuum as in electron or ion beams. The electric current flows in a constant direction,
+distinguishing it from alternating current (AC). A term formerly used for this type of current was
+galvanic current.</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="FiniteOpenLoopGainandBandwidth.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="IntegratorsandDifferentiators.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="OperationalAmplifiers.html#DCImperfections.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 2.6: DC Imperfections</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

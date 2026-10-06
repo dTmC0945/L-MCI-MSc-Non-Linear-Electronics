@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>The i-v Characteristics</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Non-Linear Electronics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2025.WS</span>
+<span class="header-chapter">Bipolar Junction Transistors</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="SignalsandAmplifiers.html#x3-20001">Signals and Amplifiers</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-30001.1">Fundamentals of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-40001.1.1">Proper Definition</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="FundamentalsofSignals.html#x4-50001.1.2">Frequency
+Spectrum of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="FundamentalsofSignals.html#x4-60001.1.3">Analog and Digital Signals</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-70001.2">Amplifiers as a Concept</a></span></span><span class="subsectionToc"><span class="number">1.2.1</span><span class="title"><a href="AmplifiersasaConcept.html#x5-80001.2.1">Signal
+Amplification</a></span></span><span class="subsectionToc"><span class="number">1.2.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-90001.2.2">Amplifier Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">1.2.3</span><span class="title"><a href="AmplifiersasaConcept.html#x5-100001.2.3">Voltage Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.4</span><span class="title"><a href="AmplifiersasaConcept.html#x5-110001.2.4">Power Gain and Current
+Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.5</span><span class="title"><a href="AmplifiersasaConcept.html#x5-120001.2.5">Expressing Gain in Decibels</a></span></span><span class="subsectionToc"><span class="number">1.2.6</span><span class="title"><a href="AmplifiersasaConcept.html#x5-130001.2.6">The Amplifier Power Supplies</a></span></span><span class="subsectionToc"><span class="number">1.2.7</span><span class="title"><a href="AmplifiersasaConcept.html#x5-140001.2.7">Amplifier
+Saturation</a></span></span><span class="subsectionToc"><span class="number">1.2.8</span><span class="title"><a href="AmplifiersasaConcept.html#x5-150001.2.8">Symbol Convention</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-160001.3">Circuit Models for Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-170001.3.1">Voltage
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.2</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-180001.3.2">Cascaded Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-190001.3.3">Other Amplifier Types</a></span></span><span class="subsectionToc"><span class="number">1.3.4</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-200001.3.4">Relationships between
+the Four Amplifier Models</a></span></span><span class="subsectionToc"><span class="number">1.3.5</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-210001.3.5">Determining Input and Output Resistance</a></span></span><span class="subsectionToc"><span class="number">1.3.6</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-220001.3.6">Unilateral
+Models</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-230001.4">Frequency Response of Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.1</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-240001.4.1">Measuring the Amplifier Frequency
+Response</a></span></span><span class="subsectionToc"><span class="number">1.4.2</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-250001.4.2">Amplifier Bandwidth</a></span></span><span class="subsectionToc"><span class="number">1.4.3</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-260001.4.3">Evaluating the Frequency Response of
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-270001.4.4">Single-Time-Constant Networks</a></span></span><span class="subsectionToc"><span class="number">1.4.5</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-280001.4.5">Classification of Amplifiers Based
+on Frequency Response</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="OperationalAmplifiers.html#x8-290002">Operational Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-300002.1">The Ideal Op Amp</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-310002.1.1">Terminals
+of the Element</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="TheIdealOpAmp.html#x9-320002.1.2">Function and Characteristics</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="TheIdealOpAmp.html#x9-330002.1.3">Differential and Common-Mode
+Signals</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-340002.2">The Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="TheInvertingAmplifier.html#x10-350002.2.1">The Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-360002.2.2">Effect of Finite
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="TheInvertingAmplifier.html#x10-370002.2.3">Input and Output Resistances</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-380002.3">Non-Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="NonInvertingAmplifier.html#x11-390002.3.1">The
+Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="NonInvertingAmplifier.html#x11-400002.3.2">Effect of Finite Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-410002.3.3">Input and Output
+Resistance</a></span></span><span class="subsectionToc"><span class="number">2.3.4</span><span class="title"><a href="NonInvertingAmplifier.html#x11-420002.3.4">The Voltage Follower</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="DifferenceAmplifiers.html#x12-430002.4">Difference Amplifiers</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="DifferenceAmplifiers.html#x12-440002.4.1">A Single-Op-Amp
+Difference Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="DifferenceAmplifiers.html#x12-450002.4.2">A Versatile Circuit: The Instrumentation Amplifier</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-460002.5">Integrators
+and Differentiators</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-470002.5.1">The Inverting Configuration with General Impedances</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-480002.5.2">The
+Inverting Integrator</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-490002.5.3">The Op-Amp Differentiator</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="DCImperfections.html#x14-500002.6">DC Imperfections</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="DCImperfections.html#x14-510002.6.1">Offset
+Voltage</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="DCImperfections.html#x14-520002.6.2">Input Bias and Offset Currents</a></span></span><span class="subsectionToc"><span class="number">2.6.3</span><span class="title"><a href="DCImperfections.html#x14-530002.6.3">Effects of Offset of Inverting
+Integrator</a></span></span><span class="sectionToc"><span class="number">2.7</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-540002.7">Finite Open-Loop Gain and Bandwidth</a></span></span><span class="subsectionToc"><span class="number">2.7.1</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-550002.7.1">Frequency Dependence of the
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.7.2</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-560002.7.2">Frequency Response of Closed-Loop Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.8</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-570002.8">Large-Signal
+Operation of Op Amps</a></span></span><span class="subsectionToc"><span class="number">2.8.1</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-580002.8.1">Output Voltage Saturation</a></span></span><span class="subsectionToc"><span class="number">2.8.2</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-590002.8.2">Output Current Limits</a></span></span><span class="subsectionToc"><span class="number">2.8.3</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-600002.8.3">Slew
+Rate</a></span></span><span class="subsectionToc"><span class="number">2.8.4</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-610002.8.4">Full-Power Bandwidth</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Semiconductors.html#x17-620003">Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-630003.1">Semiconductor Physics</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-640003.1.1">Intrinsic
+Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="SemiconductorPhysics.html#x18-650003.1.2">Doped Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-660003.2">Current Flow in Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-670003.2.1">Drift
+Current</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-680003.2.2">Diffusion Current</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ThePNJunction.html#x20-690003.3">The PN Junction</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ThePNJunction.html#x20-700003.3.1">Implementation</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ThePNJunction.html#x20-710003.3.2">Open
+Circuit Operation</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-770003.4">PN Junction with Applied Voltage</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-780003.4.1">Qualitative Description
+of Junction Operation</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-790003.4.2">Reverse Breakdown</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-800003.5">Capacitive Effects in the pn
+Junction</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-810003.5.1">Depletion or Junction Capacitance</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-820003.5.2">Diffusion Capacitance</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="Diodes.html#x23-830004">Diodes</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="TheIdealDiode.html#x24-850004.1">The
+Ideal Diode</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="TheIdealDiode.html#x24-860004.1.1">i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="TheIdealDiode.html#x24-880004.1.2">Application: The Rectificer</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="TheIdealDiode.html#x24-890004.1.3">Application:
+Logic Gates</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-900004.2">Terminal Characteristics of Junction Diodes</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-910004.2.1">The Forward-Bias
+Region</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-920004.2.2">Reverse Bias Region</a></span></span><span class="subsectionToc"><span class="number">4.2.3</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-930004.2.3">The Breakdown Region</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-940004.3">Modelling the Diode
+Forward Characteristic</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-950004.3.1">The Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-960004.3.2">Graphical Analysis Using the
+Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-970004.3.3">The Need for Rapid Analysis</a></span></span><span class="subsectionToc"><span class="number">4.3.4</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-980004.3.4">The Constant-Voltage-Drop
+Model</a></span></span><span class="subsectionToc"><span class="number">4.3.5</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-990004.3.5">The Ideal-Diode Model</a></span></span><span class="subsectionToc"><span class="number">4.3.6</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1000004.3.6">The Small-Signal Model</a></span></span><span class="subsectionToc"><span class="number">4.3.7</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1010004.3.7">Use of the Diode
+Forward Drop in Voltage Regulation</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="ZenerDiodes.html#x27-1020004.4">Zener Diodes</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="ZenerDiodes.html#x27-1030004.4.1">Operating in the Reverse
+Breakdown Region</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="ZenerDiodes.html#x27-1040004.4.2">Specifying and Modeling the Zener Diode</a></span></span><span class="subsectionToc"><span class="number">4.4.3</span><span class="title"><a href="ZenerDiodes.html#x27-1050004.4.3">Temperature
+Effects</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1060004.5">Limiting and Clamping Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1070004.5.1">Limiter Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.2</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1080004.5.2">The Clamped Capacitor
+or DC Restorer</a></span></span><span class="subsectionToc"><span class="number">4.5.3</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1090004.5.3">The Voltage Doubler</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1100004.6">Special Diode Types</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1110004.6.1">The Schottky-Barrier
+Diode (SBD)</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1120004.6.2">Varactors</a></span></span><span class="subsectionToc"><span class="number">4.6.3</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1130004.6.3">Photodiodes</a></span></span><span class="subsectionToc"><span class="number">4.6.4</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1140004.6.4">Light Emitting Diodes</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="MOSFieldEffectTransistors.html#x30-1150005">MOS
+Field Effect Transistors</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1170005.1">Device Structure and Physical Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1180005.1.1">Device
+Structure</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1190005.1.2">Operation with Zero Gate Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1200005.1.3">Creating a Channel for
+Current Flow</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1210005.1.4">Applying a Small Drain-to-Source Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.5</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1220005.1.5">Operation as
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is
+Increased</a></span></span><span class="subsectionToc"><span class="number">5.1.6</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1230005.1.6">Channel Pinch-Off and Current Saturation</a></span></span><span class="subsectionToc"><span class="number">5.1.7</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1240005.1.7">The p-Channel
+MOSFET</a></span></span><span class="subsectionToc"><span class="number">5.1.8</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1250005.1.8">Complementary MOS or CMOS</a></span></span><span class="subsectionToc"><span class="number">5.1.9</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1260005.1.9">Operating the MOS Transistor in
+the Subthreshold Region</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1270005.2">Current-Voltage Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1280005.2.1">Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1290005.2.2">
+The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1300005.2.3">The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1310005.2.4">Finite Output Resistance in Saturation</a></span></span><span class="subsectionToc"><span class="number">5.2.5</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1320005.2.5">Characteristics
+of the p-Channel MOSFET</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MOSFETCircuitsatDC.html#x33-1330005.3">MOSFET Circuits at DC</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1340005.4">Body Effect and
+Other Topics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1350005.4.1">The Role of the Substrate - The Body Effect</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1360005.4.2">Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">5.4.3</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1370005.4.3">Breakdown and Input Protection</a></span></span><span class="subsectionToc"><span class="number">5.4.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1380005.4.4">Velocity Saturation</a></span></span><span class="subsectionToc"><span class="number">5.4.5</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1390005.4.5">Depletion-Type
+MOSFET</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="BipolarJunctionTransistors.html#x35-1400006">Bipolar Junction Transistors</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1410006.1">Physical Implementation</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1420006.1.1">Simplified
+Structure and Operation Modes</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PhysicalImplementation.html#x36-1430006.1.2">Operation of the npn Transistor in the Active
+Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PhysicalImplementation.html#x36-1500006.1.3">Structure of Actual Transistor</a></span></span><span class="subsectionToc"><span class="number">6.1.4</span><span class="title"><a href="PhysicalImplementation.html#x36-1510006.1.4">Operation in the Saturation Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.5</span><span class="title"><a href="PhysicalImplementation.html#x36-1520006.1.5">The
+pnp Transistor</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="#x37-1530006.2">The i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="#x37-1540006.2.1">Symbols and Conventions</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="#x37-1550006.2.2">Graphical
+Representation of Transistor Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.3</span><span class="title"><a href="#x37-1560006.2.3">Dependence of ic on the Collector
+Voltage - The early Effect</a></span></span><span class="subsectionToc"><span class="number">6.2.4</span><span class="title"><a href="#x37-1570006.2.4">An Alternative Form of the Common-Emitter
+Characteristics</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="BJTCircuitsatDC.html#x38-1600006.3">BJT Circuits at DC</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1610006.4">Transistor Breakdown and Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1620006.4.1">Transistor Breakdown</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x40-163000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-164000A.1">An Introduction to Scientific
+Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-165000A.1.1">A Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-166000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-169000A.1.3">Decimal Multiples
+and Sub-multiples of SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-172000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x42-173000B">Dimensional
+Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-174000B.1">Physical Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-175000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-176000B.1.2">Physical
+Quantities and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-177000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-178000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-179000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-182000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-186000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-187000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-188000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-193000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-198000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-208000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="BJTCircuitsatDC.html">BJT Circuits at DC</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="PhysicalImplementation.html">Physical Implementation</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="BipolarJunctionTransistors.html#TheivCharacteristics.html">Chapter: Bipolar Junction
+Transistors</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-6.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#section.6.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">6.2</span> <span class="title"> <a id="x37-1530006.2"></a>The i-v Characteristics</span></h3></div>
+<p class="noindent"></p><figure class="float">
+<a id="x37-153001r7"></a>
+<figcaption class="caption"><span class="id">Figure 6.7: </span><span class="content">X                                                                     </span></figcaption>
+<img alt="PIC" src="figures/Bipolar-Junction-Transistors/figures-2.png" style=""/>
+</figure>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.2.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.6.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.2.1</span> <span class="title"> <a id="x37-1540006.2.1"></a>Symbols and Conventions</span></h4></div>
+</p><p class="noindent">The physical structure used up to now explain transistor operation is rather cumbersome for use in
+drawing the schematic of a multitransistor circuit. Fortunately, a very descriptive and convenient circuit
+symbol exists for the BJT. Figure 6.12(a) shows the symbol for the <span class="alert">npn</span> transistor; the <span class="alert">pnp</span> symbol is given in
+Fig. <math display="inline"><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>2</mn><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></math>. In
+both symbols the emitter is distinguished by an arrowhead. This distinction is important because, as
+we have seen in the last section, practical BJTs are not symmetric devices.
+</p><p class="noindent">The polarity of the device-<span class="alert">npn</span> or <span class="alert">pnp</span>-is indicated by the <b>direction of the arrowhead on the emitter</b>. This
+arrowhead points in the direction of normal current flow in the emitter, which is also the forward
+direction of the base-emitter junction. Since we have adopted a drawing convention by which currents
+flow from top to bottom, we will always draw pnp transistors in the manner shown in Fig.
+<math display="inline"><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>2</mn><mo class="MathClass-open" stretchy="false">(</mo><mi>b</mi><mo class="MathClass-close" stretchy="false">)</mo></math> (i.e.,
+with their emitters on top). Figure 6.13 shows <span class="alert">npn</span> and <span class="alert">pnp</span> transistors connected to dc sources so as to operate
+in the active mode. Figure 6.13 also indicates the reference and actual directions of current
+flow throughout the transistor. Our convention will be to take the reference direction to
+coincide
+</p><p class="noindent">with the normal direction of current flow. Hence, normally, we should not encounter a negative value
+for iE , iB, or iC. The convenience of the circuit-drawing convention that we have adopted should be
+obvious from Fig. 6.13. Note that currents flow from top to bottom and that voltages are higher at the
+top and lower at the bottom. The arrowhead on the emitter also implies the polarity of the
+emitter-base voltage that should be applied in order to forward bias the emitter-base junction. Just a
+glance at the circuit symbol of the pnp transistor, for example, indicates that we should make the
+emitter higher in voltage than the base (by vEB) in order to cause current to flow into the emitter
+(downward). Note that the symbol vEB means the voltage by which the emitter (E) is higher
+than the base (B). Thus for a pnp transistor operating in the active mode vEB is positive,
+while in an npn transistor vBE is positive. From the discussion of Section 6.1 it follows
+that an npn transistor whose EBJ is forward biased (usually, VBE  0.7 V) will operate in
+the active mode as long as the collector voltage does not fall below that of the base by
+more than approximately 0.4 V. Otherwise, the transistor leaves the active mode and enters
+the saturation region of operation.5 In a parallel manner, the pnp transistor will operate
+in the active mode if the EBJ is forward biased (usually, VEB  0.7 V) and the collector
+voltage is not allowed to rise above that of the base by more than 0.4 V or so. Otherwise,
+the CBJ becomes forward biased, and the pnp transistor enters the saturation region of
+operation.
+</p>
+<div class="info-block" id="info-block-6.26"> <a class="copiable-link" href="#info-block-6.26"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 6.<a id="x37-154001r26"></a>26: </b> </span> <span class="info-title"> Collector Base Reverse Current </span> </span> <div class="body">
+<p class="noindent">In our study of current flow in transistors we ignored the small reverse currents carried by thermally
+generated minority carriers. While such currents can be safely neglected in modern transistors, the
+reverse current across the collector-base junction deserves some mention. This current, denoted as
+<math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>C</mi><mi>B</mi><mi>O</mi></mrow><mrow></mrow></msubsup></math>, is the reverse
+current flowing from collector to base with the emitter <span class="margin-block">open-circuited. <span class="margin-comment"><span class="ellipsis">[173]</span>
+<span class="sidenote">This is why we use the subscript
+<math display="inline"><mi>O</mi></math>.</span></span></span> This current
+is usually in the <math display="inline"><mstyle mathvariant="normal"><mi>n</mi><mi>A</mi></mstyle></math>
+range, a value that is many times higher than its theoretically predicted value. As with the diode reverse
+current, <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi><mi>B</mi><mi>O</mi></mrow></msub></math>
+contains a substantial leakage component, and its value is dependent on
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>B</mi></mrow></msub></math>.
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi><mi>B</mi><mi>O</mi></mrow></msub></math> depends strongly
+on temperature, approximately doubling for every 10řC rise.&lt;sup&gt;6&lt;/sup&gt; &lt;sup&gt;6&lt;/sup&gt;The temperature
+coefficient of <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi><mi>B</mi><mi>O</mi></mrow></msub></math> is
+different from that of <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+because <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi><mi>B</mi><mi>O</mi></mrow></msub></math>
+contains a substantial leakage component.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.2.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.6.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.2.2</span> <span class="title"> <a id="x37-1550006.2.2"></a>Graphical Representation of Transistor Characteristics</span></h4></div>
+</p><p class="noindent">It is sometimes useful to describe the transistor
+<math display="inline"><mi>i</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>v</mi></math> characteristics graphically.
+Figure 6.16 shows the <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+characteristic, which is the exponential relationship
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>T</mi></mrow></msub></mrow></msup></math> which is identical to the
+diode <i>i</i>-<span class="alert">v</span> relationship. The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>E</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+characteristics are also exponential but with different scale currents:
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mi>α</mi></math> for
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>E</mi></mrow></msub></math>, and
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mi>β</mi></math> for
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>B</mi></mrow></msub></math>. Since the constant of the
+exponential characteristic, <math display="inline"><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>T</mi></mrow></msub></math>,
+is quite high (<math display="inline"> <mi>≃</mi></math> 40), the curve
+rises very sharply. For <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+smaller than about 0.5 V, the current is negligibly small. Also, over most of the normal current range
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math> lies in
+the range of 0.6 V to 0.8 V. In performing rapid first-order dc calculations, we normally will assume
+that <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub> <mi>≃</mi> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn><mstyle class="text"><mtext> V</mtext></mstyle></math>,
+which is similar to the approach used in the analysis of diode circuits (Chapter 4). For a <span class="alert">pnp</span> transistor, the
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>E</mi><mi>B</mi></mrow></msub></math> characteristic will look identical
+to that of Fig. 6.16 with <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+replaced with <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>E</mi><mi>B</mi></mrow></msub></math>.
+</p><p class="noindent"><b>Figure 6.16</b> The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+characteristic for an <span class="alert">npn</span> <b>Figure 6.17</b> Effect of temperature on the
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+</p><p class="noindent">As in silicon diodes, the voltage across the emitter-base junction decreases by about
+2 mV for each rise of 1řC in temperature, provided the junction is operating at a
+constant current. Figure 6.17 illustrates this temperature dependence by depicting
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math> curves
+for an <span class="alert">npn</span> transistor at three different temperatures.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.2.3"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.6.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.2.3</span> <span class="title"> <a id="x37-1560006.2.3"></a>Dependence of ic on the Collector Voltage - The early Effect</span></h4></div>
+</p><p class="noindent">When operated in the active region, practical BJTs show some dependence of the collector
+current on the collector voltage, with the result that, unlike the graph shown in Fig. 6.8, their
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>B</mi></mrow></msub></math>
+characteristics are not perfectly horizontal straight lines. To see this dependence more
+</p><p class="noindent"><b>Figure 6.18</b> (a) Conceptual circuit for measuring the
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> characteristics of
+the BJT. (b) The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+</p><p class="noindent">clearly, consider the conceptual circuit shown in Fig. 6.18(a). The transistor is connected in the common-emitter
+configuration; that is, here the emitter serves as a common terminal between the input and output ports. The
+voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+can be set to any desired value by adjusting the dc source connected between base and emitter. At each value
+of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>, the
+corresponding <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+characteristic curve can be measured point by point by varying the dc source connected between
+collector and emitter and measuring the corresponding collector current. The result is the family of
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+characteristic curves shown in Fig. 6.18(b) and known as common-emitter characteristics.
+</p><p class="noindent">At low values of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+(lower than about 0.3 V), as the collector voltage goes below that of the base by more than
+0.4 V, the collector-base junction becomes forward biased and the transistor leaves the
+active mode and enters the saturation mode. Shortly, we shall look at the details of the
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub></math>-<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+curves in the saturation region. At this time, however, we wish to examine the characteristic curves in
+the active region in detail. We observe that the characteristic curves, though still straight lines, have
+finite slope. In fact, when extrapolated, the characteristic lines meet at a point on the negative
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> axis, at
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math>. The
+voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math>, a
+positive number, is a parameter for the particular BJT, with typical values in the range of 10 V to 100
+V. As noted earlier, it is called the <b>Early voltage</b>, after J. M. Early, the engineering scientist who first
+studied this phenomenon.
+</p><p class="noindent">At a given value of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>,
+increasing <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> increases
+the reverse-bias voltage on the collector-base junction, and thus increases the width of the depletion region of this
+junction (refer to Fig. 6.4). This in turn results in a decrease in the <b>effective base width</b> W. Recalling that
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub></math> is inversely proportional to
+W (Eq. 6.13), we see that <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+will increase and that <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub></math>
+increases proportionally. This is the Early effect. For obvious reasons,
+it is also known as the base-width modulation effect.&lt;sup&gt;8&lt;/sup&gt;
+<math display="inline"><mi>β</mi></math>Recall
+that the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation
+of silicon. It has an insulated gate, the voltage of which determines the conductivity of
+the device. This ability to change conductivity with the amount of applied voltage can be
+used for amplifying or switching electronic signals. The term metalinsulatorsemiconductor
+field-effect transistor (MISFET) is almost synonymous with MOSFET. Another near-synonym is
+insulated-gate field-effect transistor (IGFET).</a></span></span></span>’s counterpart is the channel-length modulation effect.
+These two effects are remarkably similar and have been assigned the same name, Early
+effect.
+The linear dependence of <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub></math> on
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> can be explicitly accounted
+for by assuming that <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub></math> remains
+constant and including the factor <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>
+in the equation for <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub></math>
+as follows: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x37-156001r15"></mstyle>
+<msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>S</mi></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>T</mi></mrow></msub>
+</mrow></msup> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(6.15)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The nonzero slope of the <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+straight lines indicates that the <b>output resistance</b> looking into the collector is not infinite. Rather, it
+is finite and defined by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x37-156002r16"></mstyle>
+<msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mi>≡</mi><msup><mrow> <mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mrow><mo fence="true" form="prefix"></mo><mrow> <mfrac><mrow><mi>∂</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub></mrow>
+<mrow>
+<mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow><mrow><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>p</mi><mi>c</mi></mrow></msub><mo class="MathClass-rel" stretchy="false">=</mo><mstyle class="text"><mtext>constant</mtext></mstyle></mrow></msub></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup>
+</math></td><td class="eq-no">(6.16)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Using Eq. <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>8</mn><mo class="MathClass-close" stretchy="false">)</mo></math>
+we can show that </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x37-156003r17"></mstyle>
+<msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>I</mi></mrow><mrow><mi>C</mi></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(6.17)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+are the coordinates of the point at which the BJT is operating on the particular
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> curve (i.e., the curve
+obtained for <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math> equal
+to constant value <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+at which Eq. (6.19) is evaluated). Alternatively, we can write </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x37-156004r18"></mstyle>
+<msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></mrow>
+<mrow><msup><mrow>
+<mi>I</mi></mrow><mrow><mi>′</mi></mrow></msup></mrow></mfrac>
+</math></td><td class="eq-no">(6.18)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow><mrow><mi>′</mi></mrow></msubsup></math>
+is the value of the collector current with the Early effect neglected; that is, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x37-156005r19"></mstyle>
+<msubsup><mrow><mi>I</mi></mrow><mrow><mi>C</mi></mrow><mrow><mi>′</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow>
+<mi>s</mi></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>T</mi></mrow></msub>
+</mrow></msup>
+</math></td><td class="eq-no">(6.19)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">It is rarely necessary to include the dependence of
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub></math> on
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> in
+dc bias design and analysis that is performed by hand. Such an effect, however, can
+be easily included in the SPICE simulation of circuit operation, which is frequently
+used to "fine-tune" pencil-and-paper analysis or design. The finite output resistance
+<math display="inline"><mi>r</mi><mi>o</mi></math> can
+have a significant effect on the gain of transistor amplifiers. This is particularly the case in
+integrated-circuit amplifiers, as will be shown in Chapter 8. Fortunately, there are many situations in
+which <math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>a</mi></mrow></msub></math>
+can be included relatively easily in pencil-and-paper analysis. The output resistance
+<math display="inline"><mi>r</mi><mi>o</mi></math> can be
+included in the circuit model of the transistor.&lt;sup&gt;9&lt;/sup&gt; This is illustrated in Fig. 6.19, where we
+show the two large-signal circuit models of a
+</p><p class="noindent">Figure 6.19 Large-signal, equivalent-circuit models of an npn BJT operating in
+the active mode in the common-emitter configuration with the output resistance
+<math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>a</mi></mrow></msub></math>
+included.
+</p><p class="noindent">common-emitter <span class="alert">npn</span> transistor operating in the active mode, those in Fig
+<math display="inline"><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><mo class="MathClass-open" stretchy="false">(</mo><mi>c</mi><mo class="MathClass-close" stretchy="false">)</mo></math> and (d), with
+the resistance <math display="inline"><mi>r</mi><mi>e</mi></math>
+connected between the collector and the emitter terminals.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-6.2.4"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.6.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">6.2.4</span> <span class="title"> <a id="x37-1570006.2.4"></a>An Alternative Form of the Common-Emitter Characteristics</span></h4></div>
+</p><p class="noindent">An alternative way of expressing the transistor common-emitter characteristics is illustrated in Fig. 6.20. Here the base
+current <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>B</mi></mrow></msub></math> rather than the
+base-emitter voltage <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math> is used
+as a parameter. That is, each <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+curve is measured with the base fed with a constant current
+<math display="inline"><mi>I</mi><mi>B</mi></math>.
+The resulting characteristics, shown in Fig. 6.20(b), look similar to those in Fig.
+<math display="inline"><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>8</mn></math>. Figure
+<math display="inline"><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><mn>0</mn><mo class="MathClass-open" stretchy="false">(</mo><mi>c</mi><mo class="MathClass-close" stretchy="false">)</mo></math> shows
+an expanded view of the characteristics in the saturation region.
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x37-158000"></a>The Common-Emitter Current Gain <math display="inline"><mi>β</mi></math></span>
+In the active region of the characteristics shown in Fig. 6.20(b) we have identified a particular
+point Q. Note that this operating point for the transistor is characterized by a base current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>, a collector current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi></mrow></msub></math>, and a collector-emitter
+voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>. The ratio
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math> is the transistor
+<math display="inline"><mi>β</mi></math>. However, there is another way
+to measure <math display="inline"><mi>β</mi></math>: change the base
+current by an increment <math display="inline"><mi mathvariant="normal">Δ</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>R</mi></mrow></msub></math> and
+measure the resulting increment <math display="inline"><mi mathvariant="normal">Δ</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub></math>,
+while keeping <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math> constant. This is
+illustrated in Fig. 6.20(b). The ratio <math display="inline"><mi mathvariant="normal">Δ</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>C</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mi mathvariant="normal">Δ</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>B</mi></mrow></msub></math>
+should, according to our study thus far, yield an identical value for
+<math display="inline"><mi>β</mi></math>. It turns out, however,
+that the latter value of <math display="inline"><mi>β</mi></math>
+(called <span class="alert">incremental</span>, or ac, <math display="inline"><mi>β</mi></math>) is a little
+different from the dc <math display="inline"><mi>β</mi></math>
+(i.e., <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>).
+Such a distinction, however, is too subtle for our needs in this book. We shall use
+<math display="inline"><mi>β</mi></math> to
+denote both dc and incremental values.&lt;sup&gt;10&lt;/sup&gt;
+</p>
+<p class="noindent"><span class="paragraphHead"> <a id="x37-159000"></a>The Saturation Voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi><mi>s</mi><mi>a</mi><mi>t</mi></mrow></msub></math>
+and Saturation Resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>C</mi><mi>E</mi><mi>s</mi><mi>a</mi><mi>t</mi></mrow></msub></math></span>
+Refer next to the expanded view of the common-emitter characteristics in the saturation region shown
+in Fig. <math display="inline"><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><mn>0</mn><mo class="MathClass-open" stretchy="false">(</mo><mi>c</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.
+The "bunching together" of the curves in the saturation region implies that the incremental
+<math display="inline"><mi>β</mi></math>
+is lower there than in the active region. A possible operating point in the
+saturation region is that labeled X. It is characterized by a base current
+<math display="inline"><mi>I</mi><mi>B</mi></math>, a collector current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext>Csat</mtext></mstyle></mrow></msub></math>, and a collector-emitter voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext>CEsat</mtext></mstyle></mrow></msub></math>. From our previous discussion
+of saturation, recall that <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mstyle class="text"><mtext>Cast</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>β</mi></mrow><mrow><mstyle class="text"><mtext>forced</mtext></mstyle></mrow></msub><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>, where
+<math display="inline"><msub><mrow><mi>β</mi></mrow><mrow><mstyle class="text"><mtext>forced</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <mi>β</mi></math>. &lt;sup&gt;10&lt;/sup&gt;Manufacturers
+of bipolar transistors use <math display="inline"><msub><mrow><mi>h</mi></mrow><mrow><mi>F</mi><mi>E</mi></mrow></msub></math>
+to denote the dc value of <math display="inline"><mi>β</mi></math>
+and <math display="inline"><msub><mrow><mi>h</mi></mrow><mrow><mi>f</mi><mi>e</mi></mrow></msub></math> to denote
+the incremental <math display="inline"><mi>β</mi></math>.
+These symbols come from the h-parameter description of two-port networks (see Appendix C), with the subscript
+<math display="inline"><mi>F</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>f</mi><mo class="MathClass-close" stretchy="false">)</mo></math> denoting
+forward and <math display="inline"><mi>E</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>e</mi><mo class="MathClass-close" stretchy="false">)</mo></math>
+denoting common emitter.
+</p><p class="noindent">Figure 6.20 Common-emitter characteristics. (a) Basic CE circuit; note that in (b)
+the horizontal scale is expanded around the origin to show the saturation region in
+some detail. A much greater expansion of the saturation region is shown in (c). The
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>c</mi></mrow></msub></math>-<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+curves in saturation are rather steep, indicating that the saturated transistor exhibits a low collector-to-emitter
+resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>CEsat</mtext></mstyle></mrow></msub></math>,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x37-159001r20"></mstyle><msub><mrow><mi>R</mi></mrow><mrow><i><mstyle class="text"><mtext>CEsat</mtext></mstyle></i></mrow></msub> <mi>≡</mi> <mfrac>
+<mrow>
+<mi>∂</mi><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>v</mi></mrow><mrow><i><mstyle class="text"><mtext>CE</mtext></mstyle></i></mrow></msub></mrow>
+<mrow><mi>∂</mi><mspace class="thinspace" width="0.17em"></mspace><msub><mrow><mi>i</mi></mrow><mrow>
+<i><mstyle class="text"><mtext>C</mtext></mstyle></i></mrow></msub></mrow></mfrac><msub><mrow> <mstyle mathsize="2.45em"><mrow><mo fence="true" form="prefix">|</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle></mrow><mrow>
+<mtable class="subarray-c" columnalign="center" rowspacing="0"><mtr><mtd><msub><mrow><mi>i</mi></mrow><mrow><i><mstyle class="text"><mtext>B</mtext></mstyle></i></mrow></msub><mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mi>I</mi></mrow><mrow><i><mstyle class="text"><mtext>B</mtext></mstyle></i></mrow></msub>
+</mtd></mtr><mtr><mtd><msub><mrow><mi>i</mi></mrow><mrow><i><mstyle class="text"><mtext>C</mtext></mstyle></i></mrow></msub><mo class="MathClass-rel" stretchy="false">=</mo><msub><mrow><mi>I</mi></mrow><mrow><i><mstyle class="text"><mtext>Csa</mtext></mstyle></i></mrow></msub></mtd></mtr> </mtable></mrow></msub>
+</math></td><td class="eq-no">(6.20)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Typically, <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>CEsat</mtext></mstyle></mrow></msub></math>
+ranges from a few ohms to a few tens of ohms.
+</p><p class="noindent">Figure 6.21 A simplified equivalent-circuit model of the saturated transistor. That the
+collector-to-emitter resistance of a saturated BJT is small should have been anticipated from the fact
+that between C and E we now have two forward-conducting diodes in series&lt;sup&gt;11&lt;/sup&gt;
+(see also Fig. 6.9). A simple model for the saturated BJT is shown in Fig. 6.21. Here
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math> is assumed constant
+(approximately 0.7 V) and <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></math>
+also is assumed constant, <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi><mi>s</mi><mi>a</mi><mi>t</mi></mrow></msub> <mi>≃</mi> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn></math>
+V. That is, we have neglected the small saturation resistance
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mstyle class="text"><mtext>CEsat</mtext></mstyle></mrow></msub></math> for the
+sake of making the model simple for hand calculations.
+</p><p class="noindent">2]     </p> <a id="x37-159002r2"></a> <div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 6.2: </b> </span> <span class="exer-title"> Determining Base Voltage </span> </span> <div class="body">
+<p class="noindent">For the circuit below, we need to determine the value of the voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub></math> that
+results in the transistor operating:
+</p>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="/Users/danielmcguiness/GitHub/MCI-Source-Files/SRC-MSc-Non-Linear-Electronics/Lecture-Documents/Tutorial-Book/figures/Bipolar-Junction-Transistors/figures-3.png" style=""/> <a id="x37-159003r8"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 6.8: </span><span class="content">Circuit diagram for the question “Determining Base Voltage”.                             </span></figcaption>
+</figure>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+a. 
+</dt><dd class="enumerate-enumitem">in the active mode with <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn></math>
+V
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">at the edge of saturation
+</dd>
+<dt class="enumerate-enumitem">
+c. 
+</dt><dd class="enumerate-enumitem">deep in saturation with <math display="inline"><msub><mrow><mi>β</mi></mrow><mrow><mstyle class="text"><mtext>forced</mtext></mstyle></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>0</mn></math></dd></dl>
+<p class="noindent">To keep things simple, assume that <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub></math>
+remains constant at 0.7 V. The transistor <math display="inline"><mi>β</mi></math>
+is specified to be 50.
+</p>
+<hr/>
+<p class="noindent">The solution is as follows:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+a. 
+</dt><dd class="enumerate-enumitem">To operate in the active mode with <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn></math>
+V,
+<math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>c</mi><mi>c</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn><mn>0</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>5</mn></mrow>
+<mrow>
+<mn>1</mn><mstyle class="text"><mtext> k</mtext></mstyle><mi mathvariant="normal">Ω</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>5</mn><mi>m</mi><mi>A</mi><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi></mrow></msub></mrow>
+<mrow>
+<mi>β</mi></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>5</mn></mrow>
+<mrow>
+<mn>5</mn><mn>0</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mstyle class="text"><mtext> mA</mtext></mstyle><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">Now the required value of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub></math>
+can be found as follows: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub><msub><mrow><mi>R</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>E</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn> <mi>×</mi> <mn>1</mn><mn>0</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn><mi>V</mi>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+b. 
+</dt><dd class="enumerate-enumitem">Operation at the edge of saturation is obtained with
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>E</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>3</mn></math>
+V. Thus <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn><mn>0</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>3</mn></mrow>
+<mrow>
+<mn>1</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>9</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn><mstyle class="text"><mtext> mA</mtext></mstyle>
+</math></td></tr></table>
+<p class="noindent">Since, at the edge of saturation, <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math> are still
+related by <math display="inline"><mi>β</mi></math>,
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>9</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn></mrow>
+<mrow>
+<mn>5</mn><mn>0</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>9</mn><mn>4</mn><mstyle class="text"><mtext> mA</mtext></mstyle>
+</math></td></tr></table>
+<p class="noindent">The required value of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub></math>
+can be determined as </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>9</mn><mn>4</mn> <mi>×</mi> <mn>1</mn><mn>0</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>6</mn><mn>4</mn><mi>V</mi>
+</math></td></tr></table>
+</dd>
+<dt class="enumerate-enumitem">
+c. 
+</dt><dd class="enumerate-enumitem">To operate deep in saturation, <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>F</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>C</mi><mi>F</mi><mi>s</mi><mi>a</mi><mi>t</mi></mrow></msub> <mi>≃</mi> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><mi>V</mi>
+</math></td></tr></table>
+<p class="noindent">Thus, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn><mn>0</mn> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn></mrow>
+<mrow>
+<mn>1</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>9</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>8</mn><mstyle class="text"><mtext> mA</mtext></mstyle>
+</math></td></tr></table>
+<p class="noindent">We then use the value of forced <math display="inline"><mi>β</mi></math> to
+determine the required value of <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math>
+as </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>I</mi></mrow><mrow><mi>C</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>β</mi></mrow><mrow><mstyle class="text"><mtext>forced</mtext></mstyle></mrow></msub></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>9</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>8</mn></mrow>
+<mrow>
+<mn>1</mn><mn>0</mn></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>8</mn><mstyle class="text"><mtext> mA</mtext></mstyle>
+</math></td></tr></table>
+<p class="noindent">and the required <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub></math>
+can now be found as </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>9</mn><mn>8</mn> <mi>×</mi> <mn>1</mn><mn>0</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>0</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn><mi>V</mi>
+</math></td></tr></table>
+<p class="noindent">Please observe that once the transistor is in saturation, increasing
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>B</mi><mi>B</mi></mrow></msub></math> and thus
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>B</mi></mrow></msub></math> results in negligible
+change in <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub></math> since
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mstyle class="text"><mtext>CEsat</mtext></mstyle></mrow></msub></math> will change only
+slightly. Thus <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>c</mi></mrow></msub></math>
+is said to <span class="alert">saturate</span>, which is the origin of the name “saturation mode of operation”.</p></dd></dl>
+<p class="noindent"></p></div> </div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mosfet">¶</a>
+<dt class="acr-bottom" id="glo:mosfet"><span class="acr-short">MOSFET</span><span class="acr-long">Metal-Oxide Semiconductor Field-Effect Transistor</span></dt>
+<dd class="acr-desc"><p>In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation
+of silicon. It has an insulated gate, the voltage of which determines the conductivity of
+the device. This ability to change conductivity with the amount of applied voltage can be
+used for amplifying or switching electronic signals. The term metalinsulatorsemiconductor
+field-effect transistor (MISFET) is almost synonymous with MOSFET. Another near-synonym is
+insulated-gate field-effect transistor (IGFET).</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="BJTCircuitsatDC.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="PhysicalImplementation.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="BipolarJunctionTransistors.html#TheivCharacteristics.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 6.2: The i-v Characteristics</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

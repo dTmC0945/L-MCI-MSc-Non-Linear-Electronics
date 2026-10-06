@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Current-Voltage Characteristics</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Non-Linear Electronics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2025.WS</span>
+<span class="header-chapter">MOS Field Effect Transistors</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="SignalsandAmplifiers.html#x3-20001">Signals and Amplifiers</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-30001.1">Fundamentals of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-40001.1.1">Proper Definition</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="FundamentalsofSignals.html#x4-50001.1.2">Frequency
+Spectrum of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="FundamentalsofSignals.html#x4-60001.1.3">Analog and Digital Signals</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-70001.2">Amplifiers as a Concept</a></span></span><span class="subsectionToc"><span class="number">1.2.1</span><span class="title"><a href="AmplifiersasaConcept.html#x5-80001.2.1">Signal
+Amplification</a></span></span><span class="subsectionToc"><span class="number">1.2.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-90001.2.2">Amplifier Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">1.2.3</span><span class="title"><a href="AmplifiersasaConcept.html#x5-100001.2.3">Voltage Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.4</span><span class="title"><a href="AmplifiersasaConcept.html#x5-110001.2.4">Power Gain and Current
+Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.5</span><span class="title"><a href="AmplifiersasaConcept.html#x5-120001.2.5">Expressing Gain in Decibels</a></span></span><span class="subsectionToc"><span class="number">1.2.6</span><span class="title"><a href="AmplifiersasaConcept.html#x5-130001.2.6">The Amplifier Power Supplies</a></span></span><span class="subsectionToc"><span class="number">1.2.7</span><span class="title"><a href="AmplifiersasaConcept.html#x5-140001.2.7">Amplifier
+Saturation</a></span></span><span class="subsectionToc"><span class="number">1.2.8</span><span class="title"><a href="AmplifiersasaConcept.html#x5-150001.2.8">Symbol Convention</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-160001.3">Circuit Models for Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-170001.3.1">Voltage
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.2</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-180001.3.2">Cascaded Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-190001.3.3">Other Amplifier Types</a></span></span><span class="subsectionToc"><span class="number">1.3.4</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-200001.3.4">Relationships between
+the Four Amplifier Models</a></span></span><span class="subsectionToc"><span class="number">1.3.5</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-210001.3.5">Determining Input and Output Resistance</a></span></span><span class="subsectionToc"><span class="number">1.3.6</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-220001.3.6">Unilateral
+Models</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-230001.4">Frequency Response of Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.1</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-240001.4.1">Measuring the Amplifier Frequency
+Response</a></span></span><span class="subsectionToc"><span class="number">1.4.2</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-250001.4.2">Amplifier Bandwidth</a></span></span><span class="subsectionToc"><span class="number">1.4.3</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-260001.4.3">Evaluating the Frequency Response of
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-270001.4.4">Single-Time-Constant Networks</a></span></span><span class="subsectionToc"><span class="number">1.4.5</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-280001.4.5">Classification of Amplifiers Based
+on Frequency Response</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="OperationalAmplifiers.html#x8-290002">Operational Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-300002.1">The Ideal Op Amp</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-310002.1.1">Terminals
+of the Element</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="TheIdealOpAmp.html#x9-320002.1.2">Function and Characteristics</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="TheIdealOpAmp.html#x9-330002.1.3">Differential and Common-Mode
+Signals</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-340002.2">The Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="TheInvertingAmplifier.html#x10-350002.2.1">The Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-360002.2.2">Effect of Finite
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="TheInvertingAmplifier.html#x10-370002.2.3">Input and Output Resistances</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-380002.3">Non-Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="NonInvertingAmplifier.html#x11-390002.3.1">The
+Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="NonInvertingAmplifier.html#x11-400002.3.2">Effect of Finite Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-410002.3.3">Input and Output
+Resistance</a></span></span><span class="subsectionToc"><span class="number">2.3.4</span><span class="title"><a href="NonInvertingAmplifier.html#x11-420002.3.4">The Voltage Follower</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="DifferenceAmplifiers.html#x12-430002.4">Difference Amplifiers</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="DifferenceAmplifiers.html#x12-440002.4.1">A Single-Op-Amp
+Difference Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="DifferenceAmplifiers.html#x12-450002.4.2">A Versatile Circuit: The Instrumentation Amplifier</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-460002.5">Integrators
+and Differentiators</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-470002.5.1">The Inverting Configuration with General Impedances</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-480002.5.2">The
+Inverting Integrator</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-490002.5.3">The Op-Amp Differentiator</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="DCImperfections.html#x14-500002.6">DC Imperfections</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="DCImperfections.html#x14-510002.6.1">Offset
+Voltage</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="DCImperfections.html#x14-520002.6.2">Input Bias and Offset Currents</a></span></span><span class="subsectionToc"><span class="number">2.6.3</span><span class="title"><a href="DCImperfections.html#x14-530002.6.3">Effects of Offset of Inverting
+Integrator</a></span></span><span class="sectionToc"><span class="number">2.7</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-540002.7">Finite Open-Loop Gain and Bandwidth</a></span></span><span class="subsectionToc"><span class="number">2.7.1</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-550002.7.1">Frequency Dependence of the
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.7.2</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-560002.7.2">Frequency Response of Closed-Loop Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.8</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-570002.8">Large-Signal
+Operation of Op Amps</a></span></span><span class="subsectionToc"><span class="number">2.8.1</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-580002.8.1">Output Voltage Saturation</a></span></span><span class="subsectionToc"><span class="number">2.8.2</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-590002.8.2">Output Current Limits</a></span></span><span class="subsectionToc"><span class="number">2.8.3</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-600002.8.3">Slew
+Rate</a></span></span><span class="subsectionToc"><span class="number">2.8.4</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-610002.8.4">Full-Power Bandwidth</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Semiconductors.html#x17-620003">Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-630003.1">Semiconductor Physics</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-640003.1.1">Intrinsic
+Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="SemiconductorPhysics.html#x18-650003.1.2">Doped Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-660003.2">Current Flow in Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-670003.2.1">Drift
+Current</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-680003.2.2">Diffusion Current</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ThePNJunction.html#x20-690003.3">The PN Junction</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ThePNJunction.html#x20-700003.3.1">Implementation</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ThePNJunction.html#x20-710003.3.2">Open
+Circuit Operation</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-770003.4">PN Junction with Applied Voltage</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-780003.4.1">Qualitative Description
+of Junction Operation</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-790003.4.2">Reverse Breakdown</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-800003.5">Capacitive Effects in the pn
+Junction</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-810003.5.1">Depletion or Junction Capacitance</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-820003.5.2">Diffusion Capacitance</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="Diodes.html#x23-830004">Diodes</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="TheIdealDiode.html#x24-850004.1">The
+Ideal Diode</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="TheIdealDiode.html#x24-860004.1.1">i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="TheIdealDiode.html#x24-880004.1.2">Application: The Rectificer</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="TheIdealDiode.html#x24-890004.1.3">Application:
+Logic Gates</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-900004.2">Terminal Characteristics of Junction Diodes</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-910004.2.1">The Forward-Bias
+Region</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-920004.2.2">Reverse Bias Region</a></span></span><span class="subsectionToc"><span class="number">4.2.3</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-930004.2.3">The Breakdown Region</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-940004.3">Modelling the Diode
+Forward Characteristic</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-950004.3.1">The Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-960004.3.2">Graphical Analysis Using the
+Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-970004.3.3">The Need for Rapid Analysis</a></span></span><span class="subsectionToc"><span class="number">4.3.4</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-980004.3.4">The Constant-Voltage-Drop
+Model</a></span></span><span class="subsectionToc"><span class="number">4.3.5</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-990004.3.5">The Ideal-Diode Model</a></span></span><span class="subsectionToc"><span class="number">4.3.6</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1000004.3.6">The Small-Signal Model</a></span></span><span class="subsectionToc"><span class="number">4.3.7</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1010004.3.7">Use of the Diode
+Forward Drop in Voltage Regulation</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="ZenerDiodes.html#x27-1020004.4">Zener Diodes</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="ZenerDiodes.html#x27-1030004.4.1">Operating in the Reverse
+Breakdown Region</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="ZenerDiodes.html#x27-1040004.4.2">Specifying and Modeling the Zener Diode</a></span></span><span class="subsectionToc"><span class="number">4.4.3</span><span class="title"><a href="ZenerDiodes.html#x27-1050004.4.3">Temperature
+Effects</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1060004.5">Limiting and Clamping Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1070004.5.1">Limiter Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.2</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1080004.5.2">The Clamped Capacitor
+or DC Restorer</a></span></span><span class="subsectionToc"><span class="number">4.5.3</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1090004.5.3">The Voltage Doubler</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1100004.6">Special Diode Types</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1110004.6.1">The Schottky-Barrier
+Diode (SBD)</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1120004.6.2">Varactors</a></span></span><span class="subsectionToc"><span class="number">4.6.3</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1130004.6.3">Photodiodes</a></span></span><span class="subsectionToc"><span class="number">4.6.4</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1140004.6.4">Light Emitting Diodes</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="MOSFieldEffectTransistors.html#x30-1150005">MOS
+Field Effect Transistors</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1170005.1">Device Structure and Physical Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1180005.1.1">Device
+Structure</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1190005.1.2">Operation with Zero Gate Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1200005.1.3">Creating a Channel for
+Current Flow</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1210005.1.4">Applying a Small Drain-to-Source Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.5</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1220005.1.5">Operation as
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is
+Increased</a></span></span><span class="subsectionToc"><span class="number">5.1.6</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1230005.1.6">Channel Pinch-Off and Current Saturation</a></span></span><span class="subsectionToc"><span class="number">5.1.7</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1240005.1.7">The p-Channel
+MOSFET</a></span></span><span class="subsectionToc"><span class="number">5.1.8</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1250005.1.8">Complementary MOS or CMOS</a></span></span><span class="subsectionToc"><span class="number">5.1.9</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1260005.1.9">Operating the MOS Transistor in
+the Subthreshold Region</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="#x32-1270005.2">Current-Voltage Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="#x32-1280005.2.1">Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="#x32-1290005.2.2">
+The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="#x32-1300005.2.3">The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="#x32-1310005.2.4">Finite Output Resistance in Saturation</a></span></span><span class="subsectionToc"><span class="number">5.2.5</span><span class="title"><a href="#x32-1320005.2.5">Characteristics
+of the p-Channel MOSFET</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MOSFETCircuitsatDC.html#x33-1330005.3">MOSFET Circuits at DC</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1340005.4">Body Effect and
+Other Topics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1350005.4.1">The Role of the Substrate - The Body Effect</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1360005.4.2">Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">5.4.3</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1370005.4.3">Breakdown and Input Protection</a></span></span><span class="subsectionToc"><span class="number">5.4.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1380005.4.4">Velocity Saturation</a></span></span><span class="subsectionToc"><span class="number">5.4.5</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1390005.4.5">Depletion-Type
+MOSFET</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="BipolarJunctionTransistors.html#x35-1400006">Bipolar Junction Transistors</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1410006.1">Physical Implementation</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1420006.1.1">Simplified
+Structure and Operation Modes</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PhysicalImplementation.html#x36-1430006.1.2">Operation of the npn Transistor in the Active
+Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PhysicalImplementation.html#x36-1500006.1.3">Structure of Actual Transistor</a></span></span><span class="subsectionToc"><span class="number">6.1.4</span><span class="title"><a href="PhysicalImplementation.html#x36-1510006.1.4">Operation in the Saturation Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.5</span><span class="title"><a href="PhysicalImplementation.html#x36-1520006.1.5">The
+pnp Transistor</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1530006.2">The i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="TheivCharacteristics.html#x37-1540006.2.1">Symbols and Conventions</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1550006.2.2">Graphical
+Representation of Transistor Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.3</span><span class="title"><a href="TheivCharacteristics.html#x37-1560006.2.3">Dependence of ic on the Collector
+Voltage - The early Effect</a></span></span><span class="subsectionToc"><span class="number">6.2.4</span><span class="title"><a href="TheivCharacteristics.html#x37-1570006.2.4">An Alternative Form of the Common-Emitter
+Characteristics</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="BJTCircuitsatDC.html#x38-1600006.3">BJT Circuits at DC</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1610006.4">Transistor Breakdown and Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1620006.4.1">Transistor Breakdown</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x40-163000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-164000A.1">An Introduction to Scientific
+Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-165000A.1.1">A Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-166000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-169000A.1.3">Decimal Multiples
+and Sub-multiples of SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-172000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x42-173000B">Dimensional
+Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-174000B.1">Physical Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-175000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-176000B.1.2">Physical
+Quantities and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-177000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-178000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-179000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-182000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-186000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-187000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-188000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-193000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-198000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-208000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="MOSFETCircuitsatDC.html">MOSFET Circuits at DC</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="DeviceStructureandPhysicalOperation.html">Device Structure and Physical Operation</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="MOSFieldEffectTransistors.html#CurrentVoltageCharacteristics.html">Chapter: MOS Field Effect
+Transistors</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-5.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#section.5.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">5.2</span> <span class="title"> <a id="x32-1270005.2"></a>Current-Voltage
+Characteristics</span></h3></div>
+<p class="noindent">Building on the physical foundation established in the previous section for the operation of the
+enhancement MOS transistor, in this section we present its complete current-voltage characteristics.
+These characteristics can be measured at dc or at low frequencies and thus are called static
+characteristics. The dynamic effects that limit the operation of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide
+Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the metaloxidesemiconductor field-effect transistor
+(MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor
+(FET), most commonly fabricated by the controlled oxidation of silicon. It has an insulated
+gate, the voltage of which determines the conductivity of the device. This ability to change
+conductivity with the amount of applied voltage can be used for amplifying or switching
+electronic signals. The term metalinsulatorsemiconductor field-effect transistor (MISFET) is
+almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect
+transistor (IGFET).</a></span></span></span> at high frequencies and high switching speeds will be discussed in Chapter
+10.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.5.2.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.1</span> <span class="title"> <a id="x32-1280005.2.1"></a>Circuit Symbol</span></h4></div>
+</p><p class="noindent"><b>Fig.</b> <a href="#x32-132001r9">5.9</a>a shows the circuit symbol for the <i>n</i>-channel enhancement-type <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide
+Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the metaloxidesemiconductor field-effect transistor
+(MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor (FET), most
+commonly fabricated by the controlled oxidation of silicon. It has an insulated gate, the voltage of
+which determines the conductivity of the device. This ability to change conductivity with the
+amount of applied voltage can be used for amplifying or switching electronic signals. The term
+metalinsulatorsemiconductor field-effect transistor (MISFET) is almost synonymous with MOSFET.
+Another near-synonym is insulated-gate field-effect transistor (IGFET).</a></span></span></span>. Please observe that the
+spacing between the two (<span class="alert">2</span>) vertical lines that represent the gate and the channel indicates the fact that
+the gate electrode is insulated from the body of the device. The polarity of the <span class="alert">p</span>-type substrate (body)
+and the <i>n</i> channel is indicated by the arrowhead on the line representing the body (B).
+This arrowhead also indicates the polarity of the transistor, namely, that it is an <i>n</i>-channel
+device.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Although the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation of
+silicon. It has an insulated gate, the voltage of which determines the conductivity of the device. This
+ability to change conductivity with the amount of applied voltage can be used for amplifying or
+switching electronic signals. The term metalinsulatorsemiconductor field-effect transistor (MISFET) is
+almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect transistor
+(IGFET).</a></span></span></span> is a symmetrical device, it is often useful in circuit design to designate one terminal as the
+source and the other as the <span class="margin-block">drain <span class="margin-comment"><span class="ellipsis">[143]</span>
+<span class="sidenote">without having to write S and D beside the terminals.</span></span></span>
+</p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x32-128001r6"></a>
+<figcaption class="caption"><span class="id">Figure 5.6: 
+         </span><span class="content">(a) Circuit symbol for the n-channel enhancement-type MOSFET. (b) Modified circuit symbol with an
+         arrowhead on the source terminal to distinguish it from the drain and to indicate device polarity (i.e., n
+         channel). (c) Simplified circuit symbol to be used when the source is connected to the body or when the
+         effect of the body on device operation is unimportant.                                  </span></figcaption>
+<img alt="PIC" src="figures/MOS-Field-Effect-Transistors/figures-5.png" style=""/>
+</figure>
+<p class="noindent">This objective is achieved in the modified circuit symbol shown in <b>Fig.</b> <a href="#x32-132001r9">5.9</a>b. Here an arrowhead is
+placed on the source terminal, thus distinguishing it from the drain terminal. The arrowhead points in
+the normal direction of current flow and thus indicates the polarity of the device (i.e., <i>n</i>-channel).
+Observe that in the modified symbol, there is no need to show the arrowhead on the body line.
+Although the circuit symbol of <b>Fig.</b> <a href="#x32-132001r9">5.9</a>b clearly distinguishes the source from the drain, in practice
+it is the polarity of the voltage impressed across the device that determines source and
+drain;
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The drain is always positive relative to the source in an <i>n</i>-channel FET. </p></div></div>
+<p class="noindent">In applications where the source is connected to the body of the device, a further simplification of the
+circuit symbol is possible, as indicated in <b>Fig.</b> <a href="#x32-132001r9">5.9</a>c. This symbol is also used in applications when the
+effect of the body on circuit operation is <b>NOT</b> important, as will be seen later.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.5.2.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.2</span> <span class="title"> <a id="x32-1290005.2.2"></a> The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</span></h4></div>
+</p><p class="noindent">Table 5.1 provides a compilation of the conditions and the formulas for the operation of the NMOS
+transistor in each of the three possible regions:
+</p>
+<div class="quote"> the cutoff region, the triode region, and the saturation region. </div>
+<p class="noindent">The first two (<span class="alert">2</span>) are useful if the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In
+electronics, the metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or
+MOS transistor) is a type of field-effect transistor (FET), most commonly fabricated by the controlled
+oxidation of silicon. It has an insulated gate, the voltage of which determines the conductivity of the
+device. This ability to change conductivity with the amount of applied voltage can be used for
+amplifying or switching electronic signals. The term metalinsulatorsemiconductor field-effect transistor
+(MISFET) is almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect
+transistor (IGFET).</a></span></span></span> is to be utilized as a switch. On the other hand, if the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide
+Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the metaloxidesemiconductor field-effect transistor
+(MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor (FET), most
+commonly fabricated by the controlled oxidation of silicon. It has an insulated gate, the voltage of
+which determines the conductivity of the device. This ability to change conductivity with the
+amount of applied voltage can be used for amplifying or switching electronic signals. The term
+metalinsulatorsemiconductor field-effect transistor (MISFET) is almost synonymous with
+MOSFET. Another near-synonym is insulated-gate field-effect transistor (IGFET).</a></span></span></span> is to be
+used to design an amplifier, it must be operated in the saturation region. At the top of
+Table 5.1 we show a circuit consisting of an NMOS transistor and two dc supplies providing
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>. This conceptual circuit
+can be used to measure the <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+characteristic curves of the NMOS transistor. Each curve is measured by setting
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math> to a desired constant value,
+varying <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>, and measuring
+the corresponding <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>.
+Two of these characteristic curves are shown in the accompanying diagram: one for
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">&lt;</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub></math> and the other
+for <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></math>. (Note that
+we now use <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub></math>
+to denote the threshold voltage of the NMOS transistor, to distinguish it from that of the PMOS transistor,
+denoted <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>ν</mi></mrow></msub></math>.) As
+Table 5.1 shows, the boundary between the triode region and the saturation region is determined by whether
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is less or greater than
+the overdrive voltage <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></math>
+at which the transistor is operating. An equivalent way to check for the region of
+operation is to examine the relative values of the drain and gate voltages. To operate
+in the triode region, the gate voltage must exceed the drain voltage by at least
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub></math> volts,
+which ensures that the channel remains continuous (not pinched off). On the other hand, to operate in
+saturation, the channel must be pinched off at the drain end; pinch-off is achieved here by keeping
+<math display="inline"><mi>v</mi><mi>D</mi></math> higher than
+<math display="inline"><mi>v</mi><mi>G</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi>V</mi> <mi>m</mi></math>, that is, not
+allowing <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi></mrow></msub></math> to
+fall below <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi></mrow></msub></math> by
+more than <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub></math>
+volts. The graphical construction of Fig. 5.12 should serve to remind the reader of these conditions. A
+set of <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>p</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+characteristics for the NMOS transistor is shown in Fig. 5.13. Observe that each graph is obtained by setting
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math> above
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>t</mi><mi>n</mi></mrow></msub></math> by a specific value of
+overdrive voltage, denoted <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>V</mi> <mi>I</mi></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>V</mi> <mn>2</mn></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>V</mi> <mn>3</mn></mrow></msub></math>, and
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>O</mi><mi>V</mi> <mn>4</mn></mrow></msub></math>. This in turn is
+the value of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> at
+which the corresponding graph saturates, and the value of the resulting saturation current is directly determined
+by the value of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mn>0</mn><mi>V</mi> </mrow></msub></math>,
+namely, <math display="inline"><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow></msub><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn><mi>V</mi> <mn>1</mn></mrow><mrow><mn>2</mn></mrow></msubsup></math>,
+<math display="inline"><mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msub><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow></msub><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn><mi>V</mi> <mn>2</mn></mrow><mrow><mn>2</mn></mrow></msubsup></math>... The
+reader is advised to commit to memory both the structure of these graphs and the coordinates of the
+saturation points.
+</p>
+<pre><div class="code-header"> <span class="code-language">spice</span></div> <code class="language-spice">
+<pre class="fancyvrb" id="fancyvrb2"><a id="x32-129002r167"></a>RC <span style="color:#8F4070;">4</span> <span style="color:#8F4070;">3</span> <span style="color:#8F4070;">1</span>k 
+<a id="x32-129004r168"></a>M1 <span style="color:#8F4070;">3</span> <span style="color:#8F4070;">2</span> <span style="color:#8F4070;">0</span> <span style="color:#8F4070;">0</span> NFET 
+<a id="x32-129006r169"></a>V1 <span style="color:#8F4070;">1</span> <span style="color:#8F4070;">0</span> dc <span style="color:#8F4070;">12</span> 
+<a id="x32-129008r170"></a>V2 <span style="color:#8F4070;">4</span> <span style="color:#8F4070;">0</span> dc <span style="color:#8F4070;">10</span> 
+<a id="x32-129010r171"></a>    
+<a id="x32-129012r172"></a>.MODEL NFET NMOS LEVEL=<span style="color:#8F4070;">3</span>          PHI=<span style="color:#8F4070;">0.600000</span>    TOX=<span style="color:#8F4070;">2.1200E-08</span> 
+<a id="x32-129014r173"></a>               + XJ=<span style="color:#8F4070;">0.200000</span>U     TPG=<span style="color:#8F4070;">1</span>           VTO=<span style="color:#8F4070;">0.7860</span>       DELTA=<span style="color:#8F4070;">6.9670E-01</span> 
+<a id="x32-129016r174"></a>               + LD=<span style="color:#8F4070;">1.6470E-07</span>    KP=<span style="color:#8F4070;">9.6379E-05</span>   UO=<span style="color:#8F4070;">591.7</span>         THETA=<span style="color:#8F4070;">8.1220E-02</span> 
+<a id="x32-129018r175"></a>               + RSH=<span style="color:#8F4070;">8.5450E+01</span>   GAMMA=<span style="color:#8F4070;">0.5863</span>    NSUB=<span style="color:#8F4070;">1.6160E+16</span> 
+<a id="x32-129020r176"></a>               + NFS=<span style="color:#8F4070;">5.0000E+12</span>   VMAX=<span style="color:#8F4070;">2.0820E+05</span> ETA=<span style="color:#8F4070;">7.0660E-02</span> 
+<a id="x32-129022r177"></a>               + KAPPA=<span style="color:#8F4070;">1.3960E-01</span> CGDO=<span style="color:#8F4070;">4.0241E-10</span> CGSO=<span style="color:#8F4070;">4.0241E-10</span> 
+<a id="x32-129024r178"></a>               + CGBO=<span style="color:#8F4070;">3.6144E-10</span>  CJ=<span style="color:#8F4070;">3.8541E-04</span>   MJ=<span style="color:#8F4070;">1.1854</span> 
+<a id="x32-129026r179"></a>               + CJSW=<span style="color:#8F4070;">1.3940E-10</span>  MJSW=<span style="color:#8F4070;">0.125195</span>   PB=<span style="color:#8F4070;">0.800000</span> 
+<a id="x32-129028r180"></a> 
+<a id="x32-129030r181"></a>.dc V2 <span style="color:#8F4070;">0</span> <span style="color:#8F4070;">10</span> <span style="color:#8F4070;">0.1</span> V1 <span style="color:#8F4070;">1.5</span> <span style="color:#8F4070;">3.5</span> <span style="color:#8F4070;">0.5</span>  
+<a id="x32-129032r182"></a></pre>
+</code></pre>
+<p class="noindent">Finally, please observe the boundary between the triode and the saturation regions, that is, the locus of
+the saturation points, is a <i>parabolic curve</i> described by </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow><mrow><mi>′</mi></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow><mn>2</mn></mrow></msubsup>
+</math></td></tr></table>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.3"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.5.2.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.3</span> <span class="title"> <a id="x32-1300005.2.3"></a>The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</span></h4></div>
+</p><p class="noindent">When the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation
+of silicon. It has an insulated gate, the voltage of which determines the conductivity of
+the device. This ability to change conductivity with the amount of applied voltage can be
+used for amplifying or switching electronic signals. The term metalinsulatorsemiconductor
+field-effect transistor (MISFET) is almost synonymous with MOSFET. Another near-synonym is
+insulated-gate field-effect transistor (IGFET).</a></span></span></span> is used in the design of an <i>amplifier</i>, it is
+operated in the <b>saturation region</b>. As Fig. 5.13 indicates, in saturation the drain current
+(<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>) is constant, determined
+by <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math><span class="margin-block"> <span class="margin-comment"><span class="ellipsis">[144]</span>
+<span class="sidenote">We can also use
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></math> for this as well.</span></span></span> and
+is <b>independent</b> of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>.
+That is, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation of
+silicon. It has an insulated gate, the voltage of which determines the conductivity of the device. This
+ability to change conductivity with the amount of applied voltage can be used for amplifying or
+switching electronic signals. The term metalinsulatorsemiconductor field-effect transistor (MISFET) is
+almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect transistor
+(IGFET).</a></span></span></span> operates as a <b>constant-current source</b> where the value of the current is determined by
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>. In
+effect, then, the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation of
+silicon. It has an insulated gate, the voltage of which determines the conductivity of the device. This
+ability to change conductivity with the amount of applied voltage can be used for amplifying or
+switching electronic signals. The term metalinsulatorsemiconductor field-effect transistor
+(MISFET) is almost synonymous with MOSFET. Another near-synonym is insulated-gate
+field-effect transistor (IGFET).</a></span></span></span> operates as a <span class="alert">voltage-controlled current source</span> with the control relationship described by
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-130001r23"></mstyle>
+<msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow><mrow><mi>′</mi></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>t</mi><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or in </mtext><mstyle class="math"><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>o</mi><mi>v</mi></mrow></msub></mstyle><mtext></mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow><mrow><mi>′</mi></mrow></msubsup> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><msubsup><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow><mrow><mn>2</mn></mrow></msubsup>
+</math></td><td class="eq-no">(5.23)</td></tr></table>
+<p class="noindent"></p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This is the relationship which underlies the application of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor
+Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the metaloxidesemiconductor field-effect transistor
+(MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor
+(FET), most commonly fabricated by the controlled oxidation of silicon. It has an insulated
+gate, the voltage of which determines the conductivity of the device. This ability to change
+conductivity with the amount of applied voltage can be used for amplifying or switching
+electronic signals. The term metalinsulatorsemiconductor field-effect transistor (MISFET) is
+almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect
+transistor (IGFET).</a></span></span></span> as an <span class="alert">amplifier</span>, a <span class="alert">non-linear</span> relationship that should be of concern to those interested in <span class="alert">designing linear amplifiers</span>.
+</p></div></div>
+<p class="noindent">Figure 5.14 shows the <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+characteristic of an NMOS transistor operating in <span class="margin-block">saturation. <span class="margin-comment"><span class="ellipsis">[145]</span>
+<span class="sidenote">Note that if we are interested in a plot of
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> versus
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></math>, we simply shift the
+origin to the point <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>t</mi><mi>n</mi></mrow></msub></math>.</span></span></span>
+</p><p class="noindent">The view of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the
+metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or MOS transistor)
+is a type of field-effect transistor (FET), most commonly fabricated by the controlled oxidation
+of silicon. It has an insulated gate, the voltage of which determines the conductivity of
+the device. This ability to change conductivity with the amount of applied voltage can be
+used for amplifying or switching electronic signals. The term metalinsulatorsemiconductor
+field-effect transistor (MISFET) is almost synonymous with MOSFET. Another near-synonym is
+insulated-gate field-effect transistor (IGFET).</a></span></span></span> in the <span class="alert">saturation region</span> as a voltage-controlled current source is
+illustrated by the equivalent-circuit representation shown in Fig. 5.15. For reasons that will
+become apparent shortly, the circuit in Fig. 5.15 is known as a <b>large-signal equivalent</b>
+circuit.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Here the current source is <span class="alert">ideal</span>, with an infinite output resistance representing the independence, in saturation,
+of <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> from
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>.
+</p></div></div>
+<p class="noindent">This, of course, has been assumed in the idealized model of device operation utilized thus far. We are
+about to rectify an important shortcoming of this model.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.4"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.5.2.4"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.4</span> <span class="title"> <a id="x32-1310005.2.4"></a>Finite Output Resistance in Saturation</span></h4></div>
+</p><p class="noindent">The Eq. (<a href="#x32-130001r23">5.23</a>) and the corresponding large-signal equivalent circuit in
+Fig. 5.15, as well as the graphs in Fig. 5.13, indicate that in saturation,
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> is <b>independent</b> of
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>. Therefore, a change
+<math display="inline"><mi mathvariant="normal">Δ</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> in the drain-to-source voltage
+causes a zero change in <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>,
+which implies that the incremental resistance looking into the drain of a saturated <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide
+Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the metaloxidesemiconductor field-effect transistor
+(MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor (FET), most
+commonly fabricated by the controlled oxidation of silicon. It has an insulated gate, the voltage of
+which determines the conductivity of the device. This ability to change conductivity with the
+amount of applied voltage can be used for amplifying or switching electronic signals. The
+term metalinsulatorsemiconductor field-effect transistor (MISFET) is almost synonymous
+with MOSFET. Another near-synonym is insulated-gate field-effect transistor (IGFET).</a></span></span></span> is
+infinite.
+This, however, is an <i>idealization</i> based on the premise that once the channel is pinched off at the drain end, further
+increases in <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+have no effect on the channel’s shape.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">However, in practice, increasing <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+beyond <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></math>
+does affect the channel somewhat. </p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x32-131001r7"></a>
+<figcaption class="caption"><span class="id">Figure 5.7: 
+         </span><span class="content">Increasing <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+         beyond <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi><mi>s</mi><mi>a</mi><mi>t</mi></mrow></msub></math>
+         causes       the       channel       pinch-off       point       to       move       slightly       away       from
+         the        drain,        therefore        reducing        the        effective        channel        length        (by
+         <math display="inline"><mi>L</mi></math>). </span></figcaption>
+<img alt="PIC" src="figures/MOS-Field-Effect-Transistors/figures-8.png" style=""/>
+</figure>
+<p class="noindent">Specifically, as <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+is increased, the channel pinch-off point is moved slightly <span class="alert">away</span> from the drain, toward the source. This is
+illustrated in <b>Fig.</b> <a href="#x32-131001r7">5.7</a>, from which we note that the voltage across the channel remains constant at
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></math>, and
+the additional voltage applied to the drain appears as a voltage drop across the narrow depletion region
+between the end of the channel and the drain region.
+</p><p class="noindent">This voltage accelerates the electrons that reach the drain end of the channel and sweeps them across the
+depletion region into the drain. Note, however, <span class="margin-block">that <span class="margin-comment"><span class="ellipsis">[146]</span>
+<span class="sidenote">with depletion-layer widening</span></span></span> the channel length is in effect
+reduced, from <math display="inline"><mi>L</mi></math>
+to <math display="inline"><mi>L</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mi mathvariant="normal">Δ</mi><mi>L</mi></math>, a
+phenomenon known as <b>channel-length modulation</b>.
+</p><p class="noindent">Now, since <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>
+is inversely proportional to the channel length which was given in Eq. (<a href="#x32-130001r23">5.23</a>), and
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> increases
+with <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>.
+</p><p class="noindent">This effect can be accounted for in the expression for
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> by including a
+factor <math display="inline"><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>λ</mi><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>O</mi><mi>V</mi> </mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></math> or, for
+simplicity, <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>λ</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math>,
+</p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-131002r24"></mstyle>
+<msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow><mrow><mi>′</mi></mrow></msubsup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>t</mi><mi>n</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>λ</mi><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>D</mi><mi>S</mi></mrow></msub></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(5.24)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">Here <math display="inline"><mi>λ</mi></math> is a device parameter having
+the units of reciprocal volts (<math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>V</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>).
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent"><math display="inline"><mi>λ</mi></math>
+depends both on the <span class="alert">process technology</span> used to fabricate the device and on the <span class="alert">channel length</span>
+<math display="inline"><mi>L</mi></math> that
+the circuit designer selects. </p></div></div>
+<p class="noindent">Specifically, the value of <math display="inline"><mi>λ</mi></math>
+is much larger for newer submicron technologies than for older technologies. This makes intuitive sense: </p><div class="quote">
+Newer technologies have very short channels, and are therefore much more greatly impacted by the
+<b>channel-length modulation effect</b>. </div>
+<p class="noindent">Also, for a given process technology, <math display="inline"><mi>λ</mi></math>
+is inversely proportional to <math display="inline"><mi>L</mi></math>.
+</p><p class="noindent">A typical set of <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+characteristics showing the effect of channel-length modulation is displayed in Fig. 5.17. The observed linear
+dependence of <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>
+on <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+in the saturation region is represented in Eq. (<a href="#x32-131002r24">5.24</a>) by the factor
+(<math display="inline"><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>λ</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>).
+From Fig. 5.17 we observe that when the straight-line
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> characteristics are
+extrapolated, they intercept the <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+axis at the point, <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math>, where
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math> is a positive voltage. Eq.
+(<a href="#x32-131002r24">5.24</a>)
+, however, indicates that <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>
+at <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>λ</mi></math>. It
+follows that </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>λ</mi></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">and therefore <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math> is a device parameter
+with the dimensions of <math display="inline"><mi>V</mi> </math>. For a
+given process, <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math> is proportional
+to the channel length <math display="inline"><mi>L</mi></math>
+that the designer selects for a <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In
+electronics, the metaloxidesemiconductor field-effect transistor (MOSFET, MOS-FET, MOS FET, or
+MOS transistor) is a type of field-effect transistor (FET), most commonly fabricated by the controlled
+oxidation of silicon. It has an insulated gate, the voltage of which determines the conductivity of the
+device. This ability to change conductivity with the amount of applied voltage can be used for
+amplifying or switching electronic signals. The term metalinsulatorsemiconductor field-effect transistor
+(MISFET) is almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect
+transistor (IGFET).</a></span></span></span>.
+We can isolate the dependence of <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math>
+on <math display="inline"><mi>L</mi></math> by
+expressing it as </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow><mrow><mi>′</mi></mrow></msubsup><mi>L</mi>
+</math></td></tr></table>
+<p class="noindent">where <math display="inline"><msubsup><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow><mrow><mi>′</mi></mrow></msubsup><mi>L</mi></math>
+is entirely <b>process-technology dependent</b>, with the dimensions of volts per micron. Generally,
+<math display="inline"><msubsup><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow><mrow><mi>′</mi></mrow></msubsup></math> falls in the
+range of 5 V/<math display="inline"><mi>μ</mi></math>m
+to 50 V/<math display="inline"><mi>μ</mi></math>m.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The voltage, <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math>,
+is usually referred to as the Early voltage, after <i>J. M. Early</i>, who discovered a similar phenomenon for
+the BJT. </p></div></div>
+<p class="noindent">Eq. (<a href="#x32-131002r24">5.24</a>) indicates that when channel-length modulation is taken into account, the saturation values of
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> depend on
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>. Therefore, for a
+given <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>, a change
+<math display="inline"><mi mathvariant="normal">Δ</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> gives a corresponding
+change <math display="inline"><mi mathvariant="normal">Δ</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> in the
+drain current <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>.
+It follows that the output resistance of the current source representing
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math> in
+saturation is no longer infinite.
+</p><p class="noindent">Defining the output resistance <math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub></math>
+<span class="margin-block">as: <span class="margin-comment"><span class="ellipsis">[147]</span>
+<span class="sidenote">We use <math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub></math> to denote the output
+resistance in saturation, and <math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+to denote the drain-to-source resistance in the triode region, for small
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>.</span></span></span>
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-131003r25"></mstyle>
+<msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mi>≡</mi> <mrow><mo fence="true" form="prefix">[</mo><mrow><mstyle displaystyle="true"><mfrac><mrow> <mi>∂</mi><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub>
+</mrow><mrow><mi>∂</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub> </mrow></mfrac></mstyle></mrow><mo fence="true" form="postfix">]</mo></mrow> <mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn>
+<mstyle class="text"><mtext></mtext></mstyle> <mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>where</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext></mtext><mstyle class="math"><msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></mstyle><mtext> is kept constant.</mtext></mstyle>
+</math></td><td class="eq-no">(5.25)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">and using Eq. (<a href="#x32-131002r24">5.24</a>) results in </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-131004r26"></mstyle>
+<msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo><msup><mrow> <mrow><mo fence="true" form="prefix">[</mo><mrow><mi>λ</mi><mfrac><mrow><msubsup><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow><mrow><mi>′</mi></mrow></msubsup></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac> <mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo fence="true" form="postfix">]</mo></mrow> </mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup>
+</math></td><td class="eq-no">(5.26)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p><figure class="float">
+<a id="x32-131005r8"></a>
+<figcaption class="caption"><span class="id">Figure 5.8: 
+         </span><span class="content">Large-signal, equivalent-circuit model of the n-channel MOSFET in saturation, incorporating the output
+         resistance <math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub></math>
+         .         The         output         resistance         models         the         linear         dependence         of
+         <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub></math>
+         on <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math>
+         and is given by Eq. (<a href="#x32-131006r27">5.27</a>).                                                     </span></figcaption>
+<img alt="PIC" src="figures/MOS-Field-Effect-Transistors/figures-9.png" style=""/>
+</figure>
+<p class="noindent">which can be written as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-131006r27"></mstyle>
+<msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mi>λ</mi><msub><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow></msub></mrow></mfrac><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>or</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow><mi>′</mi></mrow></msubsup></mrow></mfrac>
+</math></td><td class="eq-no">(5.27)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow><mi>′</mi></mrow></msubsup></math>
+is the drain current <i>without</i> channel-length modulation taken into account; that is, </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-131007r28"></mstyle>
+<msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow><mi>′</mi></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>n</mi></mrow><mrow><mi>′</mi></mrow></msubsup><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>I</mi></mrow></mfrac> <msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>V</mi> </mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>m</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup>
+</math></td><td class="eq-no">(5.28)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Thus the output resistance is <b>inversely proportional</b> to the drain <span class="margin-block">current. <span class="margin-comment"><span class="ellipsis">[148]</span>
+<span class="sidenote">In applying Eq. (<a href="#x32-131006r27">5.27</a>) we will usually
+drop the prime on <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow></msub></math>
+and simply use <math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msub><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow></msub></math>
+where <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow></msub></math>
+is the drain current without channel-length modulation.</span></span></span>
+</p><p class="noindent">Finally, we see in <b>Fig.</b> <a href="#x32-131005r8">5.8</a> the large-signal, equivalent-circuit model incorporating
+<math display="inline"><msub><mrow><mi>r</mi></mrow><mrow><mi>o</mi></mrow></msub></math>.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-5.2.5"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.5.2.5"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">5.2.5</span> <span class="title"> <a id="x32-1320005.2.5"></a>Characteristics of the p-Channel MOSFET</span></h4></div>
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x32-132001r9"></a>
+<figcaption class="caption"><span class="id">Figure 5.9: 
+         </span><span class="content">(a) Circuit symbol for the p-channel enhancement-type MOSFET. (b) Modified symbol with an arrowhead
+         on the source lead. (c) Simplified circuit symbol for the case where the source is connected to the body.  </span></figcaption>
+<img alt="PIC" src="figures/MOS-Field-Effect-Transistors/figures-5.png" style=""/>
+</figure>
+<p class="noindent">The circuit symbol for the <i>p</i>-channel enhancement-type <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:mosfet">MOSFET</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:mosfet">Metal-Oxide Semiconductor
+Field-Effect Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:mosfet">In electronics, the metaloxidesemiconductor field-effect transistor (MOSFET,
+MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor (FET), most commonly
+fabricated by the controlled oxidation of silicon. It has an insulated gate, the voltage of which
+determines the conductivity of the device. This ability to change conductivity with the
+amount of applied voltage can be used for amplifying or switching electronic signals. The term
+metalinsulatorsemiconductor field-effect transistor (MISFET) is almost synonymous with
+MOSFET. Another near-synonym is insulated-gate field-effect transistor (IGFET).</a></span></span></span> is shown
+in <b>Fig.</b> <a href="#x32-132001r9">5.9</a>a. <b>Fig.</b> <a href="#x32-132001r9">5.9</a>b shows a modified circuit symbol in which an arrowhead pointing
+in the normal direction of current flow is included on the source terminal. For the case
+where the source is connected to the substrate, the simplified symbol of <b>Fig.</b> <a href="#x32-132001r9">5.9</a>c is usually
+used.
+The regions of operation of the PMOS transistor and the corresponding conditions and expression for
+<math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math>
+are shown in Table 5.2. Observe that the equations are written in a way that
+emphasizes physical intuition and avoids the confusion of negative signs. Thus while
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>t</mi><mi>p</mi></mrow></msub></math> is by convention
+negative, we use <math display="inline"><mi>|</mi><msub><mrow><mi>V</mi> </mrow><mrow><mi>ν</mi></mrow></msub><mi>|</mi><mi>⟩</mi></math>,
+and the voltages <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>S</mi><mi>G</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>S</mi><mi>D</mi></mrow></msub></math> are
+positive. Also, in all of our circuit diagrams we will always draw <i>p</i>-channel devices with their sources on
+top so that current flows from top to bottom. Finally, we note that PMOS devices also suffer from the
+channel-length modulation effect. This can be taken into account by including a factor
+<math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>|</mi><mi>λ</mi><mi>|</mi><msub><mrow><mi>v</mi></mrow><mrow><mi>S</mi><mi>D</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo></math> in the saturation-region
+expression for <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math>
+as follows </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-132002r29"></mstyle>
+<msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>p</mi></mrow><mrow><mi>′</mi></mrow></msubsup> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>S</mi><mi>G</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>i</mi><mi>p</mi></mrow></msub></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mi>|</mi><mi>λ</mi><mi>|</mi><msub><mrow><mi>v</mi></mrow><mrow>
+<mi>S</mi><mi>D</mi></mrow></msub><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td><td class="eq-no">(5.29)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">or equivalently </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x32-132003r30"></mstyle>
+<msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn></mrow></mfrac><msubsup><mrow><mi>k</mi></mrow><mrow><mi>p</mi></mrow><mrow><mi>′</mi></mrow></msubsup> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><mi>W</mi></mrow>
+<mrow>
+<mi>L</mi></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>S</mi><mi>G</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>i</mi><mi>p</mi></mrow></msub></mrow><mo fence="true" form="postfix">|</mo></mrow></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow><mn>2</mn></mrow></msup> <mrow><mo fence="true" form="prefix">(</mo><mrow><mn>1</mn> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><msub><mrow><mi>v</mi></mrow><mrow><mi>S</mi><mi>D</mi></mrow></msub></mrow>
+<mrow>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub>
+</mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow>
+</math></td><td class="eq-no">(5.30)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>λ</mi></math>
+and <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub></math>
+(the Early voltage for the PMOS transistor) are by convention negative quantities, hence we use
+<math display="inline"><mi>|</mi><mi>λ</mi><mi>|</mi></math> and
+<math display="inline"><mi>|</mi><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi></mrow></msub><mi>|</mi></math>.
+Finally, we should note that for a given CMOS fabrication process
+<math display="inline"><msub><mrow><mi>λ</mi></mrow><mrow><mi>n</mi></mrow></msub></math> and
+<math display="inline"><mi>|</mi><msub><mrow><mi>λ</mi></mrow><mrow><mi>p</mi></mrow></msub><mi>|</mi></math> are generally not equal,
+and similarly for <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi><mi>n</mi></mrow></msub></math>
+and <math display="inline"><mi>|</mi><msub><mrow><mi>V</mi> </mrow><mrow><mi>A</mi><mi>p</mi></mrow></msub><mi>|</mi></math>.
+</p><p class="noindent">To recap, to turn a PMOS transistor on, the gate voltage has to be made lower than that of the source
+by at least <math display="inline"><mi>|</mi><msub><mrow><mi>V</mi> </mrow><mrow><msub><mrow><mi>ν</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></msub><mi>|</mi></math>.
+To operate in the triode region, the drain voltage has to exceed that of the gate by at least
+<math display="inline"><mi>|</mi><msub><mrow><mi>V</mi> </mrow><mrow><msub><mrow><mi>ν</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></msub><mi>|</mi></math>;
+otherwise, the PMOS operates in saturation. Finally, Fig. 5.20 provides a pictorial representation of
+these operating conditions.
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:mosfet">¶</a>
+<dt class="acr-bottom" id="glo:mosfet"><span class="acr-short">MOSFET</span><span class="acr-long">Metal-Oxide
+Semiconductor Field-Effect Transistor</span></dt>
+<dd class="acr-desc"><p>In electronics, the metaloxidesemiconductor field-effect transistor
+(MOSFET, MOS-FET, MOS FET, or MOS transistor) is a type of field-effect transistor
+(FET), most commonly fabricated by the controlled oxidation of silicon. It has an insulated
+gate, the voltage of which determines the conductivity of the device. This ability to change
+conductivity with the amount of applied voltage can be used for amplifying or switching
+electronic signals. The term metalinsulatorsemiconductor field-effect transistor (MISFET) is
+almost synonymous with MOSFET. Another near-synonym is insulated-gate field-effect
+transistor (IGFET).</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="MOSFETCircuitsatDC.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="DeviceStructureandPhysicalOperation.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="MOSFieldEffectTransistors.html#CurrentVoltageCharacteristics.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 5.2: Current-Voltage Characteristics</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

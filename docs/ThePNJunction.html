@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>The PN Junction</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Non-Linear Electronics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2025.WS</span>
+<span class="header-chapter">Semiconductors</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="SignalsandAmplifiers.html#x3-20001">Signals and Amplifiers</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-30001.1">Fundamentals of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-40001.1.1">Proper Definition</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="FundamentalsofSignals.html#x4-50001.1.2">Frequency
+Spectrum of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="FundamentalsofSignals.html#x4-60001.1.3">Analog and Digital Signals</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-70001.2">Amplifiers as a Concept</a></span></span><span class="subsectionToc"><span class="number">1.2.1</span><span class="title"><a href="AmplifiersasaConcept.html#x5-80001.2.1">Signal
+Amplification</a></span></span><span class="subsectionToc"><span class="number">1.2.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-90001.2.2">Amplifier Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">1.2.3</span><span class="title"><a href="AmplifiersasaConcept.html#x5-100001.2.3">Voltage Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.4</span><span class="title"><a href="AmplifiersasaConcept.html#x5-110001.2.4">Power Gain and Current
+Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.5</span><span class="title"><a href="AmplifiersasaConcept.html#x5-120001.2.5">Expressing Gain in Decibels</a></span></span><span class="subsectionToc"><span class="number">1.2.6</span><span class="title"><a href="AmplifiersasaConcept.html#x5-130001.2.6">The Amplifier Power Supplies</a></span></span><span class="subsectionToc"><span class="number">1.2.7</span><span class="title"><a href="AmplifiersasaConcept.html#x5-140001.2.7">Amplifier
+Saturation</a></span></span><span class="subsectionToc"><span class="number">1.2.8</span><span class="title"><a href="AmplifiersasaConcept.html#x5-150001.2.8">Symbol Convention</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-160001.3">Circuit Models for Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-170001.3.1">Voltage
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.2</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-180001.3.2">Cascaded Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-190001.3.3">Other Amplifier Types</a></span></span><span class="subsectionToc"><span class="number">1.3.4</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-200001.3.4">Relationships between
+the Four Amplifier Models</a></span></span><span class="subsectionToc"><span class="number">1.3.5</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-210001.3.5">Determining Input and Output Resistance</a></span></span><span class="subsectionToc"><span class="number">1.3.6</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-220001.3.6">Unilateral
+Models</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-230001.4">Frequency Response of Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.1</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-240001.4.1">Measuring the Amplifier Frequency
+Response</a></span></span><span class="subsectionToc"><span class="number">1.4.2</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-250001.4.2">Amplifier Bandwidth</a></span></span><span class="subsectionToc"><span class="number">1.4.3</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-260001.4.3">Evaluating the Frequency Response of
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-270001.4.4">Single-Time-Constant Networks</a></span></span><span class="subsectionToc"><span class="number">1.4.5</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-280001.4.5">Classification of Amplifiers Based
+on Frequency Response</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="OperationalAmplifiers.html#x8-290002">Operational Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-300002.1">The Ideal Op Amp</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-310002.1.1">Terminals
+of the Element</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="TheIdealOpAmp.html#x9-320002.1.2">Function and Characteristics</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="TheIdealOpAmp.html#x9-330002.1.3">Differential and Common-Mode
+Signals</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-340002.2">The Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="TheInvertingAmplifier.html#x10-350002.2.1">The Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-360002.2.2">Effect of Finite
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="TheInvertingAmplifier.html#x10-370002.2.3">Input and Output Resistances</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-380002.3">Non-Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="NonInvertingAmplifier.html#x11-390002.3.1">The
+Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="NonInvertingAmplifier.html#x11-400002.3.2">Effect of Finite Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-410002.3.3">Input and Output
+Resistance</a></span></span><span class="subsectionToc"><span class="number">2.3.4</span><span class="title"><a href="NonInvertingAmplifier.html#x11-420002.3.4">The Voltage Follower</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="DifferenceAmplifiers.html#x12-430002.4">Difference Amplifiers</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="DifferenceAmplifiers.html#x12-440002.4.1">A Single-Op-Amp
+Difference Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="DifferenceAmplifiers.html#x12-450002.4.2">A Versatile Circuit: The Instrumentation Amplifier</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-460002.5">Integrators
+and Differentiators</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-470002.5.1">The Inverting Configuration with General Impedances</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-480002.5.2">The
+Inverting Integrator</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-490002.5.3">The Op-Amp Differentiator</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="DCImperfections.html#x14-500002.6">DC Imperfections</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="DCImperfections.html#x14-510002.6.1">Offset
+Voltage</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="DCImperfections.html#x14-520002.6.2">Input Bias and Offset Currents</a></span></span><span class="subsectionToc"><span class="number">2.6.3</span><span class="title"><a href="DCImperfections.html#x14-530002.6.3">Effects of Offset of Inverting
+Integrator</a></span></span><span class="sectionToc"><span class="number">2.7</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-540002.7">Finite Open-Loop Gain and Bandwidth</a></span></span><span class="subsectionToc"><span class="number">2.7.1</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-550002.7.1">Frequency Dependence of the
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.7.2</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-560002.7.2">Frequency Response of Closed-Loop Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.8</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-570002.8">Large-Signal
+Operation of Op Amps</a></span></span><span class="subsectionToc"><span class="number">2.8.1</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-580002.8.1">Output Voltage Saturation</a></span></span><span class="subsectionToc"><span class="number">2.8.2</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-590002.8.2">Output Current Limits</a></span></span><span class="subsectionToc"><span class="number">2.8.3</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-600002.8.3">Slew
+Rate</a></span></span><span class="subsectionToc"><span class="number">2.8.4</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-610002.8.4">Full-Power Bandwidth</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Semiconductors.html#x17-620003">Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-630003.1">Semiconductor Physics</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-640003.1.1">Intrinsic
+Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="SemiconductorPhysics.html#x18-650003.1.2">Doped Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-660003.2">Current Flow in Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-670003.2.1">Drift
+Current</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-680003.2.2">Diffusion Current</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="#x20-690003.3">The PN Junction</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="#x20-700003.3.1">Implementation</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="#x20-710003.3.2">Open
+Circuit Operation</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-770003.4">PN Junction with Applied Voltage</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-780003.4.1">Qualitative Description
+of Junction Operation</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-790003.4.2">Reverse Breakdown</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-800003.5">Capacitive Effects in the pn
+Junction</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-810003.5.1">Depletion or Junction Capacitance</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-820003.5.2">Diffusion Capacitance</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="Diodes.html#x23-830004">Diodes</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="TheIdealDiode.html#x24-850004.1">The
+Ideal Diode</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="TheIdealDiode.html#x24-860004.1.1">i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="TheIdealDiode.html#x24-880004.1.2">Application: The Rectificer</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="TheIdealDiode.html#x24-890004.1.3">Application:
+Logic Gates</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-900004.2">Terminal Characteristics of Junction Diodes</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-910004.2.1">The Forward-Bias
+Region</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-920004.2.2">Reverse Bias Region</a></span></span><span class="subsectionToc"><span class="number">4.2.3</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-930004.2.3">The Breakdown Region</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-940004.3">Modelling the Diode
+Forward Characteristic</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-950004.3.1">The Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-960004.3.2">Graphical Analysis Using the
+Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-970004.3.3">The Need for Rapid Analysis</a></span></span><span class="subsectionToc"><span class="number">4.3.4</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-980004.3.4">The Constant-Voltage-Drop
+Model</a></span></span><span class="subsectionToc"><span class="number">4.3.5</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-990004.3.5">The Ideal-Diode Model</a></span></span><span class="subsectionToc"><span class="number">4.3.6</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1000004.3.6">The Small-Signal Model</a></span></span><span class="subsectionToc"><span class="number">4.3.7</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1010004.3.7">Use of the Diode
+Forward Drop in Voltage Regulation</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="ZenerDiodes.html#x27-1020004.4">Zener Diodes</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="ZenerDiodes.html#x27-1030004.4.1">Operating in the Reverse
+Breakdown Region</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="ZenerDiodes.html#x27-1040004.4.2">Specifying and Modeling the Zener Diode</a></span></span><span class="subsectionToc"><span class="number">4.4.3</span><span class="title"><a href="ZenerDiodes.html#x27-1050004.4.3">Temperature
+Effects</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1060004.5">Limiting and Clamping Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1070004.5.1">Limiter Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.2</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1080004.5.2">The Clamped Capacitor
+or DC Restorer</a></span></span><span class="subsectionToc"><span class="number">4.5.3</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1090004.5.3">The Voltage Doubler</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1100004.6">Special Diode Types</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1110004.6.1">The Schottky-Barrier
+Diode (SBD)</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1120004.6.2">Varactors</a></span></span><span class="subsectionToc"><span class="number">4.6.3</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1130004.6.3">Photodiodes</a></span></span><span class="subsectionToc"><span class="number">4.6.4</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1140004.6.4">Light Emitting Diodes</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="MOSFieldEffectTransistors.html#x30-1150005">MOS
+Field Effect Transistors</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1170005.1">Device Structure and Physical Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1180005.1.1">Device
+Structure</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1190005.1.2">Operation with Zero Gate Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1200005.1.3">Creating a Channel for
+Current Flow</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1210005.1.4">Applying a Small Drain-to-Source Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.5</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1220005.1.5">Operation as
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is
+Increased</a></span></span><span class="subsectionToc"><span class="number">5.1.6</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1230005.1.6">Channel Pinch-Off and Current Saturation</a></span></span><span class="subsectionToc"><span class="number">5.1.7</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1240005.1.7">The p-Channel
+MOSFET</a></span></span><span class="subsectionToc"><span class="number">5.1.8</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1250005.1.8">Complementary MOS or CMOS</a></span></span><span class="subsectionToc"><span class="number">5.1.9</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1260005.1.9">Operating the MOS Transistor in
+the Subthreshold Region</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1270005.2">Current-Voltage Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1280005.2.1">Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1290005.2.2">
+The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1300005.2.3">The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1310005.2.4">Finite Output Resistance in Saturation</a></span></span><span class="subsectionToc"><span class="number">5.2.5</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1320005.2.5">Characteristics
+of the p-Channel MOSFET</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MOSFETCircuitsatDC.html#x33-1330005.3">MOSFET Circuits at DC</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1340005.4">Body Effect and
+Other Topics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1350005.4.1">The Role of the Substrate - The Body Effect</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1360005.4.2">Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">5.4.3</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1370005.4.3">Breakdown and Input Protection</a></span></span><span class="subsectionToc"><span class="number">5.4.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1380005.4.4">Velocity Saturation</a></span></span><span class="subsectionToc"><span class="number">5.4.5</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1390005.4.5">Depletion-Type
+MOSFET</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="BipolarJunctionTransistors.html#x35-1400006">Bipolar Junction Transistors</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1410006.1">Physical Implementation</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1420006.1.1">Simplified
+Structure and Operation Modes</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PhysicalImplementation.html#x36-1430006.1.2">Operation of the npn Transistor in the Active
+Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PhysicalImplementation.html#x36-1500006.1.3">Structure of Actual Transistor</a></span></span><span class="subsectionToc"><span class="number">6.1.4</span><span class="title"><a href="PhysicalImplementation.html#x36-1510006.1.4">Operation in the Saturation Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.5</span><span class="title"><a href="PhysicalImplementation.html#x36-1520006.1.5">The
+pnp Transistor</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1530006.2">The i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="TheivCharacteristics.html#x37-1540006.2.1">Symbols and Conventions</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1550006.2.2">Graphical
+Representation of Transistor Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.3</span><span class="title"><a href="TheivCharacteristics.html#x37-1560006.2.3">Dependence of ic on the Collector
+Voltage - The early Effect</a></span></span><span class="subsectionToc"><span class="number">6.2.4</span><span class="title"><a href="TheivCharacteristics.html#x37-1570006.2.4">An Alternative Form of the Common-Emitter
+Characteristics</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="BJTCircuitsatDC.html#x38-1600006.3">BJT Circuits at DC</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1610006.4">Transistor Breakdown and Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1620006.4.1">Transistor Breakdown</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x40-163000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-164000A.1">An Introduction to Scientific
+Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-165000A.1.1">A Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-166000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-169000A.1.3">Decimal Multiples
+and Sub-multiples of SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-172000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x42-173000B">Dimensional
+Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-174000B.1">Physical Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-175000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-176000B.1.2">Physical
+Quantities and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-177000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-178000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-179000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-182000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-186000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-187000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-188000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-193000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-198000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-208000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="PNJunctionwithAppliedVoltage.html">PN Junction with Applied Voltage</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="CurrentFlowinSemiconductors.html">Current Flow in Semiconductors</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Semiconductors.html#ThePNJunction.html">Chapter: Semiconductors</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-3.3"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#section.3.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">3.3</span> <span class="title"> <a id="x20-690003.3"></a>The PN Junction</span></h3></div>
+<div class="sidenote"> <span class="figure">
+<a id="x20-69001r6"></a>
+<figcaption class="caption"><span class="id">Figure 3.6: </span><span class="content">Simplified physical structure of the pn junction. As the pn junction implements the junction diode, its
+terminals are labeled anode and cathode.                                                    </span></figcaption>
+<img alt="PIC" src="figures/Semiconductors/figures-2.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">Having learned important semiconductor concepts, we are now ready to consider our first practical
+semiconductor structure: </p><div class="quote">  the <i>pn</i> junction. </div>
+<p class="noindent">As previously mentioned, the <i>pn</i> junction implements the diode and plays the dominant
+role in the structure and operation of the <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:bjt">BJT</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:bjt">Bipolar Junction Transistor</a></span><span class="acronym-desc"><a class="glossary" href="#glo:bjt">Bipolar Junction
+Transistor</a></span></span></span>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Understanding <math display="inline"><mi>p</mi><mi>n</mi></math>
+junctions is very important to the study of the MOSFET operation. </p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.3.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.3.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.3.1</span> <span class="title"> <a id="x20-700003.3.1"></a>Implementation</span></h4></div>
+</p><p class="noindent"><b>Fig.</b> <a href="#x20-69001r6">3.6</a> shows a simplified physical structure of the <i>pn</i> junction. It consists of a
+<math display="inline"><mi>p</mi></math>-type
+<span class="margin-block">semiconductor <span class="margin-comment"><span class="ellipsis">[83]</span>
+<span class="sidenote">e.g., silicon</span></span></span> brought into close contact with an
+<math display="inline"><mi>n</mi></math>-type
+semiconductor material, which is also silicon.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">In actual practice, both <math display="inline"><mi>p</mi></math>
+and <math display="inline"><mi>n</mi></math> regions are part
+of the same silicon crystal. That is, the <i>pn</i> junction is formed within a single silicon crystal by creating regions of
+different dopings (<math display="inline"><mi>p</mi></math>
+and <math display="inline"><mi>n</mi></math>
+regions). </p></div></div>
+<p class="noindent">As indicated in <b>Fig.</b> <a href="#x20-69001r6">3.6</a>, external wire connections are made to the
+<math display="inline"><mi>p</mi></math> and
+<math display="inline"><mi>n</mi></math> regions through metal
+(aluminum) contacts. If the <math display="inline"><mi>p</mi><mi>n</mi></math>
+junction is used as a diode, these constitute the diode terminals and are therefore labeled <span class="alert">anode</span> and <span class="alert">cathode</span> in
+keeping with diode <span class="margin-block">terminology. <span class="margin-comment"><span class="ellipsis">[84]</span>
+<span class="sidenote">This terminology in fact is a carryover from that used with
+vacuum-tube technology, which was the technology for making diodes and other electronic devices
+until the invention of the transistor in 1947. This event ushered in the era of solid-state
+electronics, which changed not only electronics, communications, and computers but indeed the
+world!</span></span></span>
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.3.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.3.3.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.3.2</span> <span class="title"> <a id="x20-710003.3.2"></a>Open Circuit Operation</span></h4></div>
+</p><p class="noindent"><b>Fig.</b> <a href="#x20-72001r7">3.7</a> shows a <math display="inline"><mi>p</mi><mi>n</mi></math>
+junction under open-circuit conditions-that is, the external terminals are left open. The “+” signs in the
+<math display="inline"><mi>p</mi></math>-type
+material denote the <b>majority holes</b>. The charge of these holes is neutralized by an equal amount of
+bound negative charge associated with the acceptor atoms.
+</p><p class="noindent">For simplicity, these bound charges are not shown in the diagram. Also not shown are the minority electrons generated in the
+<math display="inline"><mi>p</mi></math>-type material by thermal
+ionization. In the <math display="inline"><mi>n</mi></math>-type
+material the majority electrons are indicated by “-” signs. Here also, the bound positive charge, which
+neutralizes the charge of the majority electrons, is not shown in order to keep the diagram simple. The
+<math display="inline"><mi>n</mi></math>-type
+material also contains minority holes generated by thermal ionization but not shown in the
+diagram.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-1"> <a id="x20-72000"></a>Diffustion Current</h5>
+</p><p class="noindent">Because the concentration of holes is high in the
+<math display="inline"><mi>p</mi></math> region and low in the
+<math display="inline"><mi>n</mi></math> region, holes diffuse across
+the junction from the <math display="inline"><mi>p</mi></math>
+side to the <math display="inline"><mi>n</mi></math>
+side. Similarly, electrons diffuse across the junction from the
+<math display="inline"><mi>n</mi></math> side to
+the <math display="inline"><mi>p</mi></math>
+side.
+</p>
+<div class="sidenote"> <span class="figure">
+<a id="x20-72001r7"></a>
+<figcaption class="caption"><span class="id">Figure 3.7: </span><span class="content">(a) The pn junction with no applied voltage (open-circuited terminals). (b) The potential distribution
+along an axis perpendicular to the junction.                                                  </span></figcaption>
+<img alt="PIC" src="figures/Semiconductors/figures-11.png" style=""/>
+</span>
+<p class="noindent"></p></div>
+<p class="noindent">These two current components add together to form the diffusion current
+<math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>p</mi></mrow><mrow></mrow></msubsup></math>, whose
+direction is from the p side to the n side, as indicated in <b>Fig.</b> <a href="#x20-72001r7">3.7</a>.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-2"> <a id="x20-73000"></a>Depletion Region</h5>
+</p><p class="noindent">The holes that diffuse across the junction into the
+<math display="inline"><mi>n</mi></math> region
+quickly recombine with some of the majority electrons present there and therefore disappear from the
+scene.
+</p><p class="noindent">This recombination process results also in the disappearance of some free electrons from the
+<math display="inline"><mi>n</mi></math>-type
+material. Therefore some of the bound positive charge will no longer be neutralized by free electrons,
+and this charge is said to have been <span class="alert">uncovered</span>. Given the recombination takes place close to the junction, there
+will be a region close to the junction that is <span class="alert">depleted of free electrons</span> and contains uncovered bound positive charge, as
+indicated in Fig. 3.9.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x20-73001r8"></a>
+<figcaption class="caption"><span class="id">Figure 3.8: 
+         </span><span class="content">The electron density of a MESFET. Please observe the central point where the environment is void of
+         electrons.                                                                </span></figcaption>
+<img alt="PIC" src="figures/Semiconductors/figures-5.png" style=""/>
+</figure>
+<p class="noindent">The electrons that diffuse across the junction into the
+<math display="inline"><mi>p</mi></math>
+region quickly recombine with some of the majority holes there, and thus disappear from the
+scene. This results also in the disappearance of some majority holes, causing some of the
+bound negative charge to be uncovered (i.e., no longer neutralized by holes). Thus, in the
+<math display="inline"><mi>p</mi></math>
+material close to the junction, there will be a region <span class="alert">depleted of holes</span> and containing uncovered bound negative charge,
+as indicated in <b>Fig.</b> <a href="#x20-72001r7">3.7</a>.
+</p><p class="noindent">From the above it follows that a <b>carrier-depletion region</b> will exist on both sides of the junction, with the
+<math display="inline"><mi>n</mi></math> side of this region
+positively charged and the <math display="inline"><mi>p</mi></math>
+side negatively charged. This carrier-depletion region-or, simply, depletion region-is also called the
+space-charge <b>region</b>. The charges on both sides of the depletion region cause an electric field
+<math display="inline"><mi>E</mi></math>
+to be established across the region in the direction indicated in <b>Fig.</b> <a href="#x20-72001r7">3.7</a>.
+Hence a potential difference results across the depletion region, with the
+<math display="inline"><mi>n</mi></math> side at a positive
+voltage relative to the <math display="inline"><mi>p</mi></math>
+side, as shown in <b>Fig.</b> <a href="#x20-72001r7">3.7</a>b. Thus the resulting electric field opposes the diffusion of holes into the
+<math display="inline"><mi>n</mi></math> region and electrons
+into the <math display="inline"><mi>p</mi></math> region. In
+fact, the voltage drop across the depletion region acts as a <b>barrier</b> that has to be overcome for holes to diffuse into the
+<math display="inline"><mi>n</mi></math> region and electrons
+to diffuse into the <math display="inline"><mi>p</mi></math>
+region. The larger the barrier voltage, the smaller the number of carriers that will be able to overcome the
+barrier, and hence the lower the magnitude of diffusion current. Thus it is the appearance of the barrier
+voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>
+that limits the carrier diffusion process. It follows that the diffusion current
+<math display="inline"><mi>I</mi><mi>D</mi></math> depends strongly
+on the voltage drop <math display="inline"><mi>V</mi> <mn>0</mn></math>
+across the depletion region.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-3"> <a id="x20-74000"></a>Drift Current and Equilibrium</h5>
+</p><p class="noindent">In addition to the current component <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>p</mi></mrow></msub></math>
+due to majority-carrier diffusion, a component due to minority-carrier drift exists
+across the junction. Specifically, some of the thermally generated holes in the
+<math display="inline"><mi>n</mi></math>
+material move toward the junction and reach the edge of the depletion region. There, they experience
+the electric field in the depletion region, which sweeps them across that region into the
+<math display="inline"><mi>p</mi></math>
+side. Similarly, some of the minority thermally generated electrons in the
+<math display="inline"><mi>p</mi></math> material move
+to the edge of the depletion region and get swept by the electric field in the depletion region across that region
+into the <math display="inline"><mi>n</mi></math>
+side. These two current components-electrons moved by drift from
+<math display="inline"><mi>p</mi></math> to
+<math display="inline"><mi>n</mi></math> and
+holes moved by drift from &lt;i&gt;n&lt;/i&gt; to &lt;i&gt;p&lt;/i&gt;-add together to form the drift current
+<math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub></math>, whose
+direction is from the &lt;i&gt;n&lt;/i&gt; side to the p side of the junction, as indicated in Fig. 3.9. Since the
+current <math display="inline"><msub><mrow><mi>I</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+is carried by thermally generated minority carriers, its value is strongly dependent on
+temperature; however, it is independent of the value of the depletion-layer voltage
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>. This is
+due to the fact that the drift current is determined by the number of minority carriers that make it to
+the edge of the depletion region; any minority carriers that manage to get to the edge of the
+depletion region will be swept across by E irrespective of the value of E or, correspondingly, of
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>.
+</p><p class="noindent">Under open-circuit conditions (<b>Fig.</b> <a href="#x20-72001r7">3.7</a>) no external current exists; thus the two opposite currents
+across the junction must be equal in magnitude:
+</p>
+<table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>I</mi></mrow><mrow><mi>S</mi></mrow><mrow></mrow></msubsup>
+</math></td></tr></table>
+<p class="noindent">This equilibrium <span class="margin-block">condition <span class="margin-comment"><span class="ellipsis">[85]</span>
+<span class="sidenote">In fact, in equilibrum the equality of drift and diffusion currents
+applies not just to the total currents but also to their individual components. That is, the
+hole drift current must equal the hole diffusion current and, similarly, the electron drift
+current must equal the electron diffusion current.</span></span></span> is maintained by the barrier voltage
+(<math display="inline"><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math>). Therefore, if
+for some reason <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math>
+exceeds <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>S</mi></mrow><mrow></mrow></msubsup></math>, then more
+bound charge will be uncovered on both sides of the junction, the depletion layer will widen, and the voltage across it
+(<math display="inline"><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math>) will increase. This in turn
+causes <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math> to decrease until
+equilibrium is achieved with <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>I</mi></mrow><mrow><mi>S</mi></mrow><mrow></mrow></msubsup></math>.
+</p><p class="noindent">On the other hand, if <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+exceeds <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math>,
+then the amount of uncovered charge will decrease, the depletion layer will narrow, and the voltage across it
+(<math display="inline"><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math>) will decrease. This
+causes <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math> to increase until
+equilibrium is achieved with <math display="inline"><msubsup><mrow><mi>I</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>I</mi></mrow><mrow><mi>S</mi></mrow><mrow></mrow></msubsup></math>.
+</p>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-4"> <a id="x20-75000"></a>The Junction Built-in Voltage</h5>
+</p><p class="noindent">With no external voltage applied, the barrier voltage
+(<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>)
+across the <i>pn</i> junction can be shown to be given by:
+</p>
+<div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-75001r21"></mstyle>
+<msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>T</mi></mrow></msub> <mi class="loglike">ln</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mfrac><mrow><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></mrow>
+<mrow><msubsup><mrow>
+<mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(3.21)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></math> are
+the doping concentrations of the <i>p</i>-side and <i>n</i>-side of the junction, respectively. Therefore
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>
+depends both on doping concentrations and on temperature.
+</p><p class="noindent">It is known as the <b>junction built-in voltage</b>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">Typically,  for  silicon  at  room  temperature,
+<math display="inline"><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></math> is in the range of
+<math display="inline"><mn>0</mn><mi>,</mi><mn>6</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+to <math display="inline"><mn>0</mn><mi>,</mi><mn>9</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>.
+</p></div></div>
+<p class="noindent">When the <i>pn</i> junction terminals are left open-circuited, the voltage measured between them will be zero. That is,
+the voltage <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub></math>
+across the depletion region does <b>NOT</b> appear between the junction terminals. This is because of the
+contact voltages existing at the metal-semiconductor junctions at the terminals, which counter and
+exactly balance the barrier voltage.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">If this were not the case, we would have been able to draw energy from the isolated <i>pn</i> junction, which
+would clearly <span class="alert">violate the principle of conservation of energy</span>. </p></div></div>
+<p class="noindent"><h5 class="subsubsectionHead" id="header-subsubsection-5"> <a id="x20-76000"></a>Width of and Charge Stored in the Depletion Region</h5>
+</p><p class="noindent">Figure 3.10 provides further illustration of the situation occuring in the <i>pn</i> junction
+when the junction is in equilibrium. In Fig. 3.10(a) we see a junction in which
+<math display="inline"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">&gt;</mo> <msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math>, a
+typical situation in practice. This is borne out by the carrier concentration on both sides of the
+junction, as shown in Fig. 3.10(b).
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">We have denoted the minority-carrier concentrations in both sides by
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>p</mi><mn>0</mn></mrow></msub></math> and
+<math display="inline"><msubsup><mrow><mi>p</mi></mrow><mrow><mi>n</mi><mn>0</mn></mrow><mrow></mrow></msubsup></math>, with
+the additional subscript "0" signifying <span class="margin-block">equilibrium. <span class="margin-comment"><span class="ellipsis">[86]</span>
+<span class="sidenote">i.e., before external voltages are applied, as will be
+seen in the next section.</span></span></span> </p></div></div>
+<p class="noindent">Observe that the depletion region extends in both the <i>p</i> and <i>n</i> materials and <span class="alert">equal amounts of charge exist</span> on both <span class="margin-block">sides.
+<span class="margin-comment"><span class="ellipsis">[87]</span>
+<span class="sidenote"><math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><msub><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msub></math> in Fig. 3.10c)</span></span></span> However, since
+usually unequal dopings <math display="inline"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup></math>
+and <math display="inline"><msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></math> are
+used, as in the case illustrated in Fig. 3.10, the width of the depletion layer will <b>NOT</b> be the same on the
+two (<span class="alert">2</span>) sides. Rather, to uncover the same amount of charge, the depletion layer will extend deeper into the
+more lightly doped material. Specifically, if we denote the width of the depletion region in the <i>p</i> side by
+<math display="inline"><msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup></math> and in the
+<i>n</i> side by <math display="inline"><msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup></math>,
+we can express the magnitude of the charge of the junction as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-76001r22"></mstyle>
+<mstyle class="text"><mtext>on the <i>n</i> side</mtext></mstyle>
+<mspace class="qquad" width="2em"></mspace>
+<mrow class="mathinner">
+<mspace class="negthinspace" width="-0.17em"></mspace>
+<mrow><mo fence="true" form="prefix">|</mo><mrow><msubsup><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow><mrow></mrow></msubsup>
+</mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><mi>A</mi><msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup><msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and on the <i>p</i> side</mtext></mstyle><mspace class="qquad" width="2em"></mspace><mrow class="mathinner"><mspace class="negthinspace" width="-0.17em"></mspace> <mrow><mo fence="true" form="prefix">|</mo><mrow><msubsup><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">|</mo></mrow> </mrow> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><mi>A</mi><msubsup><mrow><mi>x</mi></mrow><mrow><mi>p</mi></mrow><mrow></mrow></msubsup><msubsup><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup>
+</math></td><td class="eq-no">(3.22)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><mi>A</mi></math> is the
+cross-sectional area of the junction in the plane perpendicular to the page. The charge equality condition can now
+be written as <math display="inline"><mi>q</mi><mi>A</mi><msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup><msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>q</mi><mi>A</mi><msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup><msubsup><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup></math>
+which can be rearranged to give us: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-76002r23"></mstyle>
+<mfrac>
+<mrow>
+<msub><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow>
+<mrow>
+<mi>r</mi></mrow></mfrac>
+<mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>N</mi></mrow><mrow><mi>B</mi></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(3.23)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">In actual practice, it is usual for one side of the junction to be much more heavily doped than the
+other, with the result that the depletion region exists almost entirely on one side (the lightly doped
+side).
+</p><p class="noindent">The width <math display="inline"><mi>W</mi></math>
+of the depletion layer can be shown to be given by </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-76003r24"></mstyle>
+<mi>W</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>x</mi></mrow><mrow><mi>p</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <msqrt><mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><msub><mrow><mi>𝜖</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow>
+<mrow>
+<mi>q</mi></mrow></mfrac><msup><mrow>
+<mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msubsup><mrow>
+<mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup></mrow></mfrac> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow><msubsup><mrow>
+<mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></mrow></mfrac>
+</mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup><msubsup><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mrow></msqrt>
+</math></td><td class="eq-no">(3.24)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>𝜖</mi></mrow><mrow><mi>s</mi></mrow></msub></math> is the electrical
+permittivity of silicon = <math display="inline"><mn>1</mn><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn><msub><mrow><mi>𝜖</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>7</mn> <mi>×</mi> <mn>8</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>8</mn><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mn>4</mn></mrow></msup></math>
+F/cm = <math display="inline"><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>0</mn><mn>4</mn><mi>×</mi></math>
+<math display="inline"><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mn>2</mn></mrow></msup></math> F/cm. Typically W is
+in the range 0.1 <math display="inline"><mi>μ</mi></math>m to 1
+<math display="inline"><mi>μ</mi></math>m. Eqs. (3.25) and (3.26)
+can be used to obtain <math display="inline"><msub><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>x</mi></mrow><mrow><mi>p</mi></mrow></msub></math> in
+terms of W as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-76004r25"></mstyle>
+<msubsup><mrow><mi>x</mi></mrow><mrow><mi>n</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>W</mi> <mfrac><mrow><msubsup><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup></mrow>
+<mrow><msubsup><mrow>
+<mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></mrow></mfrac><mspace class="qquad" width="2em"></mspace><mstyle class="text"><mtext>and</mtext></mstyle><mspace class="qquad" width="2em"></mspace><msubsup><mrow><mi>x</mi></mrow><mrow><mi>p</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>W</mi> <mfrac><mrow><msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></mrow>
+<mrow><msubsup><mrow>
+<mi>N</mi></mrow><mrow><mi>A</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">+</mo> <msubsup><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup></mrow></mfrac>
+</math></td><td class="eq-no">(3.25)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">The charge stored on either side of the depletion region can be expressed in terms of
+<math display="inline"><mi>W</mi></math> by utilizing
+Eqs. <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>2</mn><mn>3</mn><mo class="MathClass-close" stretchy="false">)</mo></math>
+and <span> Eq. (<a href="#x20-76004r25">3.25</a>)</span>  to obtain:
+</p><math display="block"><mtable class="align" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>Q</mi></mrow><mrow><mi>I</mi></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>|</mi><msub><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">+</mo></mrow></msub><mi>|</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>|</mi><msub><mrow><mi>Q</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo></mrow></msub><mi>|</mi><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x20-76005r26"></mstyle><mstyle class="maketag"><mtext>(3.26)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr><mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>Q</mi></mrow><mrow><mi>J</mi></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>A</mi><mi>q</mi><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">(</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle> <mfrac><mrow><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></mrow></mfrac><mstyle mathsize="2.03em"><mrow><mo fence="true" form="prefix">)</mo><mrow></mrow><mo fence="true" form="postfix"></mo></mrow></mstyle><mi>W</mi><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"><mstyle class="label" id="x20-76006r27"></mstyle><mstyle class="maketag"><mtext>(3.27)</mtext></mstyle><mspace class="nbsp" width="0.33em"></mspace>
+</mtd></mtr></mtable></math>
+<p class="noindent">Finally, we can substitute for <math display="inline"><mi>W</mi></math>
+from Eq. (3.26) to obtain </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x20-76007r28"></mstyle>
+<msub><mrow><mi>Q</mi></mrow><mrow><mi>J</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>A</mi><msqrt><mrow>
+<mn>2</mn><msub><mrow><mi>𝜖</mi></mrow><mrow><mi>s</mi></mrow></msub><mi>q</mi> <mrow><mo fence="true" form="prefix">(</mo><mrow> <mfrac><mrow><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></mrow></mfrac> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow></msqrt><msub><mrow><mi>V</mi> </mrow><mrow><mn>0</mn></mrow></msub>
+</math></td><td class="eq-no">(3.28)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">These expressions for <math display="inline"><mi>Q</mi><mi>J</mi></math>
+will prove useful in subsequent sections.
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:bjt">¶</a>
+<dt class="acr-bottom" id="glo:bjt"><span class="acr-short">BJT</span><span class="acr-long">Bipolar Junction Transistor</span></dt>
+<dd class="acr-desc"><p>Bipolar Junction
+Transistor</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="PNJunctionwithAppliedVoltage.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="CurrentFlowinSemiconductors.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Semiconductors.html#ThePNJunction.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> </p><div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 3.3: The PN Junction</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Semiconductor Physics</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Non-Linear Electronics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2025.WS</span>
+<span class="header-chapter">Semiconductors</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="SignalsandAmplifiers.html#x3-20001">Signals and Amplifiers</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-30001.1">Fundamentals of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="FundamentalsofSignals.html#x4-40001.1.1">Proper Definition</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="FundamentalsofSignals.html#x4-50001.1.2">Frequency
+Spectrum of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="FundamentalsofSignals.html#x4-60001.1.3">Analog and Digital Signals</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-70001.2">Amplifiers as a Concept</a></span></span><span class="subsectionToc"><span class="number">1.2.1</span><span class="title"><a href="AmplifiersasaConcept.html#x5-80001.2.1">Signal
+Amplification</a></span></span><span class="subsectionToc"><span class="number">1.2.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-90001.2.2">Amplifier Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">1.2.3</span><span class="title"><a href="AmplifiersasaConcept.html#x5-100001.2.3">Voltage Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.4</span><span class="title"><a href="AmplifiersasaConcept.html#x5-110001.2.4">Power Gain and Current
+Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.5</span><span class="title"><a href="AmplifiersasaConcept.html#x5-120001.2.5">Expressing Gain in Decibels</a></span></span><span class="subsectionToc"><span class="number">1.2.6</span><span class="title"><a href="AmplifiersasaConcept.html#x5-130001.2.6">The Amplifier Power Supplies</a></span></span><span class="subsectionToc"><span class="number">1.2.7</span><span class="title"><a href="AmplifiersasaConcept.html#x5-140001.2.7">Amplifier
+Saturation</a></span></span><span class="subsectionToc"><span class="number">1.2.8</span><span class="title"><a href="AmplifiersasaConcept.html#x5-150001.2.8">Symbol Convention</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-160001.3">Circuit Models for Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-170001.3.1">Voltage
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.2</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-180001.3.2">Cascaded Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-190001.3.3">Other Amplifier Types</a></span></span><span class="subsectionToc"><span class="number">1.3.4</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-200001.3.4">Relationships between
+the Four Amplifier Models</a></span></span><span class="subsectionToc"><span class="number">1.3.5</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-210001.3.5">Determining Input and Output Resistance</a></span></span><span class="subsectionToc"><span class="number">1.3.6</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-220001.3.6">Unilateral
+Models</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-230001.4">Frequency Response of Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.1</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-240001.4.1">Measuring the Amplifier Frequency
+Response</a></span></span><span class="subsectionToc"><span class="number">1.4.2</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-250001.4.2">Amplifier Bandwidth</a></span></span><span class="subsectionToc"><span class="number">1.4.3</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-260001.4.3">Evaluating the Frequency Response of
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-270001.4.4">Single-Time-Constant Networks</a></span></span><span class="subsectionToc"><span class="number">1.4.5</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-280001.4.5">Classification of Amplifiers Based
+on Frequency Response</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="OperationalAmplifiers.html#x8-290002">Operational Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-300002.1">The Ideal Op Amp</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-310002.1.1">Terminals
+of the Element</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="TheIdealOpAmp.html#x9-320002.1.2">Function and Characteristics</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="TheIdealOpAmp.html#x9-330002.1.3">Differential and Common-Mode
+Signals</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-340002.2">The Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="TheInvertingAmplifier.html#x10-350002.2.1">The Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-360002.2.2">Effect of Finite
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="TheInvertingAmplifier.html#x10-370002.2.3">Input and Output Resistances</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-380002.3">Non-Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="NonInvertingAmplifier.html#x11-390002.3.1">The
+Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="NonInvertingAmplifier.html#x11-400002.3.2">Effect of Finite Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-410002.3.3">Input and Output
+Resistance</a></span></span><span class="subsectionToc"><span class="number">2.3.4</span><span class="title"><a href="NonInvertingAmplifier.html#x11-420002.3.4">The Voltage Follower</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="DifferenceAmplifiers.html#x12-430002.4">Difference Amplifiers</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="DifferenceAmplifiers.html#x12-440002.4.1">A Single-Op-Amp
+Difference Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="DifferenceAmplifiers.html#x12-450002.4.2">A Versatile Circuit: The Instrumentation Amplifier</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-460002.5">Integrators
+and Differentiators</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-470002.5.1">The Inverting Configuration with General Impedances</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-480002.5.2">The
+Inverting Integrator</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-490002.5.3">The Op-Amp Differentiator</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="DCImperfections.html#x14-500002.6">DC Imperfections</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="DCImperfections.html#x14-510002.6.1">Offset
+Voltage</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="DCImperfections.html#x14-520002.6.2">Input Bias and Offset Currents</a></span></span><span class="subsectionToc"><span class="number">2.6.3</span><span class="title"><a href="DCImperfections.html#x14-530002.6.3">Effects of Offset of Inverting
+Integrator</a></span></span><span class="sectionToc"><span class="number">2.7</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-540002.7">Finite Open-Loop Gain and Bandwidth</a></span></span><span class="subsectionToc"><span class="number">2.7.1</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-550002.7.1">Frequency Dependence of the
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.7.2</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-560002.7.2">Frequency Response of Closed-Loop Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.8</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-570002.8">Large-Signal
+Operation of Op Amps</a></span></span><span class="subsectionToc"><span class="number">2.8.1</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-580002.8.1">Output Voltage Saturation</a></span></span><span class="subsectionToc"><span class="number">2.8.2</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-590002.8.2">Output Current Limits</a></span></span><span class="subsectionToc"><span class="number">2.8.3</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-600002.8.3">Slew
+Rate</a></span></span><span class="subsectionToc"><span class="number">2.8.4</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-610002.8.4">Full-Power Bandwidth</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Semiconductors.html#x17-620003">Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="#x18-630003.1">Semiconductor Physics</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="#x18-640003.1.1">Intrinsic
+Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="#x18-650003.1.2">Doped Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-660003.2">Current Flow in Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-670003.2.1">Drift
+Current</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-680003.2.2">Diffusion Current</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ThePNJunction.html#x20-690003.3">The PN Junction</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ThePNJunction.html#x20-700003.3.1">Implementation</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ThePNJunction.html#x20-710003.3.2">Open
+Circuit Operation</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-770003.4">PN Junction with Applied Voltage</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-780003.4.1">Qualitative Description
+of Junction Operation</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-790003.4.2">Reverse Breakdown</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-800003.5">Capacitive Effects in the pn
+Junction</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-810003.5.1">Depletion or Junction Capacitance</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-820003.5.2">Diffusion Capacitance</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="Diodes.html#x23-830004">Diodes</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="TheIdealDiode.html#x24-850004.1">The
+Ideal Diode</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="TheIdealDiode.html#x24-860004.1.1">i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="TheIdealDiode.html#x24-880004.1.2">Application: The Rectificer</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="TheIdealDiode.html#x24-890004.1.3">Application:
+Logic Gates</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-900004.2">Terminal Characteristics of Junction Diodes</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-910004.2.1">The Forward-Bias
+Region</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-920004.2.2">Reverse Bias Region</a></span></span><span class="subsectionToc"><span class="number">4.2.3</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-930004.2.3">The Breakdown Region</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-940004.3">Modelling the Diode
+Forward Characteristic</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-950004.3.1">The Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-960004.3.2">Graphical Analysis Using the
+Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-970004.3.3">The Need for Rapid Analysis</a></span></span><span class="subsectionToc"><span class="number">4.3.4</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-980004.3.4">The Constant-Voltage-Drop
+Model</a></span></span><span class="subsectionToc"><span class="number">4.3.5</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-990004.3.5">The Ideal-Diode Model</a></span></span><span class="subsectionToc"><span class="number">4.3.6</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1000004.3.6">The Small-Signal Model</a></span></span><span class="subsectionToc"><span class="number">4.3.7</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1010004.3.7">Use of the Diode
+Forward Drop in Voltage Regulation</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="ZenerDiodes.html#x27-1020004.4">Zener Diodes</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="ZenerDiodes.html#x27-1030004.4.1">Operating in the Reverse
+Breakdown Region</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="ZenerDiodes.html#x27-1040004.4.2">Specifying and Modeling the Zener Diode</a></span></span><span class="subsectionToc"><span class="number">4.4.3</span><span class="title"><a href="ZenerDiodes.html#x27-1050004.4.3">Temperature
+Effects</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1060004.5">Limiting and Clamping Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1070004.5.1">Limiter Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.2</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1080004.5.2">The Clamped Capacitor
+or DC Restorer</a></span></span><span class="subsectionToc"><span class="number">4.5.3</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1090004.5.3">The Voltage Doubler</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1100004.6">Special Diode Types</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1110004.6.1">The Schottky-Barrier
+Diode (SBD)</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1120004.6.2">Varactors</a></span></span><span class="subsectionToc"><span class="number">4.6.3</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1130004.6.3">Photodiodes</a></span></span><span class="subsectionToc"><span class="number">4.6.4</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1140004.6.4">Light Emitting Diodes</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="MOSFieldEffectTransistors.html#x30-1150005">MOS
+Field Effect Transistors</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1170005.1">Device Structure and Physical Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1180005.1.1">Device
+Structure</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1190005.1.2">Operation with Zero Gate Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1200005.1.3">Creating a Channel for
+Current Flow</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1210005.1.4">Applying a Small Drain-to-Source Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.5</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1220005.1.5">Operation as
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is
+Increased</a></span></span><span class="subsectionToc"><span class="number">5.1.6</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1230005.1.6">Channel Pinch-Off and Current Saturation</a></span></span><span class="subsectionToc"><span class="number">5.1.7</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1240005.1.7">The p-Channel
+MOSFET</a></span></span><span class="subsectionToc"><span class="number">5.1.8</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1250005.1.8">Complementary MOS or CMOS</a></span></span><span class="subsectionToc"><span class="number">5.1.9</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1260005.1.9">Operating the MOS Transistor in
+the Subthreshold Region</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1270005.2">Current-Voltage Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1280005.2.1">Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1290005.2.2">
+The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1300005.2.3">The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1310005.2.4">Finite Output Resistance in Saturation</a></span></span><span class="subsectionToc"><span class="number">5.2.5</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1320005.2.5">Characteristics
+of the p-Channel MOSFET</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MOSFETCircuitsatDC.html#x33-1330005.3">MOSFET Circuits at DC</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1340005.4">Body Effect and
+Other Topics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1350005.4.1">The Role of the Substrate - The Body Effect</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1360005.4.2">Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">5.4.3</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1370005.4.3">Breakdown and Input Protection</a></span></span><span class="subsectionToc"><span class="number">5.4.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1380005.4.4">Velocity Saturation</a></span></span><span class="subsectionToc"><span class="number">5.4.5</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1390005.4.5">Depletion-Type
+MOSFET</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="BipolarJunctionTransistors.html#x35-1400006">Bipolar Junction Transistors</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1410006.1">Physical Implementation</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1420006.1.1">Simplified
+Structure and Operation Modes</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PhysicalImplementation.html#x36-1430006.1.2">Operation of the npn Transistor in the Active
+Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PhysicalImplementation.html#x36-1500006.1.3">Structure of Actual Transistor</a></span></span><span class="subsectionToc"><span class="number">6.1.4</span><span class="title"><a href="PhysicalImplementation.html#x36-1510006.1.4">Operation in the Saturation Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.5</span><span class="title"><a href="PhysicalImplementation.html#x36-1520006.1.5">The
+pnp Transistor</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1530006.2">The i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="TheivCharacteristics.html#x37-1540006.2.1">Symbols and Conventions</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1550006.2.2">Graphical
+Representation of Transistor Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.3</span><span class="title"><a href="TheivCharacteristics.html#x37-1560006.2.3">Dependence of ic on the Collector
+Voltage - The early Effect</a></span></span><span class="subsectionToc"><span class="number">6.2.4</span><span class="title"><a href="TheivCharacteristics.html#x37-1570006.2.4">An Alternative Form of the Common-Emitter
+Characteristics</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="BJTCircuitsatDC.html#x38-1600006.3">BJT Circuits at DC</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1610006.4">Transistor Breakdown and Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1620006.4.1">Transistor Breakdown</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x40-163000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-164000A.1">An Introduction to Scientific
+Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-165000A.1.1">A Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-166000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-169000A.1.3">Decimal Multiples
+and Sub-multiples of SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-172000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x42-173000B">Dimensional
+Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-174000B.1">Physical Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-175000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-176000B.1.2">Physical
+Quantities and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-177000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-178000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-179000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-182000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-186000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-187000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-188000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-193000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-198000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-208000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="CurrentFlowinSemiconductors.html">Current Flow in Semiconductors</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="Semiconductors.html">Chapter: Semiconductors</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="Semiconductors.html#SemiconductorPhysics.html">Chapter: Semiconductors</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-3.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#section.3.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">3.1</span> <span class="title"> <a id="x18-630003.1"></a>Semiconductor
+Physics</span></h3></div>
+<p class="noindent">Semiconductors play a vital role in how modern electronics are made and therefore is in our best
+interest to get a good overview on them. To that end we shall study two (<span class="alert">2</span>) types: Intrinsic, and
+Doped.
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.1.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.3.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.1.1</span> <span class="title"> <a id="x18-640003.1.1"></a>Intrinsic Semiconductors</span></h4></div>
+</p><p class="noindent">As their name gives it away, <b>semiconductors</b> are materials whose conductivity lies between a of
+conductors, such as copper, and insulators, such as glass. From an element standpoint, there are two
+(<span class="alert">2</span>) kinds of semiconductors: </p>
+<dl class="description"><dt class="description"><a id="x18-64001x3.1.1"></a>
+<span style="color:#1C2E4A;">Single-element Semiconductors</span>
+</dt><dd class="description">
+<p class="noindent">such as germanium and <span class="margin-block"><span class="margin"><span>silicon, <span class="ellipsis">[72]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Semiconductors/raster/silicon.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[72]</span><b>Silicon</b> is an element, with symbol <b>Si</b> and atomic
+number 14. It is a hard, brittle crystalline solid with a blue-grey metallic lustre, and is a
+non-metal and semiconductor. It is a member of group 14 in the periodic table: carbon is
+above it; and <i>germanium</i>, <i>tin</i>, <i>lead</i>, and <i>flerovium</i> are below it. It is relatively unreactive.
+Silicon is widely regarded as the predominant semiconductor material due to its versatile
+applications  in  various  electrical  devices  such  as  transistors,  solar  cells,  <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ic">IC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ic">Integrated
+Circuit</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ic">A  small  electronic  device  combining  numerous  interconnected  components,  like
+transistors, resistors, and capacitors, onto a single semiconductor chip, usually silicon</a></span></span></span>, and
+others.</span></span></span></span> which are in group IV in the periodic table.
+</p>
+</dd>
+<dt class="description"><a id="x18-64002x3.1.1"></a>
+<span style="color:#1C2E4A;">Compound Semiconductors</span>
+</dt><dd class="description">
+<p class="noindent">such as gallium-arsenide, which are formed by combining elements from groups III and V
+or groups II and VI.</p></dd></dl>
+<p class="noindent"></p><figure class="float">
+<p class="noindent"> <img alt="PIC" src="figures/Semiconductors/figures-1.png" style=""/> <a id="x18-64003r1"></a>
+</p>
+<figcaption class="caption"><span class="id">Figure 3.1: </span><span class="content">The periodic table of elements.                                                  </span></figcaption>
+</figure>
+<p class="noindent">Compound semiconductors are useful in special electronic circuit applications as well as in applications
+involving light, such as <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:led">LED</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:led">Light-Emitting Diode</a></span><span class="acronym-desc"><a class="glossary" href="#glo:led">Light-Emitting Diode</a></span></span></span>s. Of the two (<span class="alert">2</span>) elemental
+semiconductors, <span class="margin-block"><span class="margin"><span>germanium <span class="ellipsis">[73]</span></span><span class="sidenote"><span class="sidenote-image"><img alt="PIC" src="figures/Semiconductors/raster/portrait-germanium.jpg" style=""/></span><span class="sidenote-text"><span class="ellipsis">[73]</span>Germanium is a chemical element, with symbol <b>Ge</b> and
+atomic number 32. It is lustrous, hard-brittle, grayish-white and similar in appearance to
+silicon. It is a metalloid or a nonmetal in the carbon group that is chemically similar to
+silicon. Like silicon, germanium naturally reacts and forms complexes with oxygen in nature.
+Elemental germanium is used as a semiconductor in transistors and various other electronic
+devices.</span></span></span></span> was used in the fabrication of the first transistors, between late 1940s, early 1950s. It
+was quickly supplanted, however, with <i>silicon</i>, on which today’s <span class="acronym"><span class="acronym-short"><a class="glossary" href="#glo:ic">IC</a></span><span class="acronym-detail"><span class="acronym-long"><a class="glossary" href="#glo:ic">Integrated Circuit</a></span><span class="acronym-desc"><a class="glossary" href="#glo:ic">A
+small electronic device combining numerous interconnected components, like transistors,
+resistors, and capacitors, onto a single semiconductor chip, usually silicon</a></span></span></span> technology is
+based.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">For this reason, we will deal mostly with <span class="alert">silicon</span> devices throughout this lecture. </p></div></div>
+<p class="noindent">A silicon atom has four (<span class="alert">4</span>) valence electrons, and requires another four (<span class="alert">4</span>) to complete its outermost
+shell. This is achieved by sharing one of its valence electrons with each of its four neighboring
+atoms. Each pair of shared electrons forms a <b>covalent bond</b>. The result is a crystal of
+pure or intrinsic silicon with a regular lattice structure, where the atoms are held in their
+position by the covalent bonds. <b>Fig.</b> <a href="#x18-64004r2">3.2</a>a shows a two-dimensional representation of such a
+structure.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x18-64004r2"></a>
+<figcaption class="caption"><span class="id">Figure 3.2: 
+         </span><span class="content">(a) Two-dimensional representation of the silicon crystal. The circles represent the inner core of silicon
+         atoms, with +4 indicating its <i>positive charge</i> of +4q, which is neutralized by the charge of the four
+         valence electrons. Please observe how the covalent bonds are formed by sharing of the valence electrons. At
+         <math display="inline"><mn>0</mn></math><math display="inline"><mstyle mathvariant="normal"><mi>K</mi></mstyle></math>,
+         all bonds are intact and no free electrons are available for current conduction (b) At room temperature,
+         some of the covalent bonds are broken by thermal generation. Each broken bond gives rise to a free
+         electron and a hole, both of which become available for current conduction.                    </span></figcaption>
+<img alt="PIC" src="figures/Semiconductors/figures-6.png" style=""/>
+</figure>
+<p class="noindent"></p><figure class="float">
+<dl class="description"><dt class="description"><a id="x18-64005x3.1.1"></a>
+<span style="color:#1C2E4A;">Valence Electrons</span>
+</dt><dd class="description">
+<p class="noindent">Valence electrons are the electrons in the outermost shell of an atom. They control how elements react,
+form chemical bonds, and share or give away electrons.
+</p>
+</dd>
+<dt class="description"><a id="x18-64006x3.1.1"></a>
+<span style="color:#1C2E4A;">Covalent Bond</span>
+</dt><dd class="description">
+<p class="noindent">A chemical bond that involves the sharing of electrons to form electron pairs between atoms. These electron
+pairs are known as shared pairs or bonding pairs. The stable balance of attractive and repulsive forces
+between atoms, when they share electrons, is known as covalent bonding</p></dd></dl>
+</figure>
+<p class="noindent">At sufficiently low <span class="margin-block">temperatures, <span class="margin-comment"><span class="ellipsis">[74]</span>
+<span class="sidenote">close to, if not, absolute zero
+(<math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>K</mi></mstyle></math>.)</span></span></span>
+all the covalent bonds are intact and no electrons are available to conduct electric current.
+</p>
+<div class="info-block" id="info-block-3.10"> <a class="copiable-link" href="#info-block-3.10"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 3.<a id="x18-64007r10"></a>10: </b> </span> <span class="info-title"> Too Cold to Move </span> </span> <div class="body">
+<p class="noindent">At such low temperatures, the intrinsic silicon crystal behaves as an <span class="alert">insulator</span>. At room temperature,
+sufficient thermal energy exists to break some of the covalent bonds, a process known as
+<span class="alert">thermal generation</span>.
+</p>
+</div></div>
+<p class="noindent">As shown in <b>Fig.</b> <a href="#x18-64004r2">3.2</a>b, when a covalent bond is broken, an electron is freed. The free electron can
+wander away from its parent atom, and it becomes available to conduct electric current if an electric
+field (<math display="inline"><mstyle mathvariant="bold"><mi>E</mi></mstyle></math>)
+is applied to the crystal. As the electron leaves its parent atom, it leaves behind a net <b>positive charge</b>
+which is equal to the magnitude of the electron charge.
+</p><p class="noindent">Therefore, an electron from a neighbouring atom could be attracted to this positive charge, and leaves
+its parent atom. This action fills up the “hole” which existed in the ionized atom but creates a new hole
+in the other atom.
+</p><p class="noindent">This process may repeat itself, with the result that we effectively have a positively charged carrier, or
+<b>hole</b>, moving through the silicon crystal structure and being available to conduct electric current. The
+charge of a hole is equal in magnitude to the charge of an electron. We can therefore see
+that, as temperature increases, more covalent bonds are broken and electron-hole pairs are
+generated.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The increase in free electrons and holes results in an <span class="alert">increase in the conductivity of silicon</span>. </p></div></div>
+<p class="noindent">Thermal generation results in free electrons and holes in equal numbers and hence equal
+concentrations, where concentration refers to the number of charge carriers per unit volume
+(<math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msup></math>). The
+free electrons and holes move randomly through the silicon crystal structure, and in the process some
+electrons may fill some of the holes. This process, called <b>recombination</b>, results in the
+disappearance of free electrons and holes. The recombination rate is proportional to the
+number of free electrons and holes, which in turn is determined by the thermal generation
+rate.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The latter is a strong function of <span class="alert">temperature</span>. </p></div></div>
+<p class="noindent">In thermal equilibrium, the recombination rate is equal to the generation
+rate, and we can conclude that the concentration of free electrons
+(<math display="inline"><mi>n</mi></math>) is equal to the
+concentration of holes (<math display="inline"><mi>p</mi></math>),
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-64008r1"></mstyle>
+<mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>p</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub>
+</math></td><td class="eq-no">(3.1)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></math>
+denotes the number of free electrons and holes in a unit volume
+(<math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mn>3</mn></mrow></msup></math>)
+of intrinsic silicon at a given temperature. Results from semiconductor physics gives
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></math> as
+</p><div class="highlight-eq-block"><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-64009r2"></mstyle>
+<msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>B</mi><msup><mrow><mi>T</mi></mrow><mrow><mn>3</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></mrow></msup> <mi class="loglike">exp</mi><mo>⁡</mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msub><mrow><mi>E</mi></mrow><mrow>
+<mi>g</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn><mi>k</mi><mi>T</mi> </mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup>
+</math></td><td class="eq-no">(3.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent"></p></div>
+<p class="noindent">where <math display="inline"><mi>B</mi></math> is a material-dependent
+parameter which is <math display="inline"><mn>7</mn><mi>,</mi><mn>3</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>5</mn></mrow></msup></math>
+for silicon, <math display="inline"><mi>T</mi></math> is the
+temperature in <math display="inline"><mstyle mathvariant="normal"><mi>K</mi></mstyle></math>;
+<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>g</mi></mrow></msub></math>, a
+parameter known as the <b>bandgap energy</b>, is 1.12 <span class="margin-block">electron volt <span class="margin-comment"><span class="ellipsis">[75]</span>
+<span class="sidenote">also written electron-volt and electron
+volt, is the measure of an amount of kinetic energy gained by a single electron accelerating through an
+electric potential difference of one volt in vacuum. When used as a unit of energy, the numerical value of
+<math display="inline"><mn>1</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>e</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+in joules (<math display="inline"><mstyle mathvariant="normal"><mi>J</mi></mstyle></math>)
+is equal to the numerical value of the charge of an electron in coulombs
+(<math display="inline"><mstyle mathvariant="normal"><mi>C</mi></mstyle></math>).
+Under  the  2019  revision  of  the  SI,  this  sets
+<math display="inline"><mn>1</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>e</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+equal to the exact value <math display="inline"><mn>1</mn><mi>,</mi><mn>6</mn><mn>0</mn><mn>2</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>7</mn><mn>6</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>6</mn><mn>3</mn><mn>4</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mn>9</mn></mrow></msup></math></span></span></span>
+(eV) for silicon; and <math display="inline"><mi>k</mi></math> is
+Boltzmann’s constant <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mn>8</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>6</mn><mn>2</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn></mrow></msup><mstyle class="text"><mtext> eV/K</mtext></mstyle><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The bandgap energy (<math display="inline"><msub><mrow><mi>E</mi></mrow><mrow><mi>g</mi></mrow></msub></math>)
+is the minimum energy required to break a covalent bond and generate an electron-hole pair and is
+defined as an energy range in a solid where no electronic states exist. </p></div></div>
+<a id="x18-64010r1"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 3.1: </b> </span> <span class="exer-title"> Carriers in a Semiconductor </span> </span> <div class="body">
+<p class="noindent">Calculate the value of <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></math>, for
+silicon at room temperature (<math display="inline"><mi>T</mi> <mi>≃</mi> <mn>3</mn><mn>0</mn><mn>0</mn></math>
+K).
+</p>
+<hr/>
+<p class="noindent">Substituting the values in <span> Eq. (<a href="#x18-64009r2">3.2</a>)</span>  gives the following:
+</p><math display="block"><mtable class="align-star" columnalign="left" displaystyle="true">
+<mtr><mtd class="align-odd" columnalign="right"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>7</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>3</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>5</mn></mrow></msup><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>3</mn><mn>0</mn><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo class="MathClass-bin" stretchy="false">/</mo><mn>2</mn></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>1</mn><mn>2</mn><mo class="MathClass-bin" stretchy="false">/</mo><mo class="MathClass-open" stretchy="false">(</mo><mn>2</mn><mi>×</mi><mn>8</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>6</mn><mn>2</mn><mi>×</mi><mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>5</mn></mrow></msup><mi>×</mi><mn>3</mn><mn>0</mn><mn>0</mn><mo class="MathClass-close" stretchy="false">)</mo>
+</mrow></msup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr><mtr><mtd class="align-odd" columnalign="right"></mtd>
+<mtd class="align-even"> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msup><mspace width="2em"></mspace></mtd>
+<mtd class="align-label" columnalign="right"></mtd>
+<mtd class="align-label">
+<mspace width="2em"></mspace></mtd></mtr></mtable></math>
+<p class="noindent">Although this number seems large, to place it into context note that silicon has
+<math display="inline"><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msup></math> atoms/cm. Thus at room
+temperature only one in about <math display="inline"><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msup></math>
+atoms is ionized and contributing a free electron and a hole.
+</p>
+<p class="noindent"></p></div> </div>
+<p class="noindent">Finally, it is useful for future purposes to express the product of the hole and free-electron
+concentration as </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-64011r3"></mstyle>
+<mi>p</mi><mi>n</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup>
+</math></td><td class="eq-no">(3.3)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where  for  silicon  at  room  temperature,
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub> <mi>≈</mi> <mn>1</mn><mi>,</mi><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msup></math> <math display="inline"><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math>.
+As will be seen shortly, this relationship extends to extrinsic or doped silicon as well.
+</p>
+<div class="info-block" id="info-block-3.11"> <a class="copiable-link" href="#info-block-3.11"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 3.<a id="x18-64012r11"></a>11: </b> </span> <span class="info-title"> Liquid Crystal Display </span> </span> <div class="body">
+<p class="noindent">The existence of liquid crystals whose color could be changed by means of an external heat source was
+first reported in 1888 by an Austrian botanical physiologist. The LC idea lay dormant until the late
+1940s, however. Subsequent developments in the field of solid-state electronics provided the technology
+to harness the technique in display media, with the first LCDs being demonstrated by RCA beginning
+in 1962. Today, LCDs are an essential component in every mobile device as the interface
+to the world of electronics within. At the other end of the scale, large LCDs are used in
+flat-panel TVs, and very large LCDs are appearing as “dynamic” wallpaper in museum display
+settings.
+</p>
+</div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-3.1.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.3.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">3.1.2</span> <span class="title"> <a id="x18-650003.1.2"></a>Doped Semiconductors</span></h4></div>
+</p><p class="noindent">The intrinsic silicon crystal described previously has <span class="alert">equal concentrations of free electrons and holes</span>, generated by thermal generation. These
+concentrations are far too small for silicon to conduct measurable current at room temperature. In
+addition, the carrier concentrations and hence the conductivity are strong functions of temperature,
+which is <b>NOT</b> a desirable property in an electronic device. Fortunately, a method was developed to
+change the carrier concentration in a semiconductor crystal substantially and in a precisely controlled
+manner.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This process is known as <span class="alert">doping</span>, and the resulting silicon is referred to as <span class="alert">doped silicon</span>. </p></div></div>
+<p class="noindent">Doping requires introducing <b>impurity atoms</b> into the silicon crystal in sufficient numbers to
+significantly increase the concentration of either free electrons or holes but with little or no change in
+the crystal properties of silicon. </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">To increase the concentration of free electrons (<math display="inline"><mi>n</mi></math>)
+silicon is doped with an element with a valence of 5, such as <i>phosphorus</i>. The resulting
+doped silicon is then said to be of <i>n</i>-<span class="margin-block">type. <span class="margin-comment"><span class="ellipsis">[76]</span>
+<span class="sidenote">This means, again, that the material has more
+free moving electrons than there are holes.</span></span></span>
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">To increase the concentration of holes (<math display="inline"><mi>p</mi></math>)
+silicon is doped with an element having a valence of 3, such as <i>boron</i>, and the resulting
+doped silicon is said to be of <i>p</i>-type.</p></li></ul>
+<p class="noindent">Figure 3.3 shows a silicon crystal doped with phosphorus impurity. The dopant (phosphorus)
+atoms replace some of the silicon atoms in the crystal structure. Since the phosphorus atom
+has five (<span class="alert">5</span>) electrons in its outer shell, four of these electrons form covalent bonds with the
+neighboring atoms, and the fifth electron becomes a free electron. Therefore each phosphorus
+atom donates a free electron to the silicon crystal, and the phosphorus impurity is called a
+<b>donor</b>.
+</p>
+<div class="info-block" id="info-block-3.12"> <a class="copiable-link" href="#info-block-3.12"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 3.<a id="x18-65001r12"></a>12: </b> </span> <span class="info-title"> No Such Thing as Free Holes </span> </span> <div class="body">
+<p class="noindent">It should be clear, though, that no holes are generated by this process. The net positive charge
+associated with the phosphorus atom is a bound charge that does not move through the
+crystal.
+</p>
+</div></div>
+<p class="noindent">If the concentration of donor atoms is <math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></math>,
+where <math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub></math> is usually
+much greater than <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></math>,
+the concentration of free electrons in the <i>n</i>-type silicon will be: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-65002r4"></mstyle>
+<msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub> <mi>≈</mi> <msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub>
+</math></td><td class="eq-no">(3.4)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the subscript <math display="inline"><mi>n</mi></math> denotes
+<i>n</i>-type silicon. Therefore, <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+is determined by the doping concentration and not by temperature. This is not the case, however, for the
+hole concentration. All the holes in the <i>n</i>-type silicon are those generated by thermal ionization. Their
+concentration <math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+can be found by noting that the relationship in <span> Eq. (<a href="#x18-64011r3">3.3</a>)</span>  applies equally well for doped silicon,
+provided thermal equilibrium is achieved. Therefore for <i>n</i>-type silicon: </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup>
+</math></td></tr></table>
+<p class="noindent">Substituting for <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub></math> from <span>
+Eq. 
+(<a href="#x18-65002r4">3.4</a>)
+</span> , we obtain for <math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub></math>:
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-65003r5"></mstyle>
+<msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub> <mi>≃</mi> <mfrac><mrow><msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>N</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(3.5)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Therefore <math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+will have the same dependence on temperature as that of
+<math display="inline"><msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></math>. Finally, in <i>n</i>-type silicon the
+concentration of free electrons <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub></math>
+will be much larger than that of holes. Hence electrons are said to be the majority charge carriers and
+holes the minority charge carriers in <i>n</i>-type silicon.
+</p><p class="noindent">To obtain <i>p</i>-type silicon in which holes are the majority charge carriers, a trivalent impurity such as
+boron is used. Figure 3.4 shows a silicon crystal doped with <i>boron</i>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The <i>boron</i> atoms <span class="alert">replace some of the silicon atoms</span> in the silicon crystal structure. </p></div></div>
+<p class="noindent">Since each boron atom has three electrons in its outer shell, it accepts an electron
+from a neighbouring atom, thus forming covalent bonds. The result is a hole in the
+neighboring atom and a bound negative charge at the <b>acceptor</b> (boron) atom. It
+follows that each acceptor atom provides a hole. If the acceptor doping concentration is
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub></math>, where
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub> <mi>≫</mi> <msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></math>, the
+hole concentration becomes </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-65004r6"></mstyle>
+<msub><mrow><mi>p</mi></mrow><mrow><mi>p</mi></mrow></msub> <mi>≃</mi> <msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub>
+</math></td><td class="eq-no">(3.6)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where the subscript <math display="inline"><mi>p</mi></math>
+denotes <math display="inline"><mi>p</mi></math>-type
+silicon. Therefore, here the majority carriers are holes and their concentration is determined by
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub></math>.
+The concentration of minority electrons can be found by using the relationship
+<math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mi>p</mi></mrow></msub><msub><mrow><mi>n</mi></mrow><mrow><mi>p</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></math> and substituting
+for <math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mi>p</mi></mrow></msub></math>
+from <span> Eq. (<a href="#x18-65004r6">3.6</a>)</span> : </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x18-65005r7"></mstyle>
+<msub><mrow><mi>n</mi></mrow><mrow><mi>p</mi></mrow></msub> <mi>≃</mi> <mfrac><mrow><msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>N</mi></mrow><mrow><mi>A</mi></mrow></msub></mrow></mfrac>
+</math></td><td class="eq-no">(3.7)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">Therefore, the concentration of the minority electrons will have the same temperature dependence as
+that of <math display="inline"><msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></math>.
+</p><p class="noindent">It should be emphasized that a piece of <i>n</i>-type or <i>p</i>-type silicon is <span class="alert">electrically neutral</span>. The charge of the majority free
+<span class="margin-block">carriers <span class="margin-comment"><span class="ellipsis">[77]</span>
+<span class="sidenote">electrons in the <i>n</i>-type and holes in the <i>p</i>-type silicon.</span></span></span> are neutralized by the bound charges
+associated with the impurity atoms.
+</p>
+<a id="x18-65006r2"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 3.2: </b> </span> <span class="exer-title"> Electrons and Holes </span> </span> <div class="body">
+<p class="noindent">Consider an <i>n</i>-type silicon for which the dopant concentration
+<math display="inline"><msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mi>,</mi><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>8</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math>. Find the electron and
+hole concentrations at <math display="inline"><mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>3</mn><mn>0</mn><mn>0</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>K</mi></mstyle></math>.
+</p>
+<hr/> The concentration of the majority electrons is <table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub> <mi>≃</mi> <msub><mrow><mi>N</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mi>,</mi><mn>0</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>8</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">The concentration of the minority holes is </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub> <mi>≃</mi> <mfrac><mrow><msubsup><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow><mrow><mn>2</mn></mrow></msubsup></mrow>
+<mrow><msub><mrow>
+<mi>N</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">In Example 3.1 we found that at <math display="inline"><mi>T</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>3</mn><mn>0</mn><mn>0</mn><mspace class="thinspace" width="0.17em"></mspace><mstyle mathvariant="normal"><mi>K</mi></mstyle></math>,
+<math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mi>,</mi><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup></math>.
+Therefore, </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><msup><mrow><mo class="MathClass-open" stretchy="false">(</mo><mn>1</mn><mo class="MathClass-punc" stretchy="false">.</mo><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msup><mo class="MathClass-close" stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow>
+<mrow>
+<mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>1</mn><mn>7</mn></mrow></msup></mrow></mfrac> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi>,</mi><mn>2</mn><mn>5</mn> <mi>×</mi> <mn>1</mn><msup><mrow><mn>0</mn></mrow><mrow><mn>3</mn></mrow></msup><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>c</mi><mi>m</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>3</mn></mrow></msup>
+</math></td></tr></table>
+<p class="noindent">Observe that <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub> <mi>≫</mi> <msub><mrow><mi>n</mi></mrow><mrow><mi>i</mi></mrow></msub></math> and
+that <math display="inline"><msub><mrow><mi>n</mi></mrow><mrow><mi>n</mi></mrow></msub></math> is vastly
+higher than <math display="inline"><msub><mrow><mi>p</mi></mrow><mrow><mi>n</mi></mrow></msub></math>.
+</p>
+<p class="noindent"></p></div> </div>
+<div class="section-header">
+<h3 id="header-section-glossary">
+<span class="number">
+<i aria-hidden="true" class="fa fa-list-alt"></i>
+</span>
+<span class="title">
+<a id="page-glossary"></a>
+        Page Glossary Terms</span>
+</h3>
+</div>
+<div class="acronym-block">
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:led">¶</a>
+<dt class="acr-bottom" id="glo:led"><span class="acr-short">LED</span><span class="acr-long">Light-Emitting Diode</span></dt>
+<dd class="acr-desc"><p>Light-Emitting Diode</p></dd>
+</dl>
+<dl class="acr-list">
+<a class="copiable-link" href="#glo:ic">¶</a>
+<dt class="acr-bottom" id="glo:ic"><span class="acr-short">IC</span><span class="acr-long">Integrated
+Circuit</span></dt>
+<dd class="acr-desc"><p>A  small  electronic  device  combining  numerous  interconnected  components,  like
+transistors, resistors, and capacitors, onto a single semiconductor chip, usually silicon</p></dd>
+</dl>
+</div><nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="CurrentFlowinSemiconductors.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="Semiconductors.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="Semiconductors.html#SemiconductorPhysics.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 3.1: Semiconductor Physics</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Fundamentals of Signals</title>
+<meta charset="utf-8"/>
+<meta content="lms-WebBook" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js" type="text/javascript"></script>
+<link href="logo/lms.ico" rel="icon" type="image/x-icon"/>
+<link href="./pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+<script src="./pagefind/pagefind-component-ui.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-mono.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.css" rel="stylesheet" type="text/css"/>
+<script async="true" crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/dTmC0945/Wb-LMS-WebBook-Infrastructure/flatweb.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/solarized-light.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/latex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/matlab.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/cmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/makefile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+ </head><body>
+<page>
+<nav class="wide"> <div class="header"><div class="header-left"><span class="header-lecture-grade">M.Sc</span>
+<span class="header-lecture-name">Non-Linear Electronics</span>
+<span class="header-webBook">WebBook 2.1</span></div><div class="header-right"><span class="header-version">2025.WS</span>
+<span class="header-chapter">Signals and Amplifiers</span></div></div><div class="toc"><pagefind-modal-trigger></pagefind-modal-trigger><pagefind-modal></pagefind-modal><div class="toc-links"><a href="https://github.com/dTmC0945" title="Lecturer GitHub Repo"><i class="fab fa-github" style="font-size:20px"></i></a><a href="https://scholar.google.com/citations?view_op=list_works\&amp;hl=en\&amp;user=lxQGADMAAAAJ" title="Lecturer Google Scholar Page"><i class="fa-brands fa-google-scholar" style="font-size:20px"></i></a><a href="https://www.researchgate.net/profile/Daniel-Mcguiness-2" title="Lecturer ResearchGate Account"><i class="fa-brands fa-researchgate" style="font-size:20px"></i></a><a href="https://dtmc0945.github.io/Th-MCI-Thesis-Topics/" title="Lecturer Thesis Ideas for B.Sc and M.Sc"><i class="fa-solid fa-book" style="font-size:20px"></i></a><a href="https://github.com/dTmC0945/C-MCI-LaTeX-Class-mcidoc/tree/main" title="mcidoc LaTeX Standard"><i class="fa-regular fa-file-lines" style="font-size:20px"></i></a></div><hr/><span class="chapterToc"><span class="number"></span><span class="title"><a href="index.html#x2-10000">Entry Point</a></span></span><span class="chapterToc"><span class="number">1</span><span class="title"><a href="SignalsandAmplifiers.html#x3-20001">Signals and Amplifiers</a></span></span><span class="sectionToc"><span class="number">1.1</span><span class="title"><a href="#x4-30001.1">Fundamentals of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.1</span><span class="title"><a href="#x4-40001.1.1">Proper Definition</a></span></span><span class="subsectionToc"><span class="number">1.1.2</span><span class="title"><a href="#x4-50001.1.2">Frequency
+Spectrum of Signals</a></span></span><span class="subsectionToc"><span class="number">1.1.3</span><span class="title"><a href="#x4-60001.1.3">Analog and Digital Signals</a></span></span><span class="sectionToc"><span class="number">1.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-70001.2">Amplifiers as a Concept</a></span></span><span class="subsectionToc"><span class="number">1.2.1</span><span class="title"><a href="AmplifiersasaConcept.html#x5-80001.2.1">Signal
+Amplification</a></span></span><span class="subsectionToc"><span class="number">1.2.2</span><span class="title"><a href="AmplifiersasaConcept.html#x5-90001.2.2">Amplifier Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">1.2.3</span><span class="title"><a href="AmplifiersasaConcept.html#x5-100001.2.3">Voltage Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.4</span><span class="title"><a href="AmplifiersasaConcept.html#x5-110001.2.4">Power Gain and Current
+Gain</a></span></span><span class="subsectionToc"><span class="number">1.2.5</span><span class="title"><a href="AmplifiersasaConcept.html#x5-120001.2.5">Expressing Gain in Decibels</a></span></span><span class="subsectionToc"><span class="number">1.2.6</span><span class="title"><a href="AmplifiersasaConcept.html#x5-130001.2.6">The Amplifier Power Supplies</a></span></span><span class="subsectionToc"><span class="number">1.2.7</span><span class="title"><a href="AmplifiersasaConcept.html#x5-140001.2.7">Amplifier
+Saturation</a></span></span><span class="subsectionToc"><span class="number">1.2.8</span><span class="title"><a href="AmplifiersasaConcept.html#x5-150001.2.8">Symbol Convention</a></span></span><span class="sectionToc"><span class="number">1.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-160001.3">Circuit Models for Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.1</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-170001.3.1">Voltage
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.2</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-180001.3.2">Cascaded Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.3.3</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-190001.3.3">Other Amplifier Types</a></span></span><span class="subsectionToc"><span class="number">1.3.4</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-200001.3.4">Relationships between
+the Four Amplifier Models</a></span></span><span class="subsectionToc"><span class="number">1.3.5</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-210001.3.5">Determining Input and Output Resistance</a></span></span><span class="subsectionToc"><span class="number">1.3.6</span><span class="title"><a href="CircuitModelsforAmplifiers.html#x6-220001.3.6">Unilateral
+Models</a></span></span><span class="sectionToc"><span class="number">1.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-230001.4">Frequency Response of Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.1</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-240001.4.1">Measuring the Amplifier Frequency
+Response</a></span></span><span class="subsectionToc"><span class="number">1.4.2</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-250001.4.2">Amplifier Bandwidth</a></span></span><span class="subsectionToc"><span class="number">1.4.3</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-260001.4.3">Evaluating the Frequency Response of
+Amplifiers</a></span></span><span class="subsectionToc"><span class="number">1.4.4</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-270001.4.4">Single-Time-Constant Networks</a></span></span><span class="subsectionToc"><span class="number">1.4.5</span><span class="title"><a href="FrequencyResponseofAmplifiers.html#x7-280001.4.5">Classification of Amplifiers Based
+on Frequency Response</a></span></span><span class="chapterToc"><span class="number">2</span><span class="title"><a href="OperationalAmplifiers.html#x8-290002">Operational Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-300002.1">The Ideal Op Amp</a></span></span><span class="subsectionToc"><span class="number">2.1.1</span><span class="title"><a href="TheIdealOpAmp.html#x9-310002.1.1">Terminals
+of the Element</a></span></span><span class="subsectionToc"><span class="number">2.1.2</span><span class="title"><a href="TheIdealOpAmp.html#x9-320002.1.2">Function and Characteristics</a></span></span><span class="subsectionToc"><span class="number">2.1.3</span><span class="title"><a href="TheIdealOpAmp.html#x9-330002.1.3">Differential and Common-Mode
+Signals</a></span></span><span class="sectionToc"><span class="number">2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-340002.2">The Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.2.1</span><span class="title"><a href="TheInvertingAmplifier.html#x10-350002.2.1">The Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.2</span><span class="title"><a href="TheInvertingAmplifier.html#x10-360002.2.2">Effect of Finite
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.2.3</span><span class="title"><a href="TheInvertingAmplifier.html#x10-370002.2.3">Input and Output Resistances</a></span></span><span class="sectionToc"><span class="number">2.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-380002.3">Non-Inverting Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.3.1</span><span class="title"><a href="NonInvertingAmplifier.html#x11-390002.3.1">The
+Closed-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.2</span><span class="title"><a href="NonInvertingAmplifier.html#x11-400002.3.2">Effect of Finite Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.3.3</span><span class="title"><a href="NonInvertingAmplifier.html#x11-410002.3.3">Input and Output
+Resistance</a></span></span><span class="subsectionToc"><span class="number">2.3.4</span><span class="title"><a href="NonInvertingAmplifier.html#x11-420002.3.4">The Voltage Follower</a></span></span><span class="sectionToc"><span class="number">2.4</span><span class="title"><a href="DifferenceAmplifiers.html#x12-430002.4">Difference Amplifiers</a></span></span><span class="subsectionToc"><span class="number">2.4.1</span><span class="title"><a href="DifferenceAmplifiers.html#x12-440002.4.1">A Single-Op-Amp
+Difference Amplifier</a></span></span><span class="subsectionToc"><span class="number">2.4.2</span><span class="title"><a href="DifferenceAmplifiers.html#x12-450002.4.2">A Versatile Circuit: The Instrumentation Amplifier</a></span></span><span class="sectionToc"><span class="number">2.5</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-460002.5">Integrators
+and Differentiators</a></span></span><span class="subsectionToc"><span class="number">2.5.1</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-470002.5.1">The Inverting Configuration with General Impedances</a></span></span><span class="subsectionToc"><span class="number">2.5.2</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-480002.5.2">The
+Inverting Integrator</a></span></span><span class="subsectionToc"><span class="number">2.5.3</span><span class="title"><a href="IntegratorsandDifferentiators.html#x13-490002.5.3">The Op-Amp Differentiator</a></span></span><span class="sectionToc"><span class="number">2.6</span><span class="title"><a href="DCImperfections.html#x14-500002.6">DC Imperfections</a></span></span><span class="subsectionToc"><span class="number">2.6.1</span><span class="title"><a href="DCImperfections.html#x14-510002.6.1">Offset
+Voltage</a></span></span><span class="subsectionToc"><span class="number">2.6.2</span><span class="title"><a href="DCImperfections.html#x14-520002.6.2">Input Bias and Offset Currents</a></span></span><span class="subsectionToc"><span class="number">2.6.3</span><span class="title"><a href="DCImperfections.html#x14-530002.6.3">Effects of Offset of Inverting
+Integrator</a></span></span><span class="sectionToc"><span class="number">2.7</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-540002.7">Finite Open-Loop Gain and Bandwidth</a></span></span><span class="subsectionToc"><span class="number">2.7.1</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-550002.7.1">Frequency Dependence of the
+Open-Loop Gain</a></span></span><span class="subsectionToc"><span class="number">2.7.2</span><span class="title"><a href="FiniteOpenLoopGainandBandwidth.html#x15-560002.7.2">Frequency Response of Closed-Loop Amplifiers</a></span></span><span class="sectionToc"><span class="number">2.8</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-570002.8">Large-Signal
+Operation of Op Amps</a></span></span><span class="subsectionToc"><span class="number">2.8.1</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-580002.8.1">Output Voltage Saturation</a></span></span><span class="subsectionToc"><span class="number">2.8.2</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-590002.8.2">Output Current Limits</a></span></span><span class="subsectionToc"><span class="number">2.8.3</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-600002.8.3">Slew
+Rate</a></span></span><span class="subsectionToc"><span class="number">2.8.4</span><span class="title"><a href="LargeSignalOperationofOpAmps.html#x16-610002.8.4">Full-Power Bandwidth</a></span></span><span class="chapterToc"><span class="number">3</span><span class="title"><a href="Semiconductors.html#x17-620003">Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-630003.1">Semiconductor Physics</a></span></span><span class="subsectionToc"><span class="number">3.1.1</span><span class="title"><a href="SemiconductorPhysics.html#x18-640003.1.1">Intrinsic
+Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.1.2</span><span class="title"><a href="SemiconductorPhysics.html#x18-650003.1.2">Doped Semiconductors</a></span></span><span class="sectionToc"><span class="number">3.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-660003.2">Current Flow in Semiconductors</a></span></span><span class="subsectionToc"><span class="number">3.2.1</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-670003.2.1">Drift
+Current</a></span></span><span class="subsectionToc"><span class="number">3.2.2</span><span class="title"><a href="CurrentFlowinSemiconductors.html#x19-680003.2.2">Diffusion Current</a></span></span><span class="sectionToc"><span class="number">3.3</span><span class="title"><a href="ThePNJunction.html#x20-690003.3">The PN Junction</a></span></span><span class="subsectionToc"><span class="number">3.3.1</span><span class="title"><a href="ThePNJunction.html#x20-700003.3.1">Implementation</a></span></span><span class="subsectionToc"><span class="number">3.3.2</span><span class="title"><a href="ThePNJunction.html#x20-710003.3.2">Open
+Circuit Operation</a></span></span><span class="sectionToc"><span class="number">3.4</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-770003.4">PN Junction with Applied Voltage</a></span></span><span class="subsectionToc"><span class="number">3.4.1</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-780003.4.1">Qualitative Description
+of Junction Operation</a></span></span><span class="subsectionToc"><span class="number">3.4.2</span><span class="title"><a href="PNJunctionwithAppliedVoltage.html#x21-790003.4.2">Reverse Breakdown</a></span></span><span class="sectionToc"><span class="number">3.5</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-800003.5">Capacitive Effects in the pn
+Junction</a></span></span><span class="subsectionToc"><span class="number">3.5.1</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-810003.5.1">Depletion or Junction Capacitance</a></span></span><span class="subsectionToc"><span class="number">3.5.2</span><span class="title"><a href="CapacitiveEffectsinthepnJunction.html#x22-820003.5.2">Diffusion Capacitance</a></span></span><span class="chapterToc"><span class="number">4</span><span class="title"><a href="Diodes.html#x23-830004">Diodes</a></span></span><span class="sectionToc"><span class="number">4.1</span><span class="title"><a href="TheIdealDiode.html#x24-850004.1">The
+Ideal Diode</a></span></span><span class="subsectionToc"><span class="number">4.1.1</span><span class="title"><a href="TheIdealDiode.html#x24-860004.1.1">i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">4.1.2</span><span class="title"><a href="TheIdealDiode.html#x24-880004.1.2">Application: The Rectificer</a></span></span><span class="subsectionToc"><span class="number">4.1.3</span><span class="title"><a href="TheIdealDiode.html#x24-890004.1.3">Application:
+Logic Gates</a></span></span><span class="sectionToc"><span class="number">4.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-900004.2">Terminal Characteristics of Junction Diodes</a></span></span><span class="subsectionToc"><span class="number">4.2.1</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-910004.2.1">The Forward-Bias
+Region</a></span></span><span class="subsectionToc"><span class="number">4.2.2</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-920004.2.2">Reverse Bias Region</a></span></span><span class="subsectionToc"><span class="number">4.2.3</span><span class="title"><a href="TerminalCharacteristicsofJunctionDiodes.html#x25-930004.2.3">The Breakdown Region</a></span></span><span class="sectionToc"><span class="number">4.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-940004.3">Modelling the Diode
+Forward Characteristic</a></span></span><span class="subsectionToc"><span class="number">4.3.1</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-950004.3.1">The Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.2</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-960004.3.2">Graphical Analysis Using the
+Exponential Model</a></span></span><span class="subsectionToc"><span class="number">4.3.3</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-970004.3.3">The Need for Rapid Analysis</a></span></span><span class="subsectionToc"><span class="number">4.3.4</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-980004.3.4">The Constant-Voltage-Drop
+Model</a></span></span><span class="subsectionToc"><span class="number">4.3.5</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-990004.3.5">The Ideal-Diode Model</a></span></span><span class="subsectionToc"><span class="number">4.3.6</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1000004.3.6">The Small-Signal Model</a></span></span><span class="subsectionToc"><span class="number">4.3.7</span><span class="title"><a href="ModellingtheDiodeForwardCharacteristic.html#x26-1010004.3.7">Use of the Diode
+Forward Drop in Voltage Regulation</a></span></span><span class="sectionToc"><span class="number">4.4</span><span class="title"><a href="ZenerDiodes.html#x27-1020004.4">Zener Diodes</a></span></span><span class="subsectionToc"><span class="number">4.4.1</span><span class="title"><a href="ZenerDiodes.html#x27-1030004.4.1">Operating in the Reverse
+Breakdown Region</a></span></span><span class="subsectionToc"><span class="number">4.4.2</span><span class="title"><a href="ZenerDiodes.html#x27-1040004.4.2">Specifying and Modeling the Zener Diode</a></span></span><span class="subsectionToc"><span class="number">4.4.3</span><span class="title"><a href="ZenerDiodes.html#x27-1050004.4.3">Temperature
+Effects</a></span></span><span class="sectionToc"><span class="number">4.5</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1060004.5">Limiting and Clamping Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.1</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1070004.5.1">Limiter Circuits</a></span></span><span class="subsectionToc"><span class="number">4.5.2</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1080004.5.2">The Clamped Capacitor
+or DC Restorer</a></span></span><span class="subsectionToc"><span class="number">4.5.3</span><span class="title"><a href="LimitingandClampingCircuits.html#x28-1090004.5.3">The Voltage Doubler</a></span></span><span class="sectionToc"><span class="number">4.6</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1100004.6">Special Diode Types</a></span></span><span class="subsectionToc"><span class="number">4.6.1</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1110004.6.1">The Schottky-Barrier
+Diode (SBD)</a></span></span><span class="subsectionToc"><span class="number">4.6.2</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1120004.6.2">Varactors</a></span></span><span class="subsectionToc"><span class="number">4.6.3</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1130004.6.3">Photodiodes</a></span></span><span class="subsectionToc"><span class="number">4.6.4</span><span class="title"><a href="SpecialDiodeTypes.html#x29-1140004.6.4">Light Emitting Diodes</a></span></span><span class="chapterToc"><span class="number">5</span><span class="title"><a href="MOSFieldEffectTransistors.html#x30-1150005">MOS
+Field Effect Transistors</a></span></span><span class="sectionToc"><span class="number">5.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1170005.1">Device Structure and Physical Operation</a></span></span><span class="subsectionToc"><span class="number">5.1.1</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1180005.1.1">Device
+Structure</a></span></span><span class="subsectionToc"><span class="number">5.1.2</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1190005.1.2">Operation with Zero Gate Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.3</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1200005.1.3">Creating a Channel for
+Current Flow</a></span></span><span class="subsectionToc"><span class="number">5.1.4</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1210005.1.4">Applying a Small Drain-to-Source Voltage</a></span></span><span class="subsectionToc"><span class="number">5.1.5</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1220005.1.5">Operation as
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow></msub></math> is
+Increased</a></span></span><span class="subsectionToc"><span class="number">5.1.6</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1230005.1.6">Channel Pinch-Off and Current Saturation</a></span></span><span class="subsectionToc"><span class="number">5.1.7</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1240005.1.7">The p-Channel
+MOSFET</a></span></span><span class="subsectionToc"><span class="number">5.1.8</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1250005.1.8">Complementary MOS or CMOS</a></span></span><span class="subsectionToc"><span class="number">5.1.9</span><span class="title"><a href="DeviceStructureandPhysicalOperation.html#x31-1260005.1.9">Operating the MOS Transistor in
+the Subthreshold Region</a></span></span><span class="sectionToc"><span class="number">5.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1270005.2">Current-Voltage Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.1</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1280005.2.1">Circuit Symbol</a></span></span><span class="subsectionToc"><span class="number">5.2.2</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1290005.2.2">
+The <math display="inline"><msubsup><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow><mrow></mrow></msubsup> <mo class="MathClass-bin" stretchy="false">−</mo> <msubsup><mrow><mi>v</mi></mrow><mrow><mi>D</mi><mi>S</mi></mrow><mrow></mrow></msubsup></math>
+Characteristics</a></span></span><span class="subsectionToc"><span class="number">5.2.3</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1300005.2.3">The <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>D</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">−</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>G</mi><mi>S</mi></mrow></msub></math>
+Characteristic</a></span></span><span class="subsectionToc"><span class="number">5.2.4</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1310005.2.4">Finite Output Resistance in Saturation</a></span></span><span class="subsectionToc"><span class="number">5.2.5</span><span class="title"><a href="CurrentVoltageCharacteristics.html#x32-1320005.2.5">Characteristics
+of the p-Channel MOSFET</a></span></span><span class="sectionToc"><span class="number">5.3</span><span class="title"><a href="MOSFETCircuitsatDC.html#x33-1330005.3">MOSFET Circuits at DC</a></span></span><span class="sectionToc"><span class="number">5.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1340005.4">Body Effect and
+Other Topics</a></span></span><span class="subsectionToc"><span class="number">5.4.1</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1350005.4.1">The Role of the Substrate - The Body Effect</a></span></span><span class="subsectionToc"><span class="number">5.4.2</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1360005.4.2">Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">5.4.3</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1370005.4.3">Breakdown and Input Protection</a></span></span><span class="subsectionToc"><span class="number">5.4.4</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1380005.4.4">Velocity Saturation</a></span></span><span class="subsectionToc"><span class="number">5.4.5</span><span class="title"><a href="BodyEffectandOtherTopics.html#x34-1390005.4.5">Depletion-Type
+MOSFET</a></span></span><span class="chapterToc"><span class="number">6</span><span class="title"><a href="BipolarJunctionTransistors.html#x35-1400006">Bipolar Junction Transistors</a></span></span><span class="sectionToc"><span class="number">6.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1410006.1">Physical Implementation</a></span></span><span class="subsectionToc"><span class="number">6.1.1</span><span class="title"><a href="PhysicalImplementation.html#x36-1420006.1.1">Simplified
+Structure and Operation Modes</a></span></span><span class="subsectionToc"><span class="number">6.1.2</span><span class="title"><a href="PhysicalImplementation.html#x36-1430006.1.2">Operation of the npn Transistor in the Active
+Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.3</span><span class="title"><a href="PhysicalImplementation.html#x36-1500006.1.3">Structure of Actual Transistor</a></span></span><span class="subsectionToc"><span class="number">6.1.4</span><span class="title"><a href="PhysicalImplementation.html#x36-1510006.1.4">Operation in the Saturation Mode</a></span></span><span class="subsectionToc"><span class="number">6.1.5</span><span class="title"><a href="PhysicalImplementation.html#x36-1520006.1.5">The
+pnp Transistor</a></span></span><span class="sectionToc"><span class="number">6.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1530006.2">The i-v Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.1</span><span class="title"><a href="TheivCharacteristics.html#x37-1540006.2.1">Symbols and Conventions</a></span></span><span class="subsectionToc"><span class="number">6.2.2</span><span class="title"><a href="TheivCharacteristics.html#x37-1550006.2.2">Graphical
+Representation of Transistor Characteristics</a></span></span><span class="subsectionToc"><span class="number">6.2.3</span><span class="title"><a href="TheivCharacteristics.html#x37-1560006.2.3">Dependence of ic on the Collector
+Voltage - The early Effect</a></span></span><span class="subsectionToc"><span class="number">6.2.4</span><span class="title"><a href="TheivCharacteristics.html#x37-1570006.2.4">An Alternative Form of the Common-Emitter
+Characteristics</a></span></span><span class="sectionToc"><span class="number">6.3</span><span class="title"><a href="BJTCircuitsatDC.html#x38-1600006.3">BJT Circuits at DC</a></span></span><span class="sectionToc"><span class="number">6.4</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1610006.4">Transistor Breakdown and Temperature
+Effects</a></span></span><span class="subsectionToc"><span class="number">6.4.1</span><span class="title"><a href="TransistorBreakdownandTemperatureEffects.html#x39-1620006.4.1">Transistor Breakdown</a></span></span><span class="appendixToc"><span class="number">A</span><span class="title"><a href="SIUnit.html#x40-163000A">SI Unit</a></span></span><span class="sectionToc"><span class="number">A.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-164000A.1">An Introduction to Scientific
+Quantification</a></span></span><span class="subsectionToc"><span class="number">A.1.1</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-165000A.1.1">A Historical Background</a></span></span><span class="subsectionToc"><span class="number">A.1.2</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-166000A.1.2">Base Units</a></span></span><span class="subsectionToc"><span class="number">A.1.3</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-169000A.1.3">Decimal Multiples
+and Sub-multiples of SI Units</a></span></span><span class="subsectionToc"><span class="number">A.1.4</span><span class="title"><a href="AnIntroductiontoScientificQuantification.html#x41-172000A.1.4">Expressing the Values of Quantities</a></span></span><span class="appendixToc"><span class="number">B</span><span class="title"><a href="DimensionalAnalysis.html#x42-173000B">Dimensional
+Analysis</a></span></span><span class="sectionToc"><span class="number">B.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-174000B.1">Physical Quantities and Equations</a></span></span><span class="subsectionToc"><span class="number">B.1.1</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-175000B.1.1">Physical properties</a></span></span><span class="subsectionToc"><span class="number">B.1.2</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-176000B.1.2">Physical
+Quantities and Base Quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.3</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-177000B.1.3">Unit and numerical value</a></span></span><span class="subsectionToc"><span class="number">B.1.4</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-178000B.1.4">Derived quantities,
+dimensions, and dimensionless quantities</a></span></span><span class="subsectionToc"><span class="number">B.1.5</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-179000B.1.5">Physical Equations and Constants,
+Dimensional homogeneity</a></span></span><span class="subsectionToc"><span class="number">B.1.6</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-182000B.1.6">Systems of units</a></span></span><span class="subsectionToc"><span class="number">B.1.7</span><span class="title"><a href="PhysicalQuantitiesandEquations.html#x43-186000B.1.7">Recapitulation</a></span></span><span class="sectionToc"><span class="number">B.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-187000B.2">The Principle
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.1</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-188000B.2.1">The steps of dimensional analysis and Buckingham’s
+<math display="inline"><mi>Π</mi></math>-theorem</a></span></span><span class="subsectionToc"><span class="number">B.2.2</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-193000B.2.2">An
+example: Deformation of an elastic ball striking a wall</a></span></span><span class="subsectionToc"><span class="number">B.2.3</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-198000B.2.3">On the Utility and Difficulties
+of Dimensional Analysis</a></span></span><span class="subsectionToc"><span class="number">B.2.4</span><span class="title"><a href="ThePrincipleofDimensionalAnalysis.html#x44-208000B.2.4">When Independent Quantities Have Fixed Values</a></span></span>
+<div class="nav-footer"><div class="nav-footer-left"><span class="nav-footer-lecture">D. T. McGuiness, Ph.D</span> ˙<span class="nav-footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><p class="nav-comments">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </p></div></nav>
+<article class="chapter">
+<nav class="crosslinks-top"> <span class="nav-button"><i class="fa-solid fa-caret-right"></i><a class="nav-link" href="AmplifiersasaConcept.html">Amplifiers as a Concept</a></span><span class="nav-button"><i class="fa-solid fa-caret-left"></i><a class="nav-link" href="SignalsandAmplifiers.html">Chapter: Signals and
+Amplifiers</a></span><span class="nav-button"><i class="fa-solid fa-caret-up"></i><a class="nav-link" href="SignalsandAmplifiers.html#FundamentalsofSignals.html">Chapter: Signals and
+Amplifiers</a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Visit Entry Point">
+<i class="fa-solid fa-table-list">
+</i>
+<span class="nav-info">Visit Index Page</span>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Visit Material GitHub Repo">
+<i class="fa-brands fa-git-alt"></i>
+<span class="nav-info">Visit Material GitHub Repo</span>
+</a></span></nav>
+<div class="section-header"> <h3 id="header-section-1.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#section.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a> <span class="number">1.1</span> <span class="title"> <a id="x4-30001.1"></a>Fundamentals of
+Signals</span></h3></div>
+<p class="noindent"></p><figure class="float">
+<a id="x4-3001r1"></a>
+<figcaption class="caption"><span class="id">Figure 1.1: </span><span class="content">Two alternative representations of a signal source: (a) the Thévenin form; (b) the Norton form.      </span></figcaption>
+<img alt="PIC" src="figures/Signals-and-Amplifiers/figures-6.png" style=""/>
+</figure>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.1"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.1.1.1"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.1</span> <span class="title"> <a id="x4-40001.1.1"></a>Proper Definition</span></h4></div>
+</p><p class="noindent">Signals contain information about a variety of things and activities in our physical world.
+</p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">Information about the weather is contained in signals representing the air temperature,
+pressure, wind speed, etc.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">The voice of a radio announcer reading the news into a microphone provides an acoustic
+signal that contains information about world affairs.
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">To monitor the status of a nuclear reactor, instruments are used to measure a multitude
+of relevant parameters, each instrument producing a signal.</p></li></ul>
+<p class="noindent">To extract required information from a set of signals, <span class="margin-block">the observer <span class="margin-comment"><span class="ellipsis">[3]</span>
+<span class="sidenote">this can be a human or
+a machine.</span></span></span> invariably needs to <span class="alert">process</span> these signals in some predetermined manner. This signal
+processing is usually most conveniently performed by <i>electronic systems</i>. For this to be possible,
+however, the signal must first be converted into an electrical signal, that is, either to <span class="alert">voltage</span> or a
+<span class="alert">current</span>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This process is accomplished by devices known as <span class="alert">transducers</span><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[4]</span>
+<span class="sidenote">This conversion process has been covered
+extensively in <b>B.Sc Drive Technology</b>.</span></span></span> </p></div></div>
+<p class="noindent">A variety of transducers exist, each suitable for one of the various forms of physical signals. </p><div class="quote">  For
+instance, the sound waves generated by a human can be converted into electrical signals by using a
+microphone, which is in effect a pressure transducer. </div>
+<p class="noindent">However, it is <b>NOT</b> our purpose here to study transducers. For simplicity and keep things relevant to
+the lecture, we will assume the signals of interest already exist in the electrical domain and just
+represent them by one of the two (<span class="alert">2</span>) equivalent forms shown in <b>Fig.</b> <a href="#x4-3001r1">1.1</a>.
+</p><p class="noindent">In <b>Fig.</b> <a href="#x4-3001r1">1.1</a>a the signal is represented by a voltage source
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> having a source
+resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>.
+In the alternate representation of <b>Fig.</b> <a href="#x4-3001r1">1.1</a>b the signal is represented by a current source
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> having a source
+resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>.
+</p><p class="noindent">Although the two (<span class="alert">2</span>) representations are equivalent:
+</p>
+<dl class="enumerate-enumitem"><dt class="enumerate-enumitem">  
+1. 
+</dt><dd class="enumerate-enumitem"><b>Fig.</b> <a href="#x4-3001r1">1.1</a>a, known as the Thévenin form, is preferred when <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+is low.
+</dd>
+<dt class="enumerate-enumitem">
+2. 
+</dt><dd class="enumerate-enumitem"><b>Fig.</b> <a href="#x4-3001r1">1.1</a>b, known as the Norton form, is preferred when <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+is high.</dd></dl>
+<div class="info-block" id="info-block-1.1"> <a class="copiable-link" href="#info-block-1.1"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 1.<a id="x4-4003r1"></a>1: </b> </span> <span class="info-title"> Representation is Important </span> </span> <div class="body">
+<p class="noindent">It is important to be familiar with Thévenin’s and Norton’s theorems and to note that for the two
+(<span class="alert">2</span>) representations in <b>Fig.</b> <a href="#x4-3001r1">1.1</a> to be equivalent, their parameters are related by the following relation:
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>v</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub><msub><mrow><mi>i</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo>
+</math></td></tr></table>
+</div></div>
+<a id="x4-4004r1"></a>
+<div class="exer-block"> <span class="exer-upper"> <span class="exer-header"> <b><b>Exercise</b> 1.1: </b> </span> <span class="exer-title"> A Simple Thevenin Analysis </span> </span> <div class="body">
+<p class="noindent">The output resistance of a signal source, although inevitable, is an imperfection that
+limits the ability of the source to deliver its full signal strength to a <span class="alert">load</span>. To see this
+point more clearly, consider the signal source when connected to a load resistance
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math> as
+shown in <b>Fig.</b> <a href="#x4-4005r2">1.2</a>.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x4-4005r2"></a>
+<figcaption class="caption"><span class="id">Figure 1.2: </span><span class="content">Circuits for the example                                                      </span></figcaption>
+<img alt="PIC" src="/Users/danielmcguiness/GitHub/MCI-Source-Files/SRC-MSc-Non-Linear-Electronics/Lecture-Documents/Tutorial-Book/figures/Signals-and-Amplifiers/figures-1.png" style=""/>
+</figure>
+<p class="noindent">For the case in which the source is represented by its Thévenin equivalent form, find the voltage
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi></mrow></msub></math> that appears across
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>, and therefore the
+condition that <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math> must
+satisfy for <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi></mrow></msub></math> to be
+close to the value of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>s</mi></mrow></msub></math>.
+</p><p class="noindent">Repeat for the Norton-represented source. In this case finding the current
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>o</mi></mrow></msub></math> that flows through
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math> and therefore the
+condition that <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math> must
+satisfy for <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>o</mi></mrow></msub></math> to be
+close to the value of <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>s</mi></mrow></msub></math>.
+</p>
+<hr/>
+<p class="noindent">For the Thévenin-represented signal source shown in <b>Fig.</b> <a href="#x4-4005r2">1.2</a>a, the output voltage
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi></mrow></msub></math> that appears across
+the load resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>
+can be found from the ratio of the voltage divider formed by
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math> and
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>v</mi></mrow><mrow><mi>s</mi></mrow></msub> <mfrac>
+<mrow>
+<msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">From this equation we see that for 5 </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi></mrow></msub> <mi>≃</mi> <msub><mrow><mi>v</mi></mrow><mrow><mi>s</mi></mrow></msub>
+</math></td></tr></table>
+<p class="noindent">the source resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math> must be much
+lower than the load resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>t</mi></mrow></msub></math>,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub> <mi>≪</mi> <msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub>
+</math></td></tr></table>
+<p class="noindent">Therefore, for a source represented by its Thévenin equivalent, ideally
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>0</mn></math>, and as
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math> is increased, relative
+to the load resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>
+with which this source is intended to operate, the voltage
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>o</mi></mrow></msub></math> that
+appears across the load becomes smaller, not a desirable outcome.
+</p><p class="noindent">Next, we consider the Norton-represented signal source in <b>Fig.</b> <a href="#x4-4005r2">1.2</a>b. To obtain the current
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>o</mi></mrow></msub></math> which flows through the load
+resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>, we utilize the ratio
+of the current divider formed by <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+and <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>i</mi></mrow><mrow><mi>o</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>i</mi></mrow><mrow><mi>s</mi></mrow></msub> <mfrac>
+<mrow>
+<msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow>
+<mrow><msub><mrow>
+<mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>R</mi></mrow><mrow><mi>t</mi></mrow></msub></mrow></mfrac>
+</math></td></tr></table>
+<p class="noindent">From this relationship we see that for </p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>i</mi></mrow><mrow><mi>o</mi></mrow></msub> <mi>≃</mi> <msub><mrow><mi>i</mi></mrow><mrow><mi>s</mi></mrow></msub>
+</math></td></tr></table>
+<p class="noindent">the source resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>
+must be much larger than <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>,
+</p><table class="equation-star"><tr><td>
+<math class="equation" display="block">
+<msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub> <mi>≫</mi> <msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub>
+</math></td></tr></table>
+<p class="noindent">Thus for a signal source represented by its Norton equivalent, ideally
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mi>∞</mi></math>, and as
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math> is reduced, relative
+to the load resistance <math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>L</mi></mrow></msub></math>
+with which this source is intended to operate, the current
+<math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>o</mi></mrow></msub></math> that
+flows through the load becomes smaller, not a desirable outcome.
+</p><p class="noindent">Finally, we note that although circuit designers cannot usually do much about the value of
+<math display="inline"><msub><mrow><mi>R</mi></mrow><mrow><mi>s</mi></mrow></msub></math>, they
+may have to devise a circuit solution that minimizes or eliminates the loss of signal strength that
+results when the source is connected to the load.
+</p>
+<p class="noindent"></p></div> </div>
+<p class="noindent">From the discussion above, it should be obvious to an engineer that a signal is a <b>time-varying
+quantity</b> which can be represented by a graph such as that shown in <b>Fig.</b> <a href="#x4-4006r3">1.3</a>. In fact, the
+information content of the signal is represented by the <b>changes in its magnitude</b> as time
+progresses.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">That is, the information is contained in the <span class="alert">wiggles</span> in the signal waveform. </p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x4-4006r3"></a>
+<figcaption class="caption"><span class="id">Figure 1.3: </span><span class="content">A random signal. This kind of signal could be generated from a wide variety of sources            </span></figcaption>
+<img alt="PIC" src="figures/Signals-and-Amplifiers/figures-1.png" style=""/>
+</figure>
+<p class="noindent">In general, such waveforms are difficult to characterise mathematically. In other words, it is <b>NOT</b> easy
+to describe clearly an arbitrary-looking waveform such as that of <b>Fig.</b> <a href="#x4-4006r3">1.3</a>. Of course, such a description
+is of great importance for the purpose of designing appropriate signal-processing circuits that perform
+desired functions on the given <span class="margin-block">signal. <span class="margin-comment"><span class="ellipsis">[5]</span>
+<span class="sidenote">Of course, this limitation can be overcome with proper numerical
+approximations.</span></span></span>
+</p>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.2"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.1.1.2"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.2</span> <span class="title"> <a id="x4-50001.1.2"></a>Frequency Spectrum of Signals</span></h4></div>
+</p><p class="noindent">An extremely useful characterisation of a signal, and for that matter of any arbitrary function of
+time, is in terms of its <b>frequency spectrum</b>. Such a description of signals is obtained
+through the mathematical tools of <i>Fourier series</i> and <i>Fourier transform</i>. We are not interested
+here in the details of these <span class="margin-block">transformations. <span class="margin-comment"><span class="ellipsis">[6]</span>
+<span class="sidenote">The mathematical intricacies and details are
+discussed in detail in <b>M.Sc Higher Mathematics II</b> which is also given by the author.</span></span></span>
+To give a brief explanation, they provide the means for representing a voltage signal
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> or a current
+signal <math display="inline"><msub><mrow><mi>i</mi></mrow><mrow><mi>s</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math>
+as the sum of sine-wave signals of different frequencies and amplitudes.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">This makes the <span class="alert">sine wave</span> a very important signal in the analysis, design, and testing of electronic circuits.
+</p></div></div>
+<p class="noindent">Therefore, we shall briefly review the properties of the sinusoid.
+</p><p class="noindent">Figure 1.4 shows a sine-wave voltage signal <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math>,
+</p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x4-5001r1"></mstyle>
+<msub><mrow><mi>v</mi></mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub> <mi class="loglike">sin</mi><mo>⁡</mo><mi>ω</mi><mi>t</mi>
+</math></td><td class="eq-no">(1.1)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent"><math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>
+denotes the <b>peak value</b><span class="margin-block"> <span class="margin-comment"><span class="ellipsis">[7]</span>
+<span class="sidenote">or amplitude</span></span></span> in volts,
+</p>
+</li>
+<li class="itemize">
+<p class="noindent"><math display="inline"><mi>ω</mi></math>
+denotes the angular frequency in radians per second; where <math display="inline"><mi>ω</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi>π</mi><mi>f</mi></math>
+<math display="inline"><mstyle mathvariant="normal"><mi>r</mi><mi>a</mi><mi>d</mi></mstyle><mspace class="thinspace" width="0.17em"></mspace><msup><mrow><mstyle mathvariant="normal"><mi>s</mi></mstyle></mrow><mrow><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup></math>,
+<math display="inline"><mi>f</mi></math>
+is frequency in hertz, <math display="inline"><mi>f</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>1</mn><mo class="MathClass-bin" stretchy="false">/</mo><mi>T</mi></math>
+<math display="inline"><mstyle mathvariant="normal"><mi>H</mi><mi>z</mi></mstyle></math>,
+and <math display="inline"><mi>T</mi></math>
+is the period in seconds.</p></li></ul>
+<p class="noindent">The sine-wave signal, as we can observe, is characterised by its peak value
+<math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub></math>, its
+frequency <math display="inline"><mi>ω</mi></math>,
+and its phase with respect to an arbitrary reference time. In the case depicted in Fig. 1.4, the time
+origin has been chosen so that the phase angle is 0.
+</p><p class="noindent">It should be mentioned that it is common to express the amplitude of a sine-wave signal in
+terms of its root-mean-square (rms) value, which is equal to the peak value divided by
+<math display="inline"><msqrt><mrow>
+<mn>2</mn></mrow></msqrt></math><span class="margin-block">. <span class="margin-comment"><span class="ellipsis">[8]</span>
+<span class="sidenote">A
+simple look at the signal would show that the average value of AC would give zero. Therefore we use
+RMS to compare both alternating and direct currents (or voltage). In other words (as an example), the
+RMS value of AC (current) is the direct current which when passed through a resistor for a given
+period of time would produce the same heat as that produced by alternating current when
+passed through the same resistor for the same time.</span></span></span> Therefore the rms value of the sinusoid
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> of Fig.
+1.4 is <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-bin" stretchy="false">/</mo><msqrt><mrow>
+<mn>2</mn></mrow></msqrt></math>.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">For instance, when we speak of the wall power supply in our homes as being 120 V, we mean that it has a sine
+waveform of <math display="inline"><mn>1</mn><mn>2</mn><mn>0</mn><msqrt><mrow>
+<mn>2</mn></mrow></msqrt></math>
+volts peak value. </p></div></div>
+<p class="noindent">Returning now to the representation of signals as the sum of sinusoids, we note that the Fourier series
+is utilized to accomplish this task for the special case of a signal that is a <b>periodic function</b> of <span class="margin-block">time.
+<span class="margin-comment"><span class="ellipsis">[9]</span>
+<span class="sidenote">On the other hand, the Fourier transform is more general and can be used to obtain the frequency
+spectrum of a signal whose waveform is an arbitrary function of time.</span></span></span> The Fourier series allows us to
+express a given periodic function of time as the sum of an infinite number of sinusoids whose
+frequencies are harmonically related.
+</p><p class="noindent">For instance, the symmetrical square-wave signal can be expressed as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x4-5002r2"></mstyle><mtable class="aligned" displaystyle="true"><mtr><mtd columnalign="right"><mi>v</mi><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn><mi>V</mi> </mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><mi class="loglike">sin</mi><mo>⁡</mo><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>3</mn></mrow></mfrac><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mn>3</mn><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>5</mn></mrow></mfrac><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><mn>5</mn><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub><mi>t</mi> <mo class="MathClass-bin" stretchy="false">+</mo> <mo class="MathClass-rel" stretchy="false">⋯</mo><mspace class="thinspace" width="0.17em"></mspace></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup></mtd>
+<mtd columnalign="right"></mtd>
+</mtr><mtr><mtd columnalign="right"></mtd>
+<mtd columnalign="left"> <mo class="MathClass-rel" stretchy="false">=</mo> <mfrac><mrow><mn>4</mn><mi>V</mi> </mrow>
+<mrow>
+<mi>π</mi></mrow></mfrac> <munderover accent="false" accentunder="false"><mrow><mo>∑</mo>
+</mrow><mrow><mi>k</mi><mo class="MathClass-rel" stretchy="false">=</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover> <mfrac><mrow><mn>1</mn></mrow>
+<mrow>
+<mn>2</mn><mi>k</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn></mrow></mfrac><mo><mi class="loglike">sin</mi><mo>⁡</mo></mo><msup><mrow> <mrow><mo fence="true" form="prefix">(</mo><mrow><msup><mrow><mrow><mo fence="true" form="prefix">(</mo><mrow><mn>2</mn><mi>k</mi> <mo class="MathClass-bin" stretchy="false">−</mo> <mn>1</mn></mrow><mo fence="true" form="postfix">)</mo></mrow></mrow><mrow></mrow></msup><msubsup><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow><mrow></mrow></msubsup></mrow><mo fence="true" form="postfix">)</mo></mrow> </mrow><mrow></mrow></msup></mtd>
+</mtr> </mtable>
+</math></td><td class="eq-no">(1.2)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where V is the amplitude of the square wave and
+<math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub> <mo class="MathClass-rel" stretchy="false">=</mo> <mn>2</mn><mi>π</mi><mo class="MathClass-bin" stretchy="false">/</mo><mi>T</mi></math> <span class="margin-block">is <span class="margin-comment"><span class="ellipsis">[10]</span>
+<span class="sidenote">T is
+the period of the square wave.</span></span></span> called the <span class="alert">fundamental frequency</span>. Note that because the amplitudes of the harmonics
+progressively decrease, the infinite series can be truncated, with the truncated series providing an
+approximation to the square waveform.
+</p><p class="noindent">The sinusoidal components in the series of <span> Eq. (<a href="#x4-5002r2">1.2</a>)</span>  constitute the frequency spectrum
+of the square-wave signal where the horizontal axis represents the angular frequency
+<math display="inline"><mi>ω</mi></math> in
+radians per second.
+</p><p class="noindent">The Fourier transform can be applied to a non-periodic function of time, such as that depicted
+in <b>Fig.</b> <a href="#x4-4006r3">1.3</a>, and provides its frequency spectrum as a continuous function of frequency.
+Unlike the case of periodic signals, where the spectrum consists of discrete <span class="margin-block">frequencies, <span class="margin-comment"><span class="ellipsis">[11]</span>
+<span class="sidenote">at
+<math display="inline"><msub><mrow><mi>ω</mi></mrow><mrow><mn>0</mn></mrow></msub></math> and its
+harmonics.</span></span></span> the spectrum of a nonperiodic signal contains in general all possible frequencies. Nevertheless,
+the essential parts of the spectra of practical signals are usually confined to relatively short segments of the
+frequency <math display="inline"><mo class="MathClass-open" stretchy="false">(</mo><mi>ω</mi><mo class="MathClass-close" stretchy="false">)</mo></math>
+axis-an observation that is very useful in the processing of such signals.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">For instance, the spectrum of audible sounds such as speech and music extends from about 20 Hz to about
+<math display="inline"><mn>2</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>H</mi><mi>z</mi></mstyle></math>,
+a frequency range known as the <span class="alert">audio band</span>. </p></div></div>
+<p class="noindent">It is worth noting that, although some musical tones have frequencies above
+<math display="inline"><mn>2</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>H</mi><mi>z</mi></mstyle></math>,
+the human ear is <b>incapable</b> of hearing frequencies that are much above
+<math display="inline"><mn>2</mn><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>k</mi><mi>H</mi><mi>z</mi></mstyle></math>.
+</p><div class="quote"> As another example, analog video signals have their spectra in the range of
+<math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>M</mi><mi>H</mi><mi>z</mi></mstyle></math>
+to 
+<math display="inline"><mn>4</mn><mi>,</mi><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>M</mi><mi>H</mi><mi>z</mi></mstyle></math>.
+</div>
+<p class="noindent">We conclude this section by noting that a signal can be represented either by
+the manner in which its waveform varies with time, as for the voltage signal
+<math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math> shown
+in <b>Fig.</b> <a href="#x4-4006r3">1.3</a>, or in terms of its <b>frequency spectrum</b>. The two alternative representations
+are known as the time-domain representation and the frequency-domain representation,
+respectively.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">The frequency-domain representation of <math display="inline"><msub><mrow><mi>v</mi></mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>t</mi><mo class="MathClass-close" stretchy="false">)</mo></math>
+will be denoted by the symbol <math display="inline"><msub><mrow><mi>V</mi> </mrow><mrow><mi>a</mi></mrow></msub><mo class="MathClass-open" stretchy="false">(</mo><mi>ω</mi><mo class="MathClass-close" stretchy="false">)</mo></math>.
+</p></div></div>
+<p class="noindent"><div class="subsection-header"> <h4 id="header-subsection-1.1.3"> <a class="pdf-icon" href="NonLinearElectronicsLectureBook.pdf#subsection.1.1.3"><svg class="bi bi-file-pdf" fill="currentColor" height="20" viewbox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path><path d="M4.603 12.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716 5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021 1.51c-.29.35-.608.655-.926.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.647 12.647 0 0 1 1.01-.193 11.666 11.666 0 0 1-.51-.858 20.741 20.741 0 0 1-.5 1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0 0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path></svg></a><span class="number">1.1.3</span> <span class="title"> <a id="x4-60001.1.3"></a>Analog and Digital Signals</span></h4></div>
+</p><p class="noindent">To clarify, the voltage signal depicted in <b>Fig.</b> <a href="#x4-4006r3">1.3</a> is called an <span class="alert">analog signal</span>. The name derives from the fact that
+such a signal is <b>analogous</b> to the physical signal that it represents.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The magnitude of an analog signal can take on <span class="alert">any value</span>. That is, the amplitude of an analogue signal exhibits a
+<span class="alert">continuous variation over its range of activity</span>. </p></div></div>
+<p class="noindent">The vast majority of signals in the world around us are analog. Electronic circuits that process such
+signals are known as <span class="alert">analog circuits</span>.
+</p><p class="noindent">An alternative form of signal representation is that of a sequence of numbers, each number
+representing the signal magnitude at an instant of time. The resulting signal is called a
+<span class="alert">digital</span> signal. To see how a signal can be represented in this form-that is, how signals can be
+converted from analog to digital form-consider <b>Fig.</b> <a href="#x4-6001r4">1.4</a>a. Here the curve represents a
+voltage signal. At equal intervals along the time axis, we have marked the time instants
+<math display="inline"><msub><mrow><mi>t</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>t</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msub></math>, and so
+on. At each of these time instants, the magnitude of the signal is measured, a process known as <span class="alert">sampling</span>.
+<b>Fig.</b> <a href="#x4-6001r4">1.4</a>b shows a representation of the signal of <b>Fig.</b> <a href="#x4-6001r4">1.4</a>a in terms of its samples. The signal of
+<b>Fig.</b> <a href="#x4-6001r4">1.4</a>b is defined only at the sampling instants; it no longer is a continuous function of time; rather,
+it is a <span class="alert">discrete-time</span> signal.
+</p><p class="noindent">However, since the magnitude of each sample can take any value in a continuous range, the signal in
+<b>Fig.</b> <a href="#x4-6001r4">1.4</a>b is still an analog signal.
+</p><p class="noindent">Now if we represent the magnitude of each of the signal samples in <b>Fig.</b> <a href="#x4-6001r4">1.4</a>b by a number having a
+finite number of digits, then the signal amplitude will no longer be continuous; rather, it is said to be <span class="alert">quantized</span>, <span class="alert">discretized</span>,
+or <span class="alert">digitized</span>. The resulting digital signal then is simply a sequence of numbers that represent the magnitudes of
+the successive signal samples.
+</p>
+<p class="noindent"></p><figure class="float">
+<a id="x4-6001r4"></a>
+<figcaption class="caption"><span class="id">Figure 1.4: </span><span class="content">Sampling the continuous-time analog signal in (a) results in the discrete-time signal in (b).          </span></figcaption>
+<img alt="PIC" src="figures/Signals-and-Amplifiers/figures-2.png" style=""/>
+</figure>
+<p class="noindent">The choice of number system to represent the signal samples affects the type of digital signal produced
+and has a profound effect on the complexity of the digital circuits required to process the
+signals. It turns out the <span class="alert">binary</span> number system results in the simplest possible digital signals and
+circuits.
+</p><p class="noindent">In a binary system, each digit in the number takes on one of only two (<span class="alert">2</span>) possible values:
+</p>
+<div class="quote"> denoted 0 and 1. </div>
+<p class="noindent">Correspondingly, the digital signals in binary systems need have only two voltage levels, which can be
+labeled <b>low</b> and <b>high</b>.
+</p><p class="noindent">As an example, in some of the digital circuits we will study, the levels are
+<math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+and +<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>.
+In this representation we can see that: </p>
+<ul class="itemize1">
+<li class="itemize">
+<p class="noindent">the waveform is a pulse train with <math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+representing a 0 signal, or logic 0, and
+</p>
+</li>
+<li class="itemize">
+<p class="noindent">+<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>
+representing logic 1.</p></li></ul>
+<p class="noindent">If we use <math display="inline"><mi>N</mi></math>
+binary digits (bits) to represent each sample of the analog signal, then the digitised sample value can be
+expressed as: </p><table class="equation"><tr><td>
+<math class="equation" display="block">
+<mstyle class="label" id="x4-6002r3"></mstyle>
+<mi>D</mi> <mo class="MathClass-rel" stretchy="false">=</mo> <msub><mrow><mi>b</mi></mrow><mrow><mn>0</mn></mrow></msub><msup><mrow><mn>2</mn></mrow><mrow><mn>0</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>b</mi></mrow><mrow>
+<mn>1</mn></mrow></msub><msup><mrow><mn>2</mn></mrow><mrow><mn>1</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>b</mi></mrow><mrow>
+<mn>2</mn></mrow></msub><msup><mrow><mn>2</mn></mrow><mrow><mn>2</mn></mrow></msup> <mo class="MathClass-bin" stretchy="false">+</mo> <mo class="MathClass-rel" stretchy="false">⋯</mo> <mo class="MathClass-bin" stretchy="false">+</mo> <msub><mrow><mi>b</mi></mrow><mrow>
+<mi>N</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msub><msup><mrow><mn>2</mn></mrow><mrow><mi>N</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msup>
+</math></td><td class="eq-no">(1.3)</td></tr></table>
+<p class="noindent"></p>
+<p class="noindent">where <math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mn>0</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>b</mi></mrow><mrow><mn>1</mn></mrow></msub><mo class="MathClass-punc" stretchy="false">,</mo><mo>…</mo><mo class="MathClass-punc" stretchy="false">,</mo><msub><mrow><mi>b</mi></mrow><mrow><mi>N</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msub></math>, denote the
+<math display="inline"><mi>N</mi></math> bits and have values of
+0 or 1. Here bit <math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mn>0</mn></mrow></msub></math> is the <span class="alert">least</span>
+significant bit (LSB), and bit <math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mi>N</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msub></math>
+is the most significant bit (MSB). Conventionally, this binary number is written as
+<math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mi>N</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>1</mn></mrow></msub></math>,
+<math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mi>N</mi><mo class="MathClass-bin" stretchy="false">−</mo><mn>2</mn></mrow></msub></math>,
+<math display="inline"><mo>…</mo></math>,
+<math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mn>0</mn></mrow></msub></math>.
+We observe that such a representation quantizes the analog sample into one of
+<math display="inline"><msup><mrow><mn>2</mn></mrow><mrow><mi>N</mi></mrow></msup></math>
+levels. Obviously the greater the number of <span class="margin-block">bits, <span class="margin-comment"><span class="ellipsis">[12]</span>
+<span class="sidenote">i.e., the larger the
+<math display="inline"><mi>N</mi></math>.</span></span></span> the closer the
+digital word <math display="inline"><mi>D</mi></math>
+approximates the magnitude of the analog sample. That is, increasing the number of bits reduces the <span class="alert">quantization error</span>
+and increases the resolution of the analog-to-digital conversion.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">This improvement is, however, usually obtained at the expense of <span class="alert">more complex</span> and hence more <span class="alert">costly circuit implementations</span>. </p></div></div>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">It is <b>NOT</b> our purpose here to delve into this topic any deeper as we merely want to appreciate the
+nature of analog and digital signals. </p></div></div>
+<p class="noindent">Nevertheless, it is an excellent time to introduce a very important circuit building block of modern
+electronic systems which is the <span class="alert">analog-to-digital converter</span> (A/D or ADC) shown in block form in <b>Fig.</b> <a href="#x4-6003r5">1.5</a>.
+</p><p class="noindent">The ADC accepts at its input the samples of an analog signal and provides for each input sample the corresponding
+<math display="inline"><mi>N</mi></math>-bit digital representation,
+according to Eq. (<a href="#x4-6002r3">1.3</a>), at its <math display="inline"><mi>N</mi></math>
+output terminals. Therefore although the voltage at the input might be, say,
+<math display="inline"><mn>6</mn><mi>,</mi><mn>5</mn><mn>1</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>,
+at  each  of  the  output  terminals,  i.e.,  at  the
+<math display="inline"><msup><mrow><mstyle class="text"><mtext>i</mtext></mstyle></mrow><mrow><mstyle class="text"><mtext>th</mtext></mstyle></mrow></msup></math> terminal, the voltage will be either low
+(<math display="inline"><mn>0</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>)
+or high (<math display="inline"><mn>5</mn></math> <math display="inline"><mstyle mathvariant="normal"><mi>V</mi></mstyle></math>)
+if <math display="inline"><msub><mrow><mi>b</mi></mrow><mrow><mi>i</mi></mrow></msub></math> is
+supposed to be 0 or 1, respectively.
+</p>
+<div class="knowledge"><div class="knowledge-upper">Knowledge</div><div class="body">
+<p class="noindent">The dual circuit of the ADC is the digital-to-analog converter (D/A or DAC). It converts an
+<math display="inline"><mi>N</mi></math>-bit <span class="alert">digital input to an analog output voltage</span>.
+</p></div></div>
+<p class="noindent"></p><figure class="float">
+<a id="x4-6003r5"></a>
+<figcaption class="caption"><span class="id">Figure 1.5: </span><span class="content">Block-diagram representation of the analog-to-digital converter (ADC).                       </span></figcaption>
+<img alt="PIC" src="figures/Signals-and-Amplifiers/figures-11.png" style=""/>
+</figure>
+<p class="noindent">Once the signal is in digital form, it can be processed using <span class="alert">digital circuits</span>. Of course, it goes without saying, digital
+circuits can deal also with signals which has no analogue origin, such as the signals that represent the
+various instructions of a digital computer.
+</p><p class="noindent">Given digital circuits deal exclusively with binary signals, their design is simpler than that of analog
+circuits. In addition, digital systems can be designed using a relatively few different kinds of digital
+circuit blocks. However, a large <span class="margin-block">number <span class="margin-comment"><span class="ellipsis">[13]</span>
+<span class="sidenote">e.g., hundreds of thousands or even millions.</span></span></span> of each
+of these blocks are usually needed. Therefore the design of digital circuits poses its own
+set of challenges to the designer but provides reliable and economic implementations of a
+great variety of signal-processing functions, many of which are not possible with analog
+circuits.
+</p><p class="noindent">At the present time, more and more of the signal-processing functions are being performed digitally.
+Examples are all around us: </p><div class="quote">  from the digital watch and the calculator to digital audio systems, digital
+cameras, and digital television. </div>
+<p class="noindent">Moreover, some long-standing analog systems such as the telephone communication system are now
+almost entirely digital. We should not forget the most important of all digital systems, the <b>digital
+computer</b>.
+</p>
+<div class="warning"><div class="warning-upper">Warning</div><div class="body">
+<p class="noindent">Although the digital processing of signals is at present all-pervasive, there remain many
+signal-processing functions that are <span class="alert">best performed by analog circuits</span>. </p></div></div>
+<p class="noindent">Many electronic systems include both <b>analog</b> and <b>digital</b> parts. It follows that a good electronics
+engineer must be proficient in the design of both analog and digital circuits, or mixed-signal or
+mixed-mode design as it is currently known.
+</p>
+<div class="info-block" id="info-block-1.2"> <a class="copiable-link" href="#info-block-1.2"> ¶</a> <span class="info-upper"> <span class="info-header"> <b>Information 1.<a id="x4-6004r2"></a>2: </b> </span> <span class="info-title"> Analog v. Digital Circuit Engineers </span> </span> <div class="body">
+<p class="noindent">As digital became the preferred implementation of more and more signal-processing functions, the
+need arose for greater numbers of digital circuit design engineers. Yet despite predictions
+made periodically that the demand for analog circuit design engineers would lessen, this has
+not been the case. Rather, the demand for analog engineers has, if anything, increased.
+</p>
+<hr/>
+<p class="noindent"> 
+What is true, however, is that the skill level required of analog engineers has risen. Not only
+are they asked to design circuits of greater sophistication and tighter specifications, but
+they also have to do this using technologies that are optimized for digital (and not analog)
+circuits. This is dictated by economics, as digital usually constitutes the larger part of most
+systems.
+</p>
+</div></div>
+<nav class="crosslinks-bottom"><div class="navigation"><span class="nav-button"><a href="AmplifiersasaConcept.html"><i class="fa-solid fa-caret-right"></i></a></span><span class="nav-button"><a href="SignalsandAmplifiers.html"><i class="fa-solid fa-caret-left"></i></a></span><span class="nav-button"><a href="SignalsandAmplifiers.html#FundamentalsofSignals.html"><i class="fa-solid fa-caret-up"></i></a></span><span class="nav-button">
+<a href="index.html" rel="index" title="Index">
+<i class="fa-solid fa-table-list">
+</i>
+</a></span><span class="nav-button">
+<a href="Index.html" rel="index" title="Index">
+<i class="fa-brands fa-git-alt"></i>
+</a></span></div></nav> <div class="footer"> <div class="footer-left"><span class="footer-lecture">D. T. McGuiness, Ph.D</span>
+<span class="footer-webBook"><b>Last Updated:</b> 6.10.2026, at 8:12.</span></div></div><div class="author-notes">
+<span class="note">Authors Note </span>
+<span class="text">The website you are viewing is auto-generated using lms-WebBook and therefore subject to slight errors in typography and formatting. When in doubt, please consult the LectureBook. </span>
+</div>
+</article>
+<div class="mode-line">
+<div class="core-line"><div class="core-line-image"><img class="webbook-logo" src="logo/webbook-logo.svg"/></div>
+<div class="current-header">
+<span class="header-pretext">Viewing | </span>
+<span class="header-text">Section 1.1: Fundamentals of Signals</span>
+</div>
+<div class="button-group">
+</div>
+</div>
+<div class="supp-line"></div>
+</div>
+</page>
+</body>
+</html>
